@@ -101,6 +101,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -388,6 +389,7 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.button3);
             this.groupBox3.Controls.Add(this.textBox10);
             this.groupBox3.Controls.Add(this.label13);
             this.groupBox3.Controls.Add(this.button25);
@@ -422,7 +424,7 @@
             // 
             // button25
             // 
-            this.button25.Location = new System.Drawing.Point(426, 24);
+            this.button25.Location = new System.Drawing.Point(347, 24);
             this.button25.Name = "button25";
             this.button25.Size = new System.Drawing.Size(82, 28);
             this.button25.TabIndex = 8;
@@ -869,6 +871,16 @@
             this.label20.TabIndex = 6;
             this.label20.Text = "作者：Richard Hu";
             // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(435, 24);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(82, 28);
+            this.button3.TabIndex = 11;
+            this.button3.Text = "测试收取";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.Button3_Click);
+            // 
             // FormModbusRtu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
@@ -979,5 +991,6 @@
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.ComboBox comboBox3;
         private DemoControl.UserControlCurve userControlCurve1;
+        private System.Windows.Forms.Button button3;
     }
 }

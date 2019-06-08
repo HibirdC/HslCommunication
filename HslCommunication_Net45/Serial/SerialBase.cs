@@ -144,7 +144,38 @@ namespace HslCommunication.Serial
 
             return receiveResult;
         }
+        /// <summary>
+        /// 读取串口特殊的数据
+        /// </summary>
+        /// <param name="from">来自于哪个从机</param>
+        /// <returns>带接收字节的结果对象</returns>
+        public OperateResult<byte[]> ReadSpecial(ushort from)
+        {
+            hybirdLock.Enter();
 
+            DateTime start = DateTime.Now;
+            while (true)
+            {
+                if ((DateTime.Now - start).TotalMilliseconds > ReceiveTimeout)
+                {
+                    break;
+                }
+                else
+                {
+                    ClearSerialCache();
+                    OperateResult<byte[]> receiveResult = SPReceived(SP_ReadData, true);
+                    if(receiveResult.Content != null && receiveResult.Content.Length>2 
+                        && receiveResult.Content[0] == from && receiveResult.Content[1] == 0x13)
+                    {
+                        hybirdLock.Leave();
+                        return receiveResult;
+                    }
+                }
+            }
+            hybirdLock.Leave();
+
+            return new OperateResult<byte[]>($"Time out: {ReceiveTimeout}");
+        }
         /// <summary>
         /// 清除串口缓冲区的数据，并返回该数据，如果缓冲区没有数据，返回的字节数组长度为0
         /// </summary>

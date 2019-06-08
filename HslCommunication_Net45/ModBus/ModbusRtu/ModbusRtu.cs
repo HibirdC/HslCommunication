@@ -297,6 +297,29 @@ namespace HslCommunication.ModBus
         }
 
         #endregion
+        /// <summary>
+        /// 获取正在上传的数据
+        /// </summary>
+        /// <param name="from">从机ID</param>
+        /// <returns>带是否成功的结果数据</returns>
+        protected virtual OperateResult<byte[]> GetSlaverUpingResponse(ushort from)
+        {
+            // 核心交互
+            OperateResult<byte[]> result = ReadSpecial(from);
+            if (!result.IsSuccess) return result;
+
+            // 长度校验
+            if (result.Content.Length < 5) return new OperateResult<byte[]>(StringResources.Language.ReceiveDataLengthTooShort + "5");
+
+            // 检查crc
+            if (!SoftCRC16.CheckCRC16(result.Content)) return new OperateResult<byte[]>(StringResources.Language.ModbusCRCCheckFailed +
+              SoftBasic.ByteToHexString(result.Content, ' '));
+
+            // 移除CRC校验
+            byte[] buffer = new byte[result.Content.Length - 2];
+            Array.Copy(result.Content, 0, buffer, 0, buffer.Length);
+            return OperateResult.CreateSuccessResult(buffer);
+        }
 
         #region Protect Override
 
@@ -360,17 +383,13 @@ namespace HslCommunication.ModBus
         }
 
         /// <summary>
-        /// 读取服务器的数据，需要指定不同的功能码
+        /// 读取从机正在上传的数据
         /// </summary>
-        /// <param name="address">地址</param>
-        /// <param name="length">长度</param>
+        /// <param name="station">从机地址</param>
         /// <returns>带结果信息的字节返回数据</returns>
-        protected OperateResult<byte[]> ReadModBusBase( ModbusAddress address, ushort length )
+        protected OperateResult<byte[]> ReadModBusSpecial(ushort station)
         {
-            OperateResult<byte[]> command = BuildReadRegisterCommand( address, length );
-            if (!command.IsSuccess) return OperateResult.CreateFailedResult<byte[]>( command );
-
-            OperateResult<byte[]> resultBytes = CheckModbusTcpResponse( command.Content );
+            OperateResult<byte[]> resultBytes = GetSlaverUpingResponse(station);
             if (resultBytes.IsSuccess)
             {
                 // 二次数据处理
@@ -383,7 +402,31 @@ namespace HslCommunication.ModBus
             }
             return resultBytes;
         }
-        
+
+        /// <summary>
+        /// 读取服务器的数据，需要指定不同的功能码
+        /// </summary>
+        /// <param name="address">地址</param>
+        /// <param name="length">长度</param>
+        /// <returns>带结果信息的字节返回数据</returns>
+        protected OperateResult<byte[]> ReadModBusBase(ModbusAddress address, ushort length)
+        {
+            OperateResult<byte[]> command = BuildReadRegisterCommand(address, length);
+            if (!command.IsSuccess) return OperateResult.CreateFailedResult<byte[]>(command);
+
+            OperateResult<byte[]> resultBytes = CheckModbusTcpResponse(command.Content);
+            if (resultBytes.IsSuccess)
+            {
+                // 二次数据处理
+                if (resultBytes.Content?.Length >= 3)
+                {
+                    byte[] buffer = new byte[resultBytes.Content.Length - 3];
+                    Array.Copy(resultBytes.Content, 3, buffer, 0, buffer.Length);
+                    resultBytes.Content = buffer;
+                }
+            }
+            return resultBytes;
+        }
         /// <summary>
         /// 读取线圈，需要指定起始地址
         /// </summary>
@@ -466,11 +509,22 @@ namespace HslCommunication.ModBus
             }
             return OperateResult.CreateSuccessResult( lists.ToArray( ) );
         }
-        
+        /// <summary>
+        /// 读取从机正在上传的数据
+        /// </summary>
+        /// <param name="from">从机ID</param>
+        /// <returns>带有成功标志的字节信息</returns>
+        public OperateResult<byte[]> ReadUping(ushort from)
+        {
+            var read = ReadModBusSpecial(from);
+            if (!read.IsSuccess) return OperateResult.CreateFailedResult<byte[]>(read);
+
+            return OperateResult.CreateSuccessResult(read.Content);
+        }
         #endregion
 
         #region Write One Register
-        
+
         /// <summary>
         /// 写一个寄存器数据
         /// </summary>

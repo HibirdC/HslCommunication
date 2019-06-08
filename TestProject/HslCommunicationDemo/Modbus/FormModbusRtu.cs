@@ -517,8 +517,12 @@ namespace HslCommunicationDemo
         }
 
 
+
         #endregion
 
-        
+        private void Button3_Click(object sender, EventArgs e)
+        {
+            DemoUtils.ReadResultRender(busRtuClient.ReadUping(1), "", textBox11);
+        }
     }
 }
