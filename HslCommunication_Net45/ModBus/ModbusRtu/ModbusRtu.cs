@@ -383,24 +383,13 @@ namespace HslCommunication.ModBus
         }
 
         /// <summary>
-        /// 读取从机正在上传的数据
+        /// 读取从机正在上传的数据,原始数据
         /// </summary>
         /// <param name="station">从机地址</param>
         /// <returns>带结果信息的字节返回数据</returns>
         protected OperateResult<byte[]> ReadModBusSpecial(ushort station)
         {
-            OperateResult<byte[]> resultBytes = GetSlaverUpingResponse(station);
-            if (resultBytes.IsSuccess)
-            {
-                // 二次数据处理
-                if (resultBytes.Content?.Length >= 3)
-                {
-                    byte[] buffer = new byte[resultBytes.Content.Length - 3];
-                    Array.Copy( resultBytes.Content, 3, buffer, 0, buffer.Length );
-                    resultBytes.Content = buffer;
-                }
-            }
-            return resultBytes;
+            return GetSlaverUpingResponse(station);
         }
 
         /// <summary>
