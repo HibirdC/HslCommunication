@@ -163,7 +163,7 @@ namespace HslCommunication.Serial
                 else
                 {
                     ClearSerialCache();
-                    OperateResult<byte[]> receiveResult = SPReceived(SP_ReadData, true);
+                    OperateResult<byte[]> receiveResult = SPReceived(SP_ReadData, false);
                     if(receiveResult.Content != null && receiveResult.Content.Length>2 
                         && receiveResult.Content[0] == from && receiveResult.Content[1] == 0x13)
                     {
