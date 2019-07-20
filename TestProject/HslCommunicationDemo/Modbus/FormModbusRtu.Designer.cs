@@ -55,6 +55,7 @@
             this.textBox13 = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.button3 = new System.Windows.Forms.Button();
             this.textBox10 = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.button25 = new System.Windows.Forms.Button();
@@ -101,7 +102,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -322,11 +322,12 @@
             // userControlCurve1
             // 
             this.userControlCurve1.AddressExample = "100";
-            this.userControlCurve1.Location = new System.Drawing.Point(545, 243);
+            this.userControlCurve1.Location = new System.Drawing.Point(546, 243);
             this.userControlCurve1.Name = "userControlCurve1";
             this.userControlCurve1.ReadWriteNet = null;
-            this.userControlCurve1.Size = new System.Drawing.Size(420, 279);
+            this.userControlCurve1.Size = new System.Drawing.Size(420, 289);
             this.userControlCurve1.TabIndex = 4;
+            this.userControlCurve1.Load += new System.EventHandler(this.UserControlCurve1_Load);
             // 
             // groupBox4
             // 
@@ -403,6 +404,16 @@
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "批量读取测试";
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(435, 24);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(82, 28);
+            this.button3.TabIndex = 11;
+            this.button3.Text = "测试收取";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.Button3_Click);
             // 
             // textBox10
             // 
@@ -870,16 +881,6 @@
             this.label20.Size = new System.Drawing.Size(108, 17);
             this.label20.TabIndex = 6;
             this.label20.Text = "作者：Richard Hu";
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(435, 24);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(82, 28);
-            this.button3.TabIndex = 11;
-            this.button3.Text = "测试收取";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.Button3_Click);
             // 
             // FormModbusRtu
             // 

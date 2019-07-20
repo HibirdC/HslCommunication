@@ -278,16 +278,16 @@ namespace HslCommunication.ModBus
             if (!result.IsSuccess) return result;
 
             // 长度校验
-            if (result.Content.Length < 5) return new OperateResult<byte[]>( StringResources.Language.ReceiveDataLengthTooShort + "5" );
+            if (result.Content.Length < 5) return new OperateResult<byte[]>( StringResources.Language.ReceiveDataLengthTooShort + SoftBasic.ByteToHexString(result.Content, ' '));
 
             // 检查crc
             if (!SoftCRC16.CheckCRC16( result.Content )) return new OperateResult<byte[]>( StringResources.Language.ModbusCRCCheckFailed +
                 SoftBasic.ByteToHexString( result.Content, ' ' ) );
 
             // 发生了错误
-            if ((send[1] + 0x80) == result.Content[1]) return new OperateResult<byte[]>( result.Content[2], ModbusInfo.GetDescriptionByErrorCode( result.Content[2] ) );
+            if ((send[1] + 0x80) == result.Content[1]) return new OperateResult<byte[]>( result.Content[2], ModbusInfo.GetDescriptionByErrorCode( result.Content[2] )+" data:"+ SoftBasic.ByteToHexString(result.Content, ' '));
 
-            if (send[1] != result.Content[1]) return new OperateResult<byte[]>( result.Content[1], $"Receive Command Check Failed: " );
+            if (send[1] != result.Content[1]) return new OperateResult<byte[]>( result.Content[1], $"Receive Command Check Failed: "+ SoftBasic.ByteToHexString(result.Content, ' '));
 
             // 移除CRC校验
             byte[] buffer = new byte[result.Content.Length - 2];

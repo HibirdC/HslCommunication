@@ -524,5 +524,10 @@ namespace HslCommunicationDemo
         {
             DemoUtils.ReadResultRender(busRtuClient.ReadUping(1), "", textBox11);
         }
+
+        private void UserControlCurve1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
