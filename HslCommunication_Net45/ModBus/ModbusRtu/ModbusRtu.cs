@@ -273,6 +273,8 @@ namespace HslCommunication.ModBus
         /// <returns>带是否成功的结果数据</returns>
         protected virtual OperateResult<byte[]> CheckModbusTcpResponse( byte[] send )
         {
+            //打印一行日志
+            Addlog("send to device:"+SoftBasic.ByteToHexString(send, ' '));
             // 核心交互
             OperateResult<byte[]> result = ReadBase( send );
             if (!result.IsSuccess) return result;
@@ -643,8 +645,16 @@ namespace HslCommunication.ModBus
         {
             return "ModbusRtu";
         }
-
+        /// <summary>
+        /// 写一行日志
+        /// </summary>
+        /// <returns>字符串信息</returns>
+        public void Addlog(string log)
+        {
+            string msg = string.Format("[{0} {1}] : {2}", "Info", DateTime.Now.ToString(), log);
+            ModbusLog.Info(log);
+        }
         #endregion
-        
+
     }
 }

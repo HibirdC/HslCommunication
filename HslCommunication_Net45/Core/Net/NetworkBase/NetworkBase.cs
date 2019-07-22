@@ -60,7 +60,7 @@ namespace HslCommunication.Core.Net
         /// <code lang="cs" source="HslCommunication_Net45.Test\Documentation\Samples\Core\NetworkBase.cs" region="LogNetExample1" title="LogNet示例" />
         /// <code lang="cs" source="HslCommunication_Net45.Test\Documentation\Samples\Core\NetworkBase.cs" region="LogNetExample2" title="LogNet示例" />
         /// </example>
-        public ILogNet LogNet { get; set; }
+        public ILogNet   LogNet { get; set; }
 
         /// <summary>
         /// 网络类的身份令牌
