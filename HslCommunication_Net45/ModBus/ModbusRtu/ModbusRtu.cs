@@ -274,7 +274,7 @@ namespace HslCommunication.ModBus
         protected virtual OperateResult<byte[]> CheckModbusTcpResponse( byte[] send )
         {
             //打印一行日志
-            Addlog("send to device:"+SoftBasic.ByteToHexString(send, ' '));
+            Writelog("send to device:"+SoftBasic.ByteToHexString(send, ' '));
             // 核心交互
             OperateResult<byte[]> result = ReadBase( send );
             if (!result.IsSuccess) return result;
@@ -649,10 +649,18 @@ namespace HslCommunication.ModBus
         /// 写一行日志
         /// </summary>
         /// <returns>字符串信息</returns>
-        public void Addlog(string log)
+        public void Writelog(string log)
         {
-            string msg = string.Format("[{0} {1}] : {2}", "Info", DateTime.Now.ToString(), log);
-            ModbusLog.Info(log);
+            ModbusLog.WriteInfoLog(log);
+        }
+
+        /// <summary>
+        /// 设置外部的日志对象
+        /// </summary>
+        /// <returns></returns>
+        public void setLogObject(log4net.ILog obj)
+        {
+            ModbusLog.logInfo = obj;
         }
         #endregion
 
