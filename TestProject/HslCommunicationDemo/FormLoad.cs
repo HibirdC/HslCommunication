@@ -6,10 +6,10 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-using HslCommunication.Profinet.Siemens;
-using HslCommunicationDemo.Control;
+using OilCommunication.Profinet.Siemens;
+using OilCommunicationDemo.Control;
 
-namespace HslCommunicationDemo
+namespace OilCommunicationDemo
 {
     public partial class FormLoad : Form
     {
@@ -130,7 +130,7 @@ namespace HslCommunicationDemo
 
         private void linkLabel2_Click( object sender, EventArgs e )
         {
-            HslCommunication.BasicFramework.FormSupport form = new HslCommunication.BasicFramework.FormSupport( );
+            OilCommunication.BasicFramework.FormSupport form = new OilCommunication.BasicFramework.FormSupport( );
             form.ShowDialog( );
         }
 
@@ -280,7 +280,7 @@ namespace HslCommunicationDemo
 
         private void FormLoad_Load( object sender, EventArgs e )
         {
-            verisonToolStripMenuItem.Text = "Version: " + HslCommunication.BasicFramework.SoftBasic.FrameworkVersion.ToString( );
+            verisonToolStripMenuItem.Text = "Version: " + OilCommunication.BasicFramework.SoftBasic.FrameworkVersion.ToString( );
 
             if (Settings1.Default.language == 1)
             {
@@ -291,7 +291,7 @@ namespace HslCommunicationDemo
                 }
                 else
                 {
-                    HslCommunication.StringResources.SeteLanguageEnglish( );
+                    OilCommunication.StringResources.SeteLanguageEnglish( );
                     Program.Language = 2;
                     Language( Program.Language );
                 }
@@ -299,7 +299,7 @@ namespace HslCommunicationDemo
             else
             {
                 Program.Language = 2;
-                HslCommunication.StringResources.SeteLanguageEnglish( );
+                OilCommunication.StringResources.SeteLanguageEnglish( );
                 Language( Program.Language );
             }
         }
@@ -318,7 +318,7 @@ namespace HslCommunicationDemo
                 button31.Text = "字节变换";
                 button29.Text = "异形 Simplify Net";
                 button16.Text = "常用简单控件";
-                Text = "HslCommunication 测试工具";
+                Text = "OilCommunication 测试工具";
                 免责条款ToolStripMenuItem.Text = "免责条款";
                 论坛toolStripMenuItem.Text = "论坛";
             }
@@ -334,7 +334,7 @@ namespace HslCommunicationDemo
                 button31.Text = "Bytes Transform";
                 button29.Text = "Alien Simplify Net";
                 button16.Text = "Simple Control";
-                Text = "HslCommunication Test Tool";
+                Text = "OilCommunication Test Tool";
                 论坛toolStripMenuItem.Text = "BBS";
                 免责条款ToolStripMenuItem.Text = "Disclaimer";
             }
@@ -343,7 +343,7 @@ namespace HslCommunicationDemo
         private void LinkLabel6_Click( object sender, EventArgs e )
         {
             // English
-            HslCommunication.StringResources.SeteLanguageEnglish( );
+            OilCommunication.StringResources.SeteLanguageEnglish( );
             Program.Language = 2;
             Language( Program.Language );
             MessageBox.Show( "Select English!" );
@@ -352,7 +352,7 @@ namespace HslCommunicationDemo
         private void LinkLabel5_Click( object sender, EventArgs e )
         {
             // 简体中文
-            HslCommunication.StringResources.SetLanguageChinese( );
+            OilCommunication.StringResources.SetLanguageChinese( );
             Program.Language = 1;
             Language( Program.Language );
             MessageBox.Show( "已选择中文" );
@@ -362,7 +362,7 @@ namespace HslCommunicationDemo
         {
             try
             {
-                System.Diagnostics.Process.Start("http://bbs.hslcommunication.cn/");
+                System.Diagnostics.Process.Start("http://bbs.OilCommunication.cn/");
             }
             catch (Exception ex)
             {
@@ -617,7 +617,7 @@ namespace HslCommunicationDemo
 
         private void webSideToolStripMenuItem_Click( object sender, EventArgs e )
         {
-            OpenWebside( "http://www.hslcommunication.cn/" );
+            OpenWebside( "http://www.OilCommunication.cn/" );
         }
 
         private void mesDemoToolStripMenuItem_Click( object sender, EventArgs e )
@@ -627,19 +627,19 @@ namespace HslCommunicationDemo
 
         private void gitToolStripMenuItem_Click( object sender, EventArgs e )
         {
-            OpenWebside( "https://github.com/dathlin/HslCommunication" );
+            OpenWebside( "https://github.com/dathlin/OilCommunication" );
         }
 
         private void patronageToolStripMenuItem_Click( object sender, EventArgs e )
         {
-            HslCommunication.BasicFramework.FormSupport form = new HslCommunication.BasicFramework.FormSupport( );
+            OilCommunication.BasicFramework.FormSupport form = new OilCommunication.BasicFramework.FormSupport( );
             form.ShowDialog( );
         }
 
         private void 简体中文ToolStripMenuItem_Click( object sender, EventArgs e )
         {
             // 简体中文
-            HslCommunication.StringResources.SetLanguageChinese( );
+            OilCommunication.StringResources.SetLanguageChinese( );
             Program.Language = 1;
             Settings1.Default.language = Program.Language;
             Settings1.Default.Save( );
@@ -650,7 +650,7 @@ namespace HslCommunicationDemo
         private void englishToolStripMenuItem_Click( object sender, EventArgs e )
         {
             // English
-            HslCommunication.StringResources.SeteLanguageEnglish( );
+            OilCommunication.StringResources.SeteLanguageEnglish( );
             Program.Language = 2;
             Settings1.Default.language = Program.Language;
             Settings1.Default.Save( );
@@ -719,12 +719,12 @@ namespace HslCommunicationDemo
         private void ThreadPoolCheckVersion( object obj )
         {
             System.Threading.Thread.Sleep( 100 );
-            HslCommunication.Enthernet.NetSimplifyClient simplifyClient = new HslCommunication.Enthernet.NetSimplifyClient( "118.24.36.220", 18467 );
-            HslCommunication.OperateResult<HslCommunication.NetHandle, string> read = simplifyClient.ReadCustomerFromServer( 1, HslCommunication.BasicFramework.SoftBasic.FrameworkVersion.ToString( ) );
+            OilCommunication.Enthernet.NetSimplifyClient simplifyClient = new OilCommunication.Enthernet.NetSimplifyClient( "118.24.36.220", 18467 );
+            OilCommunication.OperateResult<OilCommunication.NetHandle, string> read = simplifyClient.ReadCustomerFromServer( 1, OilCommunication.BasicFramework.SoftBasic.FrameworkVersion.ToString( ) );
             if (read.IsSuccess)
             {
-                HslCommunication.BasicFramework.SystemVersion version = new HslCommunication.BasicFramework.SystemVersion( read.Content2 );
-                if (version > HslCommunication.BasicFramework.SoftBasic.FrameworkVersion)
+                OilCommunication.BasicFramework.SystemVersion version = new OilCommunication.BasicFramework.SystemVersion( read.Content2 );
+                if (version > OilCommunication.BasicFramework.SoftBasic.FrameworkVersion)
                 {
                     // 有更新
                     Invoke( new Action( ( ) =>

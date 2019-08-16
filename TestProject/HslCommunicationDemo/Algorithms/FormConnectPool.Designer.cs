@@ -1,4 +1,4 @@
-﻿namespace HslCommunicationDemo.Algorithms
+﻿namespace OilCommunicationDemo.Algorithms
 {
     partial class FormConnectPool
     {

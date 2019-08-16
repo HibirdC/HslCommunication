@@ -1,4 +1,4 @@
-﻿namespace HslCommunicationDemo
+﻿namespace OilCommunicationDemo
 {
     partial class FormMelsec1EBinary
     {
@@ -38,7 +38,7 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.userControlCurve1 = new HslCommunicationDemo.DemoControl.UserControlCurve();
+            this.userControlCurve1 = new OilCommunicationDemo.DemoControl.UserControlCurve();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.textBox11 = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();

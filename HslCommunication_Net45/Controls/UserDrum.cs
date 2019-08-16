@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace HslCommunication.Controls
+namespace OilCommunication.Controls
 {
     /// <summary>
     /// 一个罐子形状的控件

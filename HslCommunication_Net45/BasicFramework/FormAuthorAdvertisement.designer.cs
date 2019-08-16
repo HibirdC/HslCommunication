@@ -1,4 +1,4 @@
-﻿namespace HslCommunication.BasicFramework
+﻿namespace OilCommunication.BasicFramework
 {
     partial class FormAuthorAdvertisement
     {
@@ -138,7 +138,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::HslCommunication.Properties.Resources.qrcode_for_gh_319218678954_258;
+            this.pictureBox1.Image = global::OilCommunication.Properties.Resources.qrcode_for_gh_319218678954_258;
             this.pictureBox1.Location = new System.Drawing.Point(11, 15);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(245, 235);

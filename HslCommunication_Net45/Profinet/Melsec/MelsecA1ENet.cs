@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using HslCommunication.Core;
-using HslCommunication.Core.IMessage;
-using HslCommunication.Core.Net;
+using OilCommunication.Core;
+using OilCommunication.Core.IMessage;
+using OilCommunication.Core.Net;
 
-namespace HslCommunication.Profinet.Melsec
+namespace OilCommunication.Profinet.Melsec
 {
     /// <summary>
     /// 三菱PLC通讯协议，采用A兼容1E帧协议实现，使用二进制码通讯，请根据实际型号来进行选取

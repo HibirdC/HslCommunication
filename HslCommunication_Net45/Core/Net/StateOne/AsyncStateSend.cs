@@ -4,7 +4,7 @@ using System.Linq;
 using System.Net.Sockets;
 using System.Text;
 
-namespace HslCommunication.Core.Net
+namespace OilCommunication.Core.Net
 {
     internal class AsyncStateSend
     {

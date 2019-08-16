@@ -1,4 +1,4 @@
-﻿namespace HslCommunicationDemo
+﻿namespace OilCommunicationDemo
 {
     partial class FormPieChart
     {
@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent( )
         {
-            this.userPieChart1 = new HslCommunication.Controls.UserPieChart();
-            this.userPieChart2 = new HslCommunication.Controls.UserPieChart();
-            this.userPieChart3 = new HslCommunication.Controls.UserPieChart();
-            this.userPieChart4 = new HslCommunication.Controls.UserPieChart();
-            this.userPieChart5 = new HslCommunication.Controls.UserPieChart();
+            this.userPieChart1 = new OilCommunication.Controls.UserPieChart();
+            this.userPieChart2 = new OilCommunication.Controls.UserPieChart();
+            this.userPieChart3 = new OilCommunication.Controls.UserPieChart();
+            this.userPieChart4 = new OilCommunication.Controls.UserPieChart();
+            this.userPieChart5 = new OilCommunication.Controls.UserPieChart();
             this.SuspendLayout();
             // 
             // userPieChart1
@@ -110,10 +110,10 @@
 
         #endregion
 
-        private HslCommunication.Controls.UserPieChart userPieChart1;
-        private HslCommunication.Controls.UserPieChart userPieChart2;
-        private HslCommunication.Controls.UserPieChart userPieChart3;
-        private HslCommunication.Controls.UserPieChart userPieChart4;
-        private HslCommunication.Controls.UserPieChart userPieChart5;
+        private OilCommunication.Controls.UserPieChart userPieChart1;
+        private OilCommunication.Controls.UserPieChart userPieChart2;
+        private OilCommunication.Controls.UserPieChart userPieChart3;
+        private OilCommunication.Controls.UserPieChart userPieChart4;
+        private OilCommunication.Controls.UserPieChart userPieChart5;
     }
 }

@@ -1,4 +1,4 @@
-﻿using HslCommunication.BasicFramework;
+﻿using OilCommunication.BasicFramework;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,7 +6,7 @@ using System.Net;
 using System.Net.Sockets;
 using System.Text;
 
-namespace HslCommunication.Core.Net
+namespace OilCommunication.Core.Net
 {
     /// <summary>
     /// Udp报文协议的内容传送
@@ -79,7 +79,7 @@ namespace HslCommunication.Core.Net
         /// </summary>
         /// <example>
         /// 主要是用来转换数据类型的，下面仅仅演示了2个方法，其他的类型转换，类似处理。
-        /// <code lang="cs" source="HslCommunication_Net45.Test\Documentation\Samples\Core\NetworkDoubleBase.cs" region="ByteTransform" title="ByteTransform示例" />
+        /// <code lang="cs" source="OilCommunication_Net45.Test\Documentation\Samples\Core\NetworkDoubleBase.cs" region="ByteTransform" title="ByteTransform示例" />
         /// </example>
         public TTransform ByteTransform
         {
@@ -542,7 +542,7 @@ namespace HslCommunication.Core.Net
         /// <returns>是否写入成功的结果对象</returns>
         /// <example>
         /// 以下为三菱的连接对象示例，其他的设备读写情况参照下面的代码：
-        /// <code lang="cs" source="HslCommunication_Net45.Test\Documentation\Samples\Core\NetworkDeviceBase.cs" region="WriteString" title="String类型示例" />
+        /// <code lang="cs" source="OilCommunication_Net45.Test\Documentation\Samples\Core\NetworkDeviceBase.cs" region="WriteString" title="String类型示例" />
         /// </example>
         public virtual OperateResult Write( string address, string value )
         {

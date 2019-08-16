@@ -1,11 +1,11 @@
-﻿using HslCommunication.Core;
+﻿using OilCommunication.Core;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Sockets;
 using System.Text;
 
-namespace HslCommunication.Enthernet.Redis
+namespace OilCommunication.Enthernet.Redis
 {
     /// <summary>
     /// 提供了redis辅助类的一些方法

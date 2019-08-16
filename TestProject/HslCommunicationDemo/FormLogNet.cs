@@ -6,9 +6,9 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-using HslCommunication.LogNet;
+using OilCommunication.LogNet;
 
-namespace HslCommunicationDemo
+namespace OilCommunicationDemo
 {
     public partial class FormLogNet : Form
     {
@@ -23,9 +23,9 @@ namespace HslCommunicationDemo
         private void FormLogNet_Load( object sender, EventArgs e )
         {
             logNet = new LogNetSingle( "log.txt" );
-            comboBox1.DataSource = HslCommunication.BasicFramework.SoftBasic.GetEnumValues<HslMessageDegree>( );
+            comboBox1.DataSource = OilCommunication.BasicFramework.SoftBasic.GetEnumValues<HslMessageDegree>( );
             comboBox1.SelectedItem = HslMessageDegree.DEBUG;
-            comboBox2.DataSource = HslCommunication.BasicFramework.SoftBasic.GetEnumValues<HslMessageDegree>( );
+            comboBox2.DataSource = OilCommunication.BasicFramework.SoftBasic.GetEnumValues<HslMessageDegree>( );
             comboBox2.SelectedItem = HslMessageDegree.DEBUG;
             comboBox2.SelectedIndexChanged += ComboBox2_SelectedIndexChanged;
 
@@ -189,7 +189,7 @@ namespace HslCommunicationDemo
             }
             catch (Exception ex)
             {
-                HslCommunication.BasicFramework.SoftBasic.ShowExceptionMessage( ex );
+                OilCommunication.BasicFramework.SoftBasic.ShowExceptionMessage( ex );
             }
         }
     }

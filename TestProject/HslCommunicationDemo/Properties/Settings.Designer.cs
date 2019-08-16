@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace HslCommunicationDemo.Properties
+namespace OilCommunicationDemo.Properties
 {
 
 

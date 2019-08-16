@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace HslCommunicationDemo.Algorithms
+namespace OilCommunicationDemo.Algorithms
 {
     public partial class FormConnectPool : Form
     {
@@ -25,7 +25,7 @@ namespace HslCommunicationDemo.Algorithms
 
 
 
-            siemensConnect = new HslCommunication.Algorithms.ConnectPool.ConnectPool<SiemensConnector>( ( ) => { return new SiemensConnector( "192.168.1.195" ); } );
+            siemensConnect = new OilCommunication.Algorithms.ConnectPool.ConnectPool<SiemensConnector>( ( ) => { return new SiemensConnector( "192.168.1.195" ); } );
             siemensConnect.MaxConnector = 10;         // 同时存在的最大连接数
             siemensConnect.ConectionExpireTime = 30;  // 连接多久不用就自动回收释放，单位秒
             
@@ -33,7 +33,7 @@ namespace HslCommunicationDemo.Algorithms
 
 
 
-        private HslCommunication.Algorithms.ConnectPool.ConnectPool<SiemensConnector> siemensConnect = null;           // 西门子对象的连接池
+        private OilCommunication.Algorithms.ConnectPool.ConnectPool<SiemensConnector> siemensConnect = null;           // 西门子对象的连接池
 
         private void button1_Click( object sender, EventArgs e )
         {
@@ -52,13 +52,13 @@ namespace HslCommunicationDemo.Algorithms
 
 
 
-    public class SiemensConnector : HslCommunication.Algorithms.ConnectPool.IConnector
+    public class SiemensConnector : OilCommunication.Algorithms.ConnectPool.IConnector
     {
         #region 构造方法
 
         public SiemensConnector( string ipAddress )
         {
-            siemens = new HslCommunication.Profinet.Siemens.SiemensS7Net( HslCommunication.Profinet.Siemens.SiemensPLCS.S1200, ipAddress );
+            siemens = new OilCommunication.Profinet.Siemens.SiemensS7Net( OilCommunication.Profinet.Siemens.SiemensPLCS.S1200, ipAddress );
         }
 
         #endregion
@@ -111,7 +111,7 @@ namespace HslCommunicationDemo.Algorithms
         /// 获取当前的连接对象，方便进行数据交互
         /// </summary>
         /// <returns></returns>
-        public HslCommunication.Profinet.Siemens.SiemensS7Net GetSiemens( )
+        public OilCommunication.Profinet.Siemens.SiemensS7Net GetSiemens( )
         {
             return siemens;
         }
@@ -121,7 +121,7 @@ namespace HslCommunicationDemo.Algorithms
 
         #region Private Member
 
-        private HslCommunication.Profinet.Siemens.SiemensS7Net siemens;        // 连接对象
+        private OilCommunication.Profinet.Siemens.SiemensS7Net siemens;        // 连接对象
 
         #endregion
     }

@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net.Sockets;
 using System.Text;
-using HslCommunication.BasicFramework;
-using HslCommunication.Core;
-using HslCommunication.Core.Net;
-using HslCommunication.Core.IMessage;
+using OilCommunication.BasicFramework;
+using OilCommunication.Core;
+using OilCommunication.Core.Net;
+using OilCommunication.Core.IMessage;
 
-namespace HslCommunication.Profinet.Melsec
+namespace OilCommunication.Profinet.Melsec
 {
     /// <summary>
     /// 三菱MC协议的虚拟服务器，支持M,X,Y,D,W的数据池读写操作，使用二进制进行读写操作

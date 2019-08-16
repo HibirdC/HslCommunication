@@ -6,11 +6,11 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-using HslCommunication.Enthernet;
-using HslCommunication;
-using HslCommunication.Core.Net;
+using OilCommunication.Enthernet;
+using OilCommunication;
+using OilCommunication.Core.Net;
 
-namespace HslCommunicationDemo
+namespace OilCommunicationDemo
 {
     public partial class FormSimplifyNetAlien : Form
     {
@@ -86,7 +86,7 @@ namespace HslCommunicationDemo
             }
             catch (Exception ex)
             {
-                HslCommunication.BasicFramework.SoftBasic.ShowExceptionMessage( ex );
+                OilCommunication.BasicFramework.SoftBasic.ShowExceptionMessage( ex );
             }
         }
 

@@ -2,14 +2,14 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using HslCommunication.Core.Net;
-using HslCommunication.Core.IMessage;
-using HslCommunication.Core;
+using OilCommunication.Core.Net;
+using OilCommunication.Core.IMessage;
+using OilCommunication.Core;
 #if !NET35
 using System.Threading.Tasks;
 #endif
 
-namespace HslCommunication.Enthernet
+namespace OilCommunication.Enthernet
 {
 
 
@@ -21,7 +21,7 @@ namespace HslCommunication.Enthernet
     /// </remarks>
     /// <example>
     /// 此处贴上了Demo项目的服务器配置的示例代码
-    /// <code lang="cs" source="TestProject\HslCommunicationDemo\FormSimplifyNet.cs" region="FormSimplifyNet" title="FormSimplifyNet示例" />
+    /// <code lang="cs" source="TestProject\OilCommunicationDemo\FormSimplifyNet.cs" region="FormSimplifyNet" title="FormSimplifyNet示例" />
     /// </example>
     public class NetSimplifyClient : NetworkDoubleBase<HslMessage, RegularByteTransform>
     {

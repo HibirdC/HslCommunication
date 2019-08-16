@@ -5,10 +5,10 @@ using System.Linq;
 using System.Net;
 using System.Net.Sockets;
 using System.Text;
-using HslCommunication.Core;
-using HslCommunication.Core.Net;
+using OilCommunication.Core;
+using OilCommunication.Core.Net;
 
-namespace HslCommunication.Enthernet
+namespace OilCommunication.Enthernet
 {
     /// <summary>
     /// 文件传输客户端基类，提供上传，下载，删除的基础服务

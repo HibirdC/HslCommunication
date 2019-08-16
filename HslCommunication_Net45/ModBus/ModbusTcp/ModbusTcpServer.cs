@@ -2,19 +2,19 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using HslCommunication.Core;
-using HslCommunication;
-using HslCommunication.Core.Net;
+using OilCommunication.Core;
+using OilCommunication;
+using OilCommunication.Core.Net;
 using System.Net.Sockets;
-using HslCommunication.Core.IMessage;
-using HslCommunication.Core.Address;
-using HslCommunication.BasicFramework;
+using OilCommunication.Core.IMessage;
+using OilCommunication.Core.Address;
+using OilCommunication.BasicFramework;
 
 #if !NETSTANDARD2_0
 using System.IO.Ports;
 #endif
 
-namespace HslCommunication.ModBus
+namespace OilCommunication.ModBus
 {
     /// <summary>
     /// Modbus的虚拟服务器，同时支持Tcp和Rtu的机制，支持线圈，离散输入，寄存器和输入寄存器的读写操作，可以用来当做系统的数据交换池
@@ -30,7 +30,7 @@ namespace HslCommunication.ModBus
     /// </remarks>
     /// <example>
     /// 读写的地址格式为富文本地址，具体请参照下面的示例代码。
-    /// <code lang="cs" source="HslCommunication_Net45.Test\Documentation\Samples\Modbus\ModbusTcpServer.cs" region="ModbusTcpServerExample" title="ModbusTcpServer示例" />
+    /// <code lang="cs" source="OilCommunication_Net45.Test\Documentation\Samples\Modbus\ModbusTcpServer.cs" region="ModbusTcpServerExample" title="ModbusTcpServer示例" />
     /// </example>
     public class ModbusTcpServer : NetworkDataServerBase
     {

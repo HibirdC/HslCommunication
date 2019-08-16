@@ -1,4 +1,4 @@
-﻿namespace HslCommunicationDemo
+﻿namespace OilCommunicationDemo
 {
     partial class FormUdpNet
     {

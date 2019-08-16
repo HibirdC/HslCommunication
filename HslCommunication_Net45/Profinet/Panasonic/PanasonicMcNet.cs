@@ -1,10 +1,10 @@
-﻿using HslCommunication.Profinet.Melsec;
+﻿using OilCommunication.Profinet.Melsec;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace HslCommunication.Profinet.Panasonic
+namespace OilCommunication.Profinet.Panasonic
 {
     /// <summary>
     /// 松下PLC的MC协议的信息，具体的地址格式请参考备注说明

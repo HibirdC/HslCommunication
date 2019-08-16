@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace HslCommunicationDemo
+namespace OilCommunicationDemo
 {
     public partial class FormByteTransfer : Form
     {
@@ -102,7 +102,7 @@ namespace HslCommunicationDemo
 
 
             textBox2.AppendText( DateTime.Now.ToString( "yyyy-MM-dd HH:mm:ss.fff" ) + " [" + textBox1.Text + "] ["+ radioButton.Text.PadRight(7,' ') + "]  " +
-                HslCommunication.BasicFramework.SoftBasic.ByteToHexString( buffer, ' ' ) + Environment.NewLine);
+                OilCommunication.BasicFramework.SoftBasic.ByteToHexString( buffer, ' ' ) + Environment.NewLine);
 
         }
 
@@ -180,72 +180,72 @@ namespace HslCommunicationDemo
             {
                 if (radioButton1.Checked)
                 {
-                    value = HslCommunication.BasicFramework.SoftBasic.HexStringToBytes( textBox1.Text )[0].ToString( );
+                    value = OilCommunication.BasicFramework.SoftBasic.HexStringToBytes( textBox1.Text )[0].ToString( );
                     radioButton = radioButton1;
                 }
                 else if (radioButton2.Checked)
                 {
-                    value = BitConverter.ToInt16( HslCommunication.BasicFramework.SoftBasic.HexStringToBytes( textBox1.Text ), 0 ).ToString( );
+                    value = BitConverter.ToInt16( OilCommunication.BasicFramework.SoftBasic.HexStringToBytes( textBox1.Text ), 0 ).ToString( );
                     radioButton = radioButton2;
                 }
                 else if (radioButton3.Checked)
                 {
-                    value = BitConverter.ToUInt16( HslCommunication.BasicFramework.SoftBasic.HexStringToBytes( textBox1.Text ), 0 ).ToString( );
+                    value = BitConverter.ToUInt16( OilCommunication.BasicFramework.SoftBasic.HexStringToBytes( textBox1.Text ), 0 ).ToString( );
                     radioButton = radioButton3;
                 }
                 else if (radioButton4.Checked)
                 {
-                    value = BitConverter.ToInt32( HslCommunication.BasicFramework.SoftBasic.HexStringToBytes( textBox1.Text ), 0 ).ToString( );
+                    value = BitConverter.ToInt32( OilCommunication.BasicFramework.SoftBasic.HexStringToBytes( textBox1.Text ), 0 ).ToString( );
                     radioButton = radioButton4;
                 }
                 else if (radioButton5.Checked)
                 {
-                    value = BitConverter.ToUInt32( HslCommunication.BasicFramework.SoftBasic.HexStringToBytes( textBox1.Text ), 0 ).ToString( );
+                    value = BitConverter.ToUInt32( OilCommunication.BasicFramework.SoftBasic.HexStringToBytes( textBox1.Text ), 0 ).ToString( );
                     radioButton = radioButton5;
                 }
                 else if (radioButton6.Checked)
                 {
-                    value = BitConverter.ToInt64( HslCommunication.BasicFramework.SoftBasic.HexStringToBytes( textBox1.Text ), 0 ).ToString( );
+                    value = BitConverter.ToInt64( OilCommunication.BasicFramework.SoftBasic.HexStringToBytes( textBox1.Text ), 0 ).ToString( );
                     radioButton = radioButton6;
                 }
                 else if (radioButton7.Checked)
                 {
-                    value = BitConverter.ToUInt64( HslCommunication.BasicFramework.SoftBasic.HexStringToBytes( textBox1.Text ), 0 ).ToString( );
+                    value = BitConverter.ToUInt64( OilCommunication.BasicFramework.SoftBasic.HexStringToBytes( textBox1.Text ), 0 ).ToString( );
                     radioButton = radioButton7;
                 }
                 else if (radioButton8.Checked)
                 {
-                    value = BitConverter.ToSingle( HslCommunication.BasicFramework.SoftBasic.HexStringToBytes( textBox1.Text ), 0 ).ToString( );
+                    value = BitConverter.ToSingle( OilCommunication.BasicFramework.SoftBasic.HexStringToBytes( textBox1.Text ), 0 ).ToString( );
                     radioButton = radioButton8;
                 }
                 else if (radioButton9.Checked)
                 {
-                    value = BitConverter.ToDouble( HslCommunication.BasicFramework.SoftBasic.HexStringToBytes( textBox1.Text ), 0 ).ToString( );
+                    value = BitConverter.ToDouble( OilCommunication.BasicFramework.SoftBasic.HexStringToBytes( textBox1.Text ), 0 ).ToString( );
                     radioButton = radioButton9;
                 }
                 else if (radioButton10.Checked)
                 {
-                    value = Encoding.ASCII.GetString( HslCommunication.BasicFramework.SoftBasic.HexStringToBytes( textBox1.Text ) ).ToString( );
+                    value = Encoding.ASCII.GetString( OilCommunication.BasicFramework.SoftBasic.HexStringToBytes( textBox1.Text ) ).ToString( );
                     radioButton = radioButton10;
                 }
                 else if (radioButton11.Checked)
                 {
-                    value = Encoding.Unicode.GetString( HslCommunication.BasicFramework.SoftBasic.HexStringToBytes( textBox1.Text ) ).ToString( );
+                    value = Encoding.Unicode.GetString( OilCommunication.BasicFramework.SoftBasic.HexStringToBytes( textBox1.Text ) ).ToString( );
                     radioButton = radioButton11;
                 }
                 else if (radioButton12.Checked)
                 {
-                    value = Encoding.UTF8.GetString( HslCommunication.BasicFramework.SoftBasic.HexStringToBytes( textBox1.Text ) ).ToString( );
+                    value = Encoding.UTF8.GetString( OilCommunication.BasicFramework.SoftBasic.HexStringToBytes( textBox1.Text ) ).ToString( );
                     radioButton = radioButton12;
                 }
                 else if (radioButton13.Checked)
                 {
-                    value = Encoding.UTF32.GetString( HslCommunication.BasicFramework.SoftBasic.HexStringToBytes( textBox1.Text ) ).ToString( );
+                    value = Encoding.UTF32.GetString( OilCommunication.BasicFramework.SoftBasic.HexStringToBytes( textBox1.Text ) ).ToString( );
                     radioButton = radioButton13;
                 }
                 else if (radioButton14.Checked)
                 {
-                    value = Encoding.Default.GetString( HslCommunication.BasicFramework.SoftBasic.HexStringToBytes( textBox1.Text ) ).ToString( );
+                    value = Encoding.Default.GetString( OilCommunication.BasicFramework.SoftBasic.HexStringToBytes( textBox1.Text ) ).ToString( );
                     radioButton = radioButton13;
                 }
             }

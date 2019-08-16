@@ -7,7 +7,7 @@ using System.Net.Sockets;
 using System.Text;
 
 
-namespace HslCommunication.Enthernet
+namespace OilCommunication.Enthernet
 {
     /// <summary>
     /// 与服务器文件引擎交互的客户端类，支持操作Advanced引擎和Ultimate引擎
@@ -17,7 +17,7 @@ namespace HslCommunication.Enthernet
     /// </remarks>
     /// <example>
     /// 此处只演示创建实例，具体的上传，下载，删除的例子请参照对应的方法
-    /// <code lang="cs" source="TestProject\HslCommunicationDemo\FormFileClient.cs" region="Intergration File Client" title="IntegrationFileClient示例" />
+    /// <code lang="cs" source="TestProject\OilCommunicationDemo\FormFileClient.cs" region="Intergration File Client" title="IntegrationFileClient示例" />
     /// </example>
     public class IntegrationFileClient : FileClientBase
     {
@@ -75,7 +75,7 @@ namespace HslCommunication.Enthernet
         /// </note>
         /// </remarks>
         /// <example>
-        /// <code lang="cs" source="TestProject\HslCommunicationDemo\FormFileClient.cs" region="Download File" title="DownloadFile示例" />
+        /// <code lang="cs" source="TestProject\OilCommunicationDemo\FormFileClient.cs" region="Download File" title="DownloadFile示例" />
         /// </example>
         public OperateResult DownloadFile(
             string fileName,
@@ -107,7 +107,7 @@ namespace HslCommunication.Enthernet
         /// </note>
         /// </remarks>
         /// <example>
-        /// <code lang="cs" source="TestProject\HslCommunicationDemo\FormFileClient.cs" region="Download File" title="DownloadFile示例" />
+        /// <code lang="cs" source="TestProject\OilCommunicationDemo\FormFileClient.cs" region="Download File" title="DownloadFile示例" />
         /// </example>
         public OperateResult DownloadFile(
             string fileName,
@@ -141,7 +141,7 @@ namespace HslCommunication.Enthernet
         /// </note>
         /// </remarks>
         /// <example>
-        /// <code lang="cs" source="TestProject\HslCommunicationDemo\FormFileClient.cs" region="Download File" title="DownloadFile示例" />
+        /// <code lang="cs" source="TestProject\OilCommunicationDemo\FormFileClient.cs" region="Download File" title="DownloadFile示例" />
         /// </example>
         public OperateResult DownloadFile(
             string fileName,
@@ -193,7 +193,7 @@ namespace HslCommunication.Enthernet
         /// </note>
         /// </remarks>
         /// <example>
-        /// <code lang="cs" source="TestProject\HslCommunicationDemo\FormFileClient.cs" region="Upload File" title="UploadFile示例" />
+        /// <code lang="cs" source="TestProject\OilCommunicationDemo\FormFileClient.cs" region="Upload File" title="UploadFile示例" />
         /// </example>
         public OperateResult UploadFile(
             string fileName,
@@ -228,7 +228,7 @@ namespace HslCommunication.Enthernet
         /// </note>
         /// </remarks>
         /// <example>
-        /// <code lang="cs" source="TestProject\HslCommunicationDemo\FormFileClient.cs" region="Upload File" title="UploadFile示例" />
+        /// <code lang="cs" source="TestProject\OilCommunicationDemo\FormFileClient.cs" region="Upload File" title="UploadFile示例" />
         /// </example>
         public OperateResult UploadFile(
             Stream stream,
@@ -265,7 +265,7 @@ namespace HslCommunication.Enthernet
         /// </note>
         /// </remarks>
         /// <example>
-        /// <code lang="cs" source="TestProject\HslCommunicationDemo\FormFileClient.cs" region="Upload File" title="UploadFile示例" />
+        /// <code lang="cs" source="TestProject\OilCommunicationDemo\FormFileClient.cs" region="Upload File" title="UploadFile示例" />
         /// </example>
         public OperateResult UploadFile(
             Bitmap bitmap,
@@ -361,7 +361,7 @@ namespace HslCommunication.Enthernet
         /// </note>
         /// </remarks>
         /// <example>
-        /// <code lang="cs" source="TestProject\HslCommunicationDemo\FormFileClient.cs" region="DownloadPathFileNames" title="DownloadPathFileNames示例" />
+        /// <code lang="cs" source="TestProject\OilCommunicationDemo\FormFileClient.cs" region="DownloadPathFileNames" title="DownloadPathFileNames示例" />
         /// </example>
         public OperateResult DownloadPathFileNames(
             out GroupFileItem[] fileNames,
@@ -400,7 +400,7 @@ namespace HslCommunication.Enthernet
         /// </note>
         /// </remarks>
         /// <example>
-        /// <code lang="cs" source="TestProject\HslCommunicationDemo\FormFileClient.cs" region="DownloadPathFolders" title="DownloadPathFolders示例" />
+        /// <code lang="cs" source="TestProject\OilCommunicationDemo\FormFileClient.cs" region="DownloadPathFolders" title="DownloadPathFolders示例" />
         /// </example>
         public OperateResult DownloadPathFolders(
             out string[] folders,

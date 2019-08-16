@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using HslCommunication.Core;
+using OilCommunication.Core;
 
-namespace HslCommunication.BasicFramework
+namespace OilCommunication.BasicFramework
 {
     /// <summary>
     /// 一个线程安全的缓存数据块，支持批量动态修改，添加，并获取快照
@@ -15,7 +15,7 @@ namespace HslCommunication.BasicFramework
     /// </remarks>
     /// <example>
     /// 此处举例一些数据的读写说明，可以此处的数据示例。
-    /// <code lang="cs" source="HslCommunication_Net45.Test\Documentation\Samples\BasicFramework\SoftBufferExample.cs" region="SoftBufferExample1" title="SoftBuffer示例" />
+    /// <code lang="cs" source="OilCommunication_Net45.Test\Documentation\Samples\BasicFramework\SoftBufferExample.cs" region="SoftBufferExample1" title="SoftBuffer示例" />
     /// </example>
     public class SoftBuffer
     {

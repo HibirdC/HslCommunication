@@ -1,11 +1,11 @@
-﻿using HslCommunication.BasicFramework;
+﻿using OilCommunication.BasicFramework;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using HslCommunication.ModBus;
+using OilCommunication.ModBus;
 
-namespace HslCommunication.Core.Address
+namespace OilCommunication.Core.Address
 {
     /// <summary>
     /// Modbus协议地址格式，可以携带站号，功能码，地址信息

@@ -7,9 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.Threading;
-using HslCommunication;
+using OilCommunication;
 
-namespace HslCommunicationDemo.DemoControl
+namespace OilCommunicationDemo.DemoControl
 {
     public partial class UserControlCurve : UserControl
     {
@@ -103,7 +103,7 @@ namespace HslCommunicationDemo.DemoControl
         }
 
         [Browsable(false)]
-        public HslCommunication.Core.IReadWriteNet ReadWriteNet { get; set; }
+        public OilCommunication.Core.IReadWriteNet ReadWriteNet { get; set; }
 
         [Category( "Appearance" )]
         [Description( "设置或获取默认的地址信息" )]

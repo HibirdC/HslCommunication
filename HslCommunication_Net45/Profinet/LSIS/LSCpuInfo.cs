@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace HslCommunication.Profinet.LSIS
+namespace OilCommunication.Profinet.LSIS
 {
     /// <summary>
     /// It is determined to be the XGK/I/R series through a reserved area

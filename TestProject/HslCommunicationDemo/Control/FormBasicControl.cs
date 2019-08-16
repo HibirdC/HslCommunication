@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace HslCommunicationDemo
+namespace OilCommunicationDemo
 {
     public partial class FormBasicControl : Form
     {
@@ -94,7 +94,7 @@ namespace HslCommunicationDemo
         private void button1_Click( object sender, EventArgs e )
         {
             // 右下角弹窗，存在10s就关闭，时间小于0就是无穷大
-            HslCommunication.BasicFramework.FormPopup popup = new HslCommunication.BasicFramework.FormPopup( "This is a test message!", Color.Blue, 5000 );
+            OilCommunication.BasicFramework.FormPopup popup = new OilCommunication.BasicFramework.FormPopup( "This is a test message!", Color.Blue, 5000 );
             popup.Show( );
         }
     }

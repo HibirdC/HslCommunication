@@ -1,4 +1,4 @@
-﻿namespace HslCommunicationDemo
+﻿namespace OilCommunicationDemo
 {
     partial class FormAuthor
     {
@@ -68,7 +68,7 @@
             this.linkLabel1.Size = new System.Drawing.Size(199, 17);
             this.linkLabel1.TabIndex = 3;
             this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "http://www.hslcommunication.cn/";
+            this.linkLabel1.Text = "http://www.OilCommunication.cn/";
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // FormAuthor

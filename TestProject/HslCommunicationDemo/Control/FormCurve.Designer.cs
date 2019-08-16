@@ -1,4 +1,4 @@
-﻿namespace HslCommunicationDemo
+﻿namespace OilCommunicationDemo
 {
     partial class FormCurve
     {
@@ -29,16 +29,16 @@
         private void InitializeComponent( )
         {
             this.label11 = new System.Windows.Forms.Label();
-            this.userCurve1 = new HslCommunication.Controls.UserCurve();
+            this.userCurve1 = new OilCommunication.Controls.UserCurve();
             this.label12 = new System.Windows.Forms.Label();
-            this.userCurve2 = new HslCommunication.Controls.UserCurve();
+            this.userCurve2 = new OilCommunication.Controls.UserCurve();
             this.label1 = new System.Windows.Forms.Label();
-            this.userCurve3 = new HslCommunication.Controls.UserCurve();
-            this.userButton8 = new HslCommunication.Controls.UserButton();
-            this.userButton7 = new HslCommunication.Controls.UserButton();
-            this.userButton6 = new HslCommunication.Controls.UserButton();
+            this.userCurve3 = new OilCommunication.Controls.UserCurve();
+            this.userButton8 = new OilCommunication.Controls.UserButton();
+            this.userButton7 = new OilCommunication.Controls.UserButton();
+            this.userButton6 = new OilCommunication.Controls.UserButton();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.userButton1 = new HslCommunication.Controls.UserButton();
+            this.userButton1 = new OilCommunication.Controls.UserButton();
             this.SuspendLayout();
             // 
             // label11
@@ -203,15 +203,15 @@
         #endregion
 
         private System.Windows.Forms.Label label11;
-        private HslCommunication.Controls.UserCurve userCurve1;
+        private OilCommunication.Controls.UserCurve userCurve1;
         private System.Windows.Forms.Label label12;
-        private HslCommunication.Controls.UserCurve userCurve2;
+        private OilCommunication.Controls.UserCurve userCurve2;
         private System.Windows.Forms.Label label1;
-        private HslCommunication.Controls.UserCurve userCurve3;
-        private HslCommunication.Controls.UserButton userButton8;
-        private HslCommunication.Controls.UserButton userButton7;
-        private HslCommunication.Controls.UserButton userButton6;
+        private OilCommunication.Controls.UserCurve userCurve3;
+        private OilCommunication.Controls.UserButton userButton8;
+        private OilCommunication.Controls.UserButton userButton7;
+        private OilCommunication.Controls.UserButton userButton6;
         private System.Windows.Forms.TextBox textBox1;
-        private HslCommunication.Controls.UserButton userButton1;
+        private OilCommunication.Controls.UserButton userButton1;
     }
 }

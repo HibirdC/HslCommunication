@@ -1,11 +1,11 @@
-﻿using HslCommunication.Core;
+﻿using OilCommunication.Core;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
 
-namespace HslCommunication.BasicFramework
+namespace OilCommunication.BasicFramework
 {
 
     /*****************************************************************************
@@ -68,11 +68,11 @@ namespace HslCommunication.BasicFramework
     /// </remarks>
     /// <example>
     /// 下面举例实现两个字段的普通数据存储
-    /// <code lang="cs" source="HslCommunication_Net45.Test\Documentation\Samples\BasicFramework\SoftFileSaveBaseExample.cs" region="SoftFileSaveBase1" title="简单示例" />
+    /// <code lang="cs" source="OilCommunication_Net45.Test\Documentation\Samples\BasicFramework\SoftFileSaveBaseExample.cs" region="SoftFileSaveBase1" title="简单示例" />
     /// 然后怎么调用呢？
-    /// <code lang="cs" source="HslCommunication_Net45.Test\Documentation\Samples\BasicFramework\SoftFileSaveBaseExample.cs" region="Example" title="调用示例" />
+    /// <code lang="cs" source="OilCommunication_Net45.Test\Documentation\Samples\BasicFramework\SoftFileSaveBaseExample.cs" region="Example" title="调用示例" />
     /// 如果你想实现加密存储，这样就不用关心被用户看到了。
-    /// <code lang="cs" source="HslCommunication_Net45.Test\Documentation\Samples\BasicFramework\SoftFileSaveBaseExample.cs" region="SoftFileSaveBase2" title="加密示例" />
+    /// <code lang="cs" source="OilCommunication_Net45.Test\Documentation\Samples\BasicFramework\SoftFileSaveBaseExample.cs" region="SoftFileSaveBase2" title="加密示例" />
     /// 如果还是担心被反编译获取数据，那么这个密钥就要来自服务器的数据，本地不做存储。
     /// </example>
     public class SoftFileSaveBase : ISoftFileSaveBase

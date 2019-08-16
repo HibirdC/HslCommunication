@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace HslCommunicationDemo {
+namespace OilCommunicationDemo {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]

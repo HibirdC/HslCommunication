@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace HslCommunication.Core.Net
+namespace OilCommunication.Core.Net
 {
     /// <summary>
     /// 所有的机器人的统一读写标准

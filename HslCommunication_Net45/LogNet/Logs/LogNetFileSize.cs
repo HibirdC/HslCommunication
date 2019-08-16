@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.IO;
 
-namespace HslCommunication.LogNet
+namespace OilCommunication.LogNet
 {
     /// <summary>
     /// 根据文件的大小来存储日志信息

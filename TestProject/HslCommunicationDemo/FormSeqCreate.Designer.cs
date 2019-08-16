@@ -1,4 +1,4 @@
-﻿namespace HslCommunicationDemo
+﻿namespace OilCommunicationDemo
 {
     partial class FormSeqCreate
     {
@@ -29,10 +29,10 @@
         private void InitializeComponent( )
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.userButton3 = new HslCommunication.Controls.UserButton();
-            this.userButton2 = new HslCommunication.Controls.UserButton();
+            this.userButton3 = new OilCommunication.Controls.UserButton();
+            this.userButton2 = new OilCommunication.Controls.UserButton();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.userButton1 = new HslCommunication.Controls.UserButton();
+            this.userButton1 = new OilCommunication.Controls.UserButton();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -154,10 +154,10 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private HslCommunication.Controls.UserButton userButton3;
-        private HslCommunication.Controls.UserButton userButton2;
+        private OilCommunication.Controls.UserButton userButton3;
+        private OilCommunication.Controls.UserButton userButton2;
         private System.Windows.Forms.TextBox textBox1;
-        private HslCommunication.Controls.UserButton userButton1;
+        private OilCommunication.Controls.UserButton userButton1;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.Label label2;
     }

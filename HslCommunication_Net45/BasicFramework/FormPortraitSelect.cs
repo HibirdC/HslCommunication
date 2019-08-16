@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace HslCommunication.BasicFramework
+namespace OilCommunication.BasicFramework
 {
     /// <summary>
     /// 一个正方形图形选择窗口，可以获取指定的分辨率

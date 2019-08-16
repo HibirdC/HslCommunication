@@ -1,4 +1,4 @@
-﻿namespace HslCommunicationDemo.Robot
+﻿namespace OilCommunicationDemo.Robot
 {
     partial class FormEfort
     {

@@ -1,4 +1,4 @@
-﻿namespace HslCommunicationDemo
+﻿namespace OilCommunicationDemo
 {
     partial class FormModbusAlien
     {
@@ -47,7 +47,7 @@
             this.label17 = new System.Windows.Forms.Label();
             this.textBox12 = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
-            this.userCurve1 = new HslCommunication.Controls.UserCurve();
+            this.userCurve1 = new OilCommunication.Controls.UserCurve();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.textBox11 = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
@@ -921,7 +921,7 @@
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.TextBox textBox12;
         private System.Windows.Forms.Label label15;
-        private HslCommunication.Controls.UserCurve userCurve1;
+        private OilCommunication.Controls.UserCurve userCurve1;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.TextBox textBox11;
         private System.Windows.Forms.Label label14;

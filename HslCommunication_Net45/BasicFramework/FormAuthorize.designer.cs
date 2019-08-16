@@ -1,6 +1,6 @@
 ﻿
 
-namespace HslCommunication.BasicFramework
+namespace OilCommunication.BasicFramework
 {
     partial class FormAuthorize
     {
@@ -35,7 +35,7 @@ namespace HslCommunication.BasicFramework
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.userButton1 = new HslCommunication.Controls.UserButton();
+            this.userButton1 = new OilCommunication.Controls.UserButton();
             this.SuspendLayout();
             // 
             // textBox2
@@ -134,7 +134,7 @@ namespace HslCommunication.BasicFramework
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private HslCommunication.Controls.UserButton userButton1;
+        private OilCommunication.Controls.UserButton userButton1;
         private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }

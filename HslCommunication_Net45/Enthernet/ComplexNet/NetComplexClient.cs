@@ -1,14 +1,14 @@
-﻿using HslCommunication.Core;
+﻿using OilCommunication.Core;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading;
-using HslCommunication.Core.Net;
+using OilCommunication.Core.Net;
 using System.Net;
 using System.Net.Sockets;
 
-namespace HslCommunication.Enthernet
+namespace OilCommunication.Enthernet
 {
 
     /// <summary>
@@ -19,7 +19,7 @@ namespace HslCommunication.Enthernet
     /// </remarks>
     /// <example>
     /// 此处贴上了Demo项目的服务器配置的示例代码
-    /// <code lang="cs" source="TestProject\HslCommunicationDemo\FormComplexNet.cs" region="NetComplexClient" title="NetComplexClient示例" />
+    /// <code lang="cs" source="TestProject\OilCommunicationDemo\FormComplexNet.cs" region="NetComplexClient" title="NetComplexClient示例" />
     /// </example>
     public class NetComplexClient : NetworkXBase
     {

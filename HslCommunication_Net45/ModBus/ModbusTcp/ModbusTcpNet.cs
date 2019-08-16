@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using HslCommunication.BasicFramework;
-using HslCommunication.Core;
-using HslCommunication.Core.IMessage;
-using HslCommunication.Core.Net;
-using HslCommunication.Core.Address;
+using OilCommunication.BasicFramework;
+using OilCommunication.Core;
+using OilCommunication.Core.IMessage;
+using OilCommunication.Core.Net;
+using OilCommunication.Core.Address;
 
-namespace HslCommunication.ModBus
+namespace OilCommunication.ModBus
 {
     /// <summary>
     /// Modbus-Tcp协议的客户端通讯类，方便的和服务器进行数据交互
@@ -50,7 +50,7 @@ namespace HslCommunication.ModBus
     /// </remarks>
     /// <example>
     /// 基本的用法请参照下面的代码示例
-    /// <code lang="cs" source="HslCommunication_Net45.Test\Documentation\Samples\Modbus\Modbus.cs" region="Example1" title="Modbus示例" />
+    /// <code lang="cs" source="OilCommunication_Net45.Test\Documentation\Samples\Modbus\Modbus.cs" region="Example1" title="Modbus示例" />
     /// </example>
     public class ModbusTcpNet : NetworkDeviceBase<ModbusTcpMessage, ReverseWordTransform>
     {
@@ -499,7 +499,7 @@ namespace HslCommunication.ModBus
         /// </remarks>
         /// <example>
         /// 此处演示批量读取的示例
-        /// <code lang="cs" source="HslCommunication_Net45.Test\Documentation\Samples\Modbus\Modbus.cs" region="ReadExample1" title="Read示例" />
+        /// <code lang="cs" source="OilCommunication_Net45.Test\Documentation\Samples\Modbus\Modbus.cs" region="ReadExample1" title="Read示例" />
         /// </example>
         public override OperateResult<byte[]> Read( string address, ushort length )
         {
@@ -583,7 +583,7 @@ namespace HslCommunication.ModBus
         /// </remarks>
         /// <example>
         /// 此处演示批量写入的示例
-        /// <code lang="cs" source="HslCommunication_Net45.Test\Documentation\Samples\Modbus\Modbus.cs" region="WriteExample1" title="Write示例" />
+        /// <code lang="cs" source="OilCommunication_Net45.Test\Documentation\Samples\Modbus\Modbus.cs" region="WriteExample1" title="Write示例" />
         /// </example>
         public override OperateResult Write( string address, byte[] value )
         {

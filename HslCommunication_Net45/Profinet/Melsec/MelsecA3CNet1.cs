@@ -1,11 +1,11 @@
-﻿using HslCommunication.Core;
-using HslCommunication.Serial;
+﻿using OilCommunication.Core;
+using OilCommunication.Serial;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace HslCommunication.Profinet.Melsec
+namespace OilCommunication.Profinet.Melsec
 {
     /// <summary>
     /// 基于Qna 兼容3C帧的格式一的通讯，具体的地址需要参照三菱的基本地址

@@ -6,12 +6,12 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-using HslCommunication.Profinet;
+using OilCommunication.Profinet;
 using System.Threading;
-using HslCommunication.Profinet.Melsec;
-using HslCommunication;
+using OilCommunication.Profinet.Melsec;
+using OilCommunication;
 
-namespace HslCommunicationDemo
+namespace OilCommunicationDemo
 {
     public partial class FormMelsec3C : Form
     {
@@ -339,10 +339,10 @@ namespace HslCommunicationDemo
 
         private void button26_Click( object sender, EventArgs e )
         {
-            OperateResult<byte[]> read = melsecA3C.ReadBase( HslCommunication.BasicFramework.SoftBasic.HexStringToBytes( textBox13.Text ) );
+            OperateResult<byte[]> read = melsecA3C.ReadBase( OilCommunication.BasicFramework.SoftBasic.HexStringToBytes( textBox13.Text ) );
             if (read.IsSuccess)
             {
-                textBox11.Text = "Result：" + HslCommunication.BasicFramework.SoftBasic.ByteToHexString( read.Content );
+                textBox11.Text = "Result：" + OilCommunication.BasicFramework.SoftBasic.ByteToHexString( read.Content );
             }
             else
             {
@@ -450,7 +450,7 @@ namespace HslCommunicationDemo
             melsecA3C.WriteCustomer( "D100", new UserType( ) );
 
             // Sets an instance operation for the log.
-            melsecA3C.LogNet = new HslCommunication.LogNet.LogNetSingle( Application.StartupPath + "\\Logs.txt" );
+            melsecA3C.LogNet = new OilCommunication.LogNet.LogNetSingle( Application.StartupPath + "\\Logs.txt" );
         }
 
         #endregion

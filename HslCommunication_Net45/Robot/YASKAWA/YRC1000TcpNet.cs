@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net.Sockets;
 using System.Text;
-using HslCommunication.Core;
-using HslCommunication.Core.IMessage;
-using HslCommunication.Core.Net;
+using OilCommunication.Core;
+using OilCommunication.Core.IMessage;
+using OilCommunication.Core.Net;
 
-namespace HslCommunication.Robot.YASKAWA
+namespace OilCommunication.Robot.YASKAWA
 {
     /// <summary>
     /// 安川机器人的Ethernet 服务器功能的通讯类

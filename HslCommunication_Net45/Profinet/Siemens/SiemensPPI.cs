@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using HslCommunication.Serial;
+using OilCommunication.Serial;
 #if Net45
 using System.Threading.Tasks;
 #endif
 
-namespace HslCommunication.Profinet.Siemens
+namespace OilCommunication.Profinet.Siemens
 {
     /// <summary>
     /// 西门子的PPI协议，适用于s7-200plc，注意，本类库有个致命的风险需要注意，由于本类库的每次通讯分成2次操作，故而不支持多线程同时读写，当发生线程竞争的时候，会导致数据异常，
@@ -18,7 +18,7 @@ namespace HslCommunication.Profinet.Siemens
     /// 
     /// 注意：M地址范围有限 0-31地址
     /// </remarks>
-    public class SiemensPPI : SerialDeviceBase<HslCommunication.Core.ReverseBytesTransform>
+    public class SiemensPPI : SerialDeviceBase<OilCommunication.Core.ReverseBytesTransform>
     {
         #region Constructor
 

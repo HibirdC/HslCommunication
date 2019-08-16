@@ -6,12 +6,12 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-using HslCommunication.Profinet;
-using HslCommunication;
-using HslCommunication.ModBus;
+using OilCommunication.Profinet;
+using OilCommunication;
+using OilCommunication.ModBus;
 using System.Threading;
 
-namespace HslCommunicationDemo
+namespace OilCommunicationDemo
 {
     public partial class FormLSisServer : Form
     {
@@ -134,7 +134,7 @@ namespace HslCommunicationDemo
         #region Server Start
 
 
-        private HslCommunication.Profinet.LSIS.LSisServer lSisServer;
+        private OilCommunication.Profinet.LSIS.LSisServer lSisServer;
 
         private void button1_Click( object sender, EventArgs e )
         {
@@ -148,8 +148,8 @@ namespace HslCommunicationDemo
             try
             {
 
-                lSisServer = new HslCommunication.Profinet.LSIS.LSisServer( );                       // 实例化对象
-                //lSisServer.LogNet = new HslCommunication.LogNet.LogNetSingle( "logs.txt" );                  // 配置日志信息
+                lSisServer = new OilCommunication.Profinet.LSIS.LSisServer( );                       // 实例化对象
+                //lSisServer.LogNet = new OilCommunication.LogNet.LogNetSingle( "logs.txt" );                  // 配置日志信息
                 //lSisServer.LogNet.BeforeSaveToFile += LogNet_BeforeSaveToFile;
                 lSisServer.OnDataReceived += BusTcpServer_OnDataReceived;
                 
@@ -196,7 +196,7 @@ namespace HslCommunicationDemo
                 return;
             }
 
-            textBox1.AppendText( "Received：" + HslCommunication.BasicFramework.SoftBasic.ByteToHexString( receive, ' ' ) + Environment.NewLine );
+            textBox1.AppendText( "Received：" + OilCommunication.BasicFramework.SoftBasic.ByteToHexString( receive, ' ' ) + Environment.NewLine );
         }
 
         /// <summary>
@@ -204,13 +204,13 @@ namespace HslCommunicationDemo
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void LogNet_BeforeSaveToFile( object sender, HslCommunication.LogNet.HslEventArgs e )
+        private void LogNet_BeforeSaveToFile( object sender, OilCommunication.LogNet.HslEventArgs e )
         {
             try
             {
                 if (InvokeRequired)
                 {
-                    Invoke( new Action<object, HslCommunication.LogNet.HslEventArgs>( LogNet_BeforeSaveToFile ), sender, e );
+                    Invoke( new Action<object, OilCommunication.LogNet.HslEventArgs>( LogNet_BeforeSaveToFile ), sender, e );
                     return;
                 }
 
@@ -462,7 +462,7 @@ namespace HslCommunicationDemo
 
         private void linkLabel2_LinkClicked( object sender, LinkLabelLinkClickedEventArgs e )
         {
-            HslCommunication.BasicFramework.FormSupport form = new HslCommunication.BasicFramework.FormSupport( );
+            OilCommunication.BasicFramework.FormSupport form = new OilCommunication.BasicFramework.FormSupport( );
             form.ShowDialog( );
         }
 
@@ -476,11 +476,11 @@ namespace HslCommunicationDemo
                     OperateResult connect = lSisServer.ConnectHslAlientClient( form.IpAddress, form.Port, form.DTU );
                     if (connect.IsSuccess)
                     {
-                        MessageBox.Show( HslCommunication.StringResources.Language.ConnectedSuccess );
+                        MessageBox.Show( OilCommunication.StringResources.Language.ConnectedSuccess );
                     }
                     else
                     {
-                        MessageBox.Show( HslCommunication.StringResources.Language.ConnectedFailed + connect.Message );
+                        MessageBox.Show( OilCommunication.StringResources.Language.ConnectedFailed + connect.Message );
                     }
                 }
             }

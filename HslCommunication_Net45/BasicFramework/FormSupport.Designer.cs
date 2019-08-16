@@ -1,4 +1,4 @@
-﻿namespace HslCommunication.BasicFramework
+﻿namespace OilCommunication.BasicFramework
 {
     partial class FormSupport
     {
@@ -76,7 +76,7 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = global::HslCommunication.Properties.Resources.mm_facetoface_collect_qrcode_1525331158525;
+            this.pictureBox2.Image = global::OilCommunication.Properties.Resources.mm_facetoface_collect_qrcode_1525331158525;
             this.pictureBox2.Location = new System.Drawing.Point(375, 10);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox2.Name = "pictureBox2";
@@ -87,7 +87,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::HslCommunication.Properties.Resources.alipay;
+            this.pictureBox1.Image = global::OilCommunication.Properties.Resources.alipay;
             this.pictureBox1.Location = new System.Drawing.Point(35, 10);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox1.Name = "pictureBox1";

@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace HslCommunication.BasicFramework
+namespace OilCommunication.BasicFramework
 {
     /// <summary>
     /// 显示作者一些信息的类，应当在软件系统中提供一处链接显示原作者信息，或者以彩蛋方式实现

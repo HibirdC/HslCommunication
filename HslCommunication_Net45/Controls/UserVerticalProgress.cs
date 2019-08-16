@@ -8,7 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.Drawing.Drawing2D;
 
-namespace HslCommunication.Controls
+namespace OilCommunication.Controls
 {
     /// <summary>
     /// 一个直立的进度条控件，满足不同的情况使用

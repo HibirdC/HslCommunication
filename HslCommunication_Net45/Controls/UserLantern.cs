@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace HslCommunication.Controls
+namespace OilCommunication.Controls
 {
     /// <summary>
     /// 信号灯的控件类

@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace HslCommunicationDemo.Algorithms
+namespace OilCommunicationDemo.Algorithms
 {
     public partial class FourierTransform : Form
     {
@@ -82,7 +82,7 @@ namespace HslCommunicationDemo.Algorithms
 
             userCurve1.SetCurve( key: "A", isLeft: true, data: data.Select( m => (float)m ).ToArray( ), lineColor: Color.Red, thickness: 1f );
 
-            double[] trans = HslCommunication.Algorithms.Fourier.FFTHelper.FFT( data );
+            double[] trans = OilCommunication.Algorithms.Fourier.FFTHelper.FFT( data );
             
             userCurve2.ValueMaxLeft = (float)trans.Max( );
             userCurve2.ValueMaxRight = (float)trans.Max( );
@@ -101,7 +101,7 @@ namespace HslCommunicationDemo.Algorithms
 
             userCurve4.SetCurve( key: "A", isLeft: true, data: data.Select( m => (float)m ).ToArray( ), lineColor: Color.Red, thickness: 1f );
 
-            double[] trans = HslCommunication.Algorithms.Fourier.FFTHelper.FFT( data );
+            double[] trans = OilCommunication.Algorithms.Fourier.FFTHelper.FFT( data );
 
             userCurve3.ValueMaxLeft = (float)trans.Max( );
             userCurve3.ValueMaxRight = (float)trans.Max( );
@@ -122,7 +122,7 @@ namespace HslCommunicationDemo.Algorithms
 
             userCurve6.SetCurve( key: "A", isLeft: true, data: data.Select( m => (float)m ).ToArray( ), lineColor: Color.Red, thickness: 1f );
 
-            double[] trans = HslCommunication.Algorithms.Fourier.FFTHelper.FFT( data );
+            double[] trans = OilCommunication.Algorithms.Fourier.FFTHelper.FFT( data );
 
             userCurve5.ValueMaxLeft = (float)trans.Max( );
             userCurve5.ValueMaxRight = (float)trans.Max( );
@@ -137,7 +137,7 @@ namespace HslCommunicationDemo.Algorithms
                 data[i] = 5;
             }
 
-            using (FormImage form = new FormImage( HslCommunication.Algorithms.Fourier.FFTHelper.GetFFTImage( data, 1000, 600, Color.Blue ) ))
+            using (FormImage form = new FormImage( OilCommunication.Algorithms.Fourier.FFTHelper.GetFFTImage( data, 1000, 600, Color.Blue ) ))
             {
                 form.ShowDialog( );
             }
@@ -154,7 +154,7 @@ namespace HslCommunicationDemo.Algorithms
                 data[i] = 5 * Math.Sin( i * Math.PI / 128 ) + 5 + 0.5f * Math.Cos( i * 8 * Math.PI / 128 );
             }
 
-            using (FormImage form = new FormImage( HslCommunication.Algorithms.Fourier.FFTHelper.GetFFTImage( data, 1000, 600, Color.Blue ) ))
+            using (FormImage form = new FormImage( OilCommunication.Algorithms.Fourier.FFTHelper.GetFFTImage( data, 1000, 600, Color.Blue ) ))
             {
                 form.ShowDialog( );
             }
@@ -171,7 +171,7 @@ namespace HslCommunicationDemo.Algorithms
                 }
             }
 
-            using (FormImage form = new FormImage( HslCommunication.Algorithms.Fourier.FFTHelper.GetFFTImage( data, 1000, 600, Color.Blue ) ))
+            using (FormImage form = new FormImage( OilCommunication.Algorithms.Fourier.FFTHelper.GetFFTImage( data, 1000, 600, Color.Blue ) ))
             {
                 form.ShowDialog( );
             }

@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using HslCommunication.Core.Net;
+using OilCommunication.Core.Net;
 using System.Net;
 using System.Net.Sockets;
 
-namespace HslCommunication.Enthernet
+namespace OilCommunication.Enthernet
 {
 
     /// <summary>
@@ -17,7 +17,7 @@ namespace HslCommunication.Enthernet
     /// </remarks>
     /// <example>
     /// 此处贴上了Demo项目的服务器配置的示例代码
-    /// <code lang="cs" source="TestProject\HslCommunicationDemo\FormPushNet.cs" region="FormPushNet" title="NetPushClient示例" />
+    /// <code lang="cs" source="TestProject\OilCommunicationDemo\FormPushNet.cs" region="FormPushNet" title="NetPushClient示例" />
     /// </example>
     public class NetPushClient : NetworkXBase
     {

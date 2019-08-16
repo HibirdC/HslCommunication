@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using HslCommunication.LogNet;
+using OilCommunication.LogNet;
 using System.Net.Sockets;
 using System.IO;
 using System.Threading;
 using System.Net;
-using HslCommunication.Core.IMessage;
-using HslCommunication.BasicFramework;
+using OilCommunication.Core.IMessage;
+using OilCommunication.BasicFramework;
 
 #if (NET451 || NETSTANDARD2_0)
 using System.Threading.Tasks;
@@ -23,7 +23,7 @@ using System.Threading.Tasks;
  * 
  *************************************************************************************/
 
-namespace HslCommunication.Core.Net
+namespace OilCommunication.Core.Net
 {
     /// <summary>
     /// 本系统所有网络类的基类，该类为抽象类，无法进行实例化
@@ -57,8 +57,8 @@ namespace HslCommunication.Core.Net
         /// 只要实例化即可以记录日志，实例化的对象需要实现接口 <see cref="ILogNet"/> ，本组件提供了三个日志记录类，你可以实现基于 <see cref="ILogNet"/>  的对象。</remarks>
         /// <example>
         /// 如下的实例化适用于所有的Network及其派生类，以下举两个例子，三菱的设备类及服务器类
-        /// <code lang="cs" source="HslCommunication_Net45.Test\Documentation\Samples\Core\NetworkBase.cs" region="LogNetExample1" title="LogNet示例" />
-        /// <code lang="cs" source="HslCommunication_Net45.Test\Documentation\Samples\Core\NetworkBase.cs" region="LogNetExample2" title="LogNet示例" />
+        /// <code lang="cs" source="OilCommunication_Net45.Test\Documentation\Samples\Core\NetworkBase.cs" region="LogNetExample1" title="LogNet示例" />
+        /// <code lang="cs" source="OilCommunication_Net45.Test\Documentation\Samples\Core\NetworkBase.cs" region="LogNetExample2" title="LogNet示例" />
         /// </example>
         public ILogNet   LogNet { get; set; }
 
@@ -70,8 +70,8 @@ namespace HslCommunication.Core.Net
         /// </remarks>
         /// <example>
         /// 此处以 <see cref="Enthernet.NetSimplifyServer"/> 服务器类及 <see cref="Enthernet.NetSimplifyClient"/> 客户端类的令牌设置举例
-        /// <code lang="cs" source="HslCommunication_Net45.Test\Documentation\Samples\Core\NetworkBase.cs" region="TokenClientExample" title="Client示例" />
-        /// <code lang="cs" source="HslCommunication_Net45.Test\Documentation\Samples\Core\NetworkBase.cs" region="TokenServerExample" title="Server示例" />
+        /// <code lang="cs" source="OilCommunication_Net45.Test\Documentation\Samples\Core\NetworkBase.cs" region="TokenClientExample" title="Client示例" />
+        /// <code lang="cs" source="OilCommunication_Net45.Test\Documentation\Samples\Core\NetworkBase.cs" region="TokenServerExample" title="Server示例" />
         /// </example>
         public Guid Token { get; set; }
 
@@ -598,7 +598,7 @@ namespace HslCommunication.Core.Net
         /// <param name="port">端口号</param>
         /// <returns>返回套接字的封装结果对象</returns>
         /// <example>
-        /// <code lang="cs" source="HslCommunication_Net45.Test\Documentation\Samples\Core\NetworkBase.cs" region="CreateSocketAndConnectExample" title="创建连接示例" />
+        /// <code lang="cs" source="OilCommunication_Net45.Test\Documentation\Samples\Core\NetworkBase.cs" region="CreateSocketAndConnectExample" title="创建连接示例" />
         /// </example>
         protected OperateResult<Socket> CreateSocketAndConnect( string ipAddress, int port )
         {
@@ -614,7 +614,7 @@ namespace HslCommunication.Core.Net
         /// <param name="timeOut">连接的超时时间</param>
         /// <returns>返回套接字的封装结果对象</returns>
         /// <example>
-        /// <code lang="cs" source="HslCommunication_Net45.Test\Documentation\Samples\Core\NetworkBase.cs" region="CreateSocketAndConnectExample" title="创建连接示例" />
+        /// <code lang="cs" source="OilCommunication_Net45.Test\Documentation\Samples\Core\NetworkBase.cs" region="CreateSocketAndConnectExample" title="创建连接示例" />
         /// </example>
         protected OperateResult<Socket> CreateSocketAndConnect( string ipAddress, int port, int timeOut )
         {
@@ -629,7 +629,7 @@ namespace HslCommunication.Core.Net
         /// <param name="timeOut">连接的超时时间</param>
         /// <returns>返回套接字的封装结果对象</returns>
         /// <example>
-        /// <code lang="cs" source="HslCommunication_Net45.Test\Documentation\Samples\Core\NetworkBase.cs" region="CreateSocketAndConnectExample" title="创建连接示例" />
+        /// <code lang="cs" source="OilCommunication_Net45.Test\Documentation\Samples\Core\NetworkBase.cs" region="CreateSocketAndConnectExample" title="创建连接示例" />
         /// </example>
         protected OperateResult<Socket> CreateSocketAndConnect( IPEndPoint endPoint, int timeOut )
         {

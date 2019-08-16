@@ -6,12 +6,12 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-using HslCommunication;
-using HslCommunication.Profinet.Panasonic;
+using OilCommunication;
+using OilCommunication.Profinet.Panasonic;
 using System.Threading;
 using System.IO.Ports;
 
-namespace HslCommunicationDemo
+namespace OilCommunicationDemo
 {
     public partial class FormPanasonicMew : Form
     {
@@ -346,7 +346,7 @@ namespace HslCommunicationDemo
                 OperateResult<byte[]> read = panasonicMewtocol.Read( textBox6.Text , ushort.Parse( textBox9.Text ) );
                 if (read.IsSuccess)
                 {
-                    textBox10.Text = "结果：" + HslCommunication.BasicFramework.SoftBasic.ByteToHexString( read.Content );
+                    textBox10.Text = "结果：" + OilCommunication.BasicFramework.SoftBasic.ByteToHexString( read.Content );
                 }
                 else
                 {
@@ -370,10 +370,10 @@ namespace HslCommunicationDemo
         {
             try
             {
-                OperateResult<byte[]> read = panasonicMewtocol.ReadBase( HslCommunication.Serial.SoftCRC16.CRC16(HslCommunication.BasicFramework.SoftBasic.HexStringToBytes( textBox13.Text )) );
+                OperateResult<byte[]> read = panasonicMewtocol.ReadBase( OilCommunication.Serial.SoftCRC16.CRC16(OilCommunication.BasicFramework.SoftBasic.HexStringToBytes( textBox13.Text )) );
                 if (read.IsSuccess)
                 {
-                    textBox11.Text = "结果：" + HslCommunication.BasicFramework.SoftBasic.ByteToHexString( read.Content );
+                    textBox11.Text = "结果：" + OilCommunication.BasicFramework.SoftBasic.ByteToHexString( read.Content );
                 }
                 else
                 {
@@ -471,7 +471,7 @@ namespace HslCommunicationDemo
                 string err = write.Message;
             }
 
-            HslCommunication.Core.IByteTransform ByteTransform = new HslCommunication.Core.ReverseWordTransform( );
+            OilCommunication.Core.IByteTransform ByteTransform = new OilCommunication.Core.ReverseWordTransform( );
         }
 
 

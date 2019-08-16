@@ -6,12 +6,12 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-using HslCommunication.Profinet;
+using OilCommunication.Profinet;
 using System.Threading;
-using HslCommunication.Profinet.Panasonic;
-using HslCommunication;
+using OilCommunication.Profinet.Panasonic;
+using OilCommunication;
 
-namespace HslCommunicationDemo
+namespace OilCommunicationDemo
 {
     public partial class FormPanasonicBinary : Form
     {
@@ -148,7 +148,7 @@ namespace HslCommunicationDemo
                 OperateResult connect = panasonic_net.ConnectServer( );
                 if (connect.IsSuccess)
                 {
-                    MessageBox.Show( HslCommunication.StringResources.Language.ConnectedSuccess );
+                    MessageBox.Show( OilCommunication.StringResources.Language.ConnectedSuccess );
                     button2.Enabled = true;
                     button1.Enabled = false;
                     panel2.Enabled = true;
@@ -156,7 +156,7 @@ namespace HslCommunicationDemo
                 }
                 else
                 {
-                    MessageBox.Show( HslCommunication.StringResources.Language.ConnectedFailed );
+                    MessageBox.Show( OilCommunication.StringResources.Language.ConnectedFailed );
                 }
             }
             catch (Exception ex)
@@ -323,10 +323,10 @@ namespace HslCommunicationDemo
 
         private void button26_Click( object sender, EventArgs e )
         {
-            OperateResult<byte[]> read = panasonic_net.ReadFromCoreServer( HslCommunication.BasicFramework.SoftBasic.HexStringToBytes( textBox13.Text ) );
+            OperateResult<byte[]> read = panasonic_net.ReadFromCoreServer( OilCommunication.BasicFramework.SoftBasic.HexStringToBytes( textBox13.Text ) );
             if (read.IsSuccess)
             {
-                textBox11.Text = "Result：" + HslCommunication.BasicFramework.SoftBasic.ByteToHexString( read.Content );
+                textBox11.Text = "Result：" + OilCommunication.BasicFramework.SoftBasic.ByteToHexString( read.Content );
             }
             else
             {
@@ -434,7 +434,7 @@ namespace HslCommunicationDemo
             panasonic_net.WriteCustomer( "D100", new UserType( ) );
 
             // Sets an instance operation for the log.
-            panasonic_net.LogNet = new HslCommunication.LogNet.LogNetSingle( Application.StartupPath + "\\Logs.txt" );
+            panasonic_net.LogNet = new OilCommunication.LogNet.LogNetSingle( Application.StartupPath + "\\Logs.txt" );
         }
         
         #endregion

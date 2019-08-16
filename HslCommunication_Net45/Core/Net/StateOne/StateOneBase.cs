@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 
-namespace HslCommunication.Core.Net
+namespace OilCommunication.Core.Net
 {
     /// <summary>
     /// 异步消息的对象

@@ -6,10 +6,10 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-using HslCommunication.Enthernet;
-using HslCommunication;
+using OilCommunication.Enthernet;
+using OilCommunication;
 
-namespace HslCommunicationDemo
+namespace OilCommunicationDemo
 {
     #region FormPushNet
 
@@ -99,7 +99,7 @@ namespace HslCommunicationDemo
             }
             catch (Exception ex)
             {
-                HslCommunication.BasicFramework.SoftBasic.ShowExceptionMessage( ex );
+                OilCommunication.BasicFramework.SoftBasic.ShowExceptionMessage( ex );
             }
         }
     }

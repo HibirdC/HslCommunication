@@ -1,4 +1,4 @@
-﻿namespace HslCommunicationDemo.Control
+﻿namespace OilCommunicationDemo.Control
 {
     partial class FormPipe
     {
@@ -28,23 +28,23 @@
         /// </summary>
         private void InitializeComponent( )
         {
-            this.userPipe9 = new HslCommunication.Controls.UserPipe();
-            this.userPipe8 = new HslCommunication.Controls.UserPipe();
-            this.userPipe7 = new HslCommunication.Controls.UserPipe();
-            this.userPipe6 = new HslCommunication.Controls.UserPipe();
-            this.userPipe5 = new HslCommunication.Controls.UserPipe();
-            this.userPipe4 = new HslCommunication.Controls.UserPipe();
-            this.userPipe3 = new HslCommunication.Controls.UserPipe();
-            this.userCurve1 = new HslCommunication.Controls.UserCurve();
-            this.userBottle1 = new HslCommunication.Controls.UserBottle();
-            this.userBottle7 = new HslCommunication.Controls.UserBottle();
-            this.userBottle6 = new HslCommunication.Controls.UserBottle();
-            this.userBottle5 = new HslCommunication.Controls.UserBottle();
-            this.userBottle4 = new HslCommunication.Controls.UserBottle();
-            this.userBottle3 = new HslCommunication.Controls.UserBottle();
-            this.userBottle2 = new HslCommunication.Controls.UserBottle();
-            this.userPipe2 = new HslCommunication.Controls.UserPipe();
-            this.userPipe1 = new HslCommunication.Controls.UserPipe();
+            this.userPipe9 = new OilCommunication.Controls.UserPipe();
+            this.userPipe8 = new OilCommunication.Controls.UserPipe();
+            this.userPipe7 = new OilCommunication.Controls.UserPipe();
+            this.userPipe6 = new OilCommunication.Controls.UserPipe();
+            this.userPipe5 = new OilCommunication.Controls.UserPipe();
+            this.userPipe4 = new OilCommunication.Controls.UserPipe();
+            this.userPipe3 = new OilCommunication.Controls.UserPipe();
+            this.userCurve1 = new OilCommunication.Controls.UserCurve();
+            this.userBottle1 = new OilCommunication.Controls.UserBottle();
+            this.userBottle7 = new OilCommunication.Controls.UserBottle();
+            this.userBottle6 = new OilCommunication.Controls.UserBottle();
+            this.userBottle5 = new OilCommunication.Controls.UserBottle();
+            this.userBottle4 = new OilCommunication.Controls.UserBottle();
+            this.userBottle3 = new OilCommunication.Controls.UserBottle();
+            this.userBottle2 = new OilCommunication.Controls.UserBottle();
+            this.userPipe2 = new OilCommunication.Controls.UserPipe();
+            this.userPipe1 = new OilCommunication.Controls.UserPipe();
             this.SuspendLayout();
             // 
             // userPipe9
@@ -286,22 +286,22 @@
 
         #endregion
 
-        private HslCommunication.Controls.UserBottle userBottle1;
-        private HslCommunication.Controls.UserBottle userBottle2;
-        private HslCommunication.Controls.UserBottle userBottle3;
-        private HslCommunication.Controls.UserBottle userBottle4;
-        private HslCommunication.Controls.UserBottle userBottle5;
-        private HslCommunication.Controls.UserBottle userBottle6;
-        private HslCommunication.Controls.UserBottle userBottle7;
-        private HslCommunication.Controls.UserPipe userPipe1;
-        private HslCommunication.Controls.UserPipe userPipe2;
-        private HslCommunication.Controls.UserCurve userCurve1;
-        private HslCommunication.Controls.UserPipe userPipe3;
-        private HslCommunication.Controls.UserPipe userPipe4;
-        private HslCommunication.Controls.UserPipe userPipe5;
-        private HslCommunication.Controls.UserPipe userPipe6;
-        private HslCommunication.Controls.UserPipe userPipe7;
-        private HslCommunication.Controls.UserPipe userPipe8;
-        private HslCommunication.Controls.UserPipe userPipe9;
+        private OilCommunication.Controls.UserBottle userBottle1;
+        private OilCommunication.Controls.UserBottle userBottle2;
+        private OilCommunication.Controls.UserBottle userBottle3;
+        private OilCommunication.Controls.UserBottle userBottle4;
+        private OilCommunication.Controls.UserBottle userBottle5;
+        private OilCommunication.Controls.UserBottle userBottle6;
+        private OilCommunication.Controls.UserBottle userBottle7;
+        private OilCommunication.Controls.UserPipe userPipe1;
+        private OilCommunication.Controls.UserPipe userPipe2;
+        private OilCommunication.Controls.UserCurve userCurve1;
+        private OilCommunication.Controls.UserPipe userPipe3;
+        private OilCommunication.Controls.UserPipe userPipe4;
+        private OilCommunication.Controls.UserPipe userPipe5;
+        private OilCommunication.Controls.UserPipe userPipe6;
+        private OilCommunication.Controls.UserPipe userPipe7;
+        private OilCommunication.Controls.UserPipe userPipe8;
+        private OilCommunication.Controls.UserPipe userPipe9;
     }
 }

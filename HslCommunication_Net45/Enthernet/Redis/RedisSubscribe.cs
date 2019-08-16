@@ -1,4 +1,4 @@
-﻿using HslCommunication.Core.Net;
+﻿using OilCommunication.Core.Net;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,7 +6,7 @@ using System.Net;
 using System.Net.Sockets;
 using System.Text;
 
-namespace HslCommunication.Enthernet.Redis
+namespace OilCommunication.Enthernet.Redis
 {
     /// <summary>
     /// Redis协议的订阅操作，一个对象订阅一个或是多个频道的信息

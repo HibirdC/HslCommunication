@@ -6,12 +6,12 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-using HslCommunication.Profinet;
+using OilCommunication.Profinet;
 using System.Threading;
-using HslCommunication;
-using HslCommunication.Profinet.Omron;
+using OilCommunication;
+using OilCommunication.Profinet.Omron;
 
-namespace HslCommunicationDemo
+namespace OilCommunicationDemo
 {
     public partial class FormOmronUdp : Form
     {
@@ -37,8 +37,8 @@ namespace HslCommunicationDemo
 
         private void FormSiemens_Load( object sender, EventArgs e )
         {
-            comboBox1.DataSource = HslCommunication.BasicFramework.SoftBasic.GetEnumValues<HslCommunication.Core.DataFormat>( );
-            comboBox1.SelectedItem = HslCommunication.Core.DataFormat.CDAB;
+            comboBox1.DataSource = OilCommunication.BasicFramework.SoftBasic.GetEnumValues<OilCommunication.Core.DataFormat>( );
+            comboBox1.SelectedItem = OilCommunication.Core.DataFormat.CDAB;
             panel2.Enabled = false;
 
             Language( Program.Language );
@@ -145,7 +145,7 @@ namespace HslCommunicationDemo
             omronFinsUdp = new OmronFinsUdp( textBox1.Text, port );
             panel2.Enabled = true;
             omronFinsUdp.SA1 = SA1;
-            omronFinsUdp.ByteTransform.DataFormat = (HslCommunication.Core.DataFormat)comboBox1.SelectedItem;
+            omronFinsUdp.ByteTransform.DataFormat = (OilCommunication.Core.DataFormat)comboBox1.SelectedItem;
 
             userControlCurve1.ReadWriteNet = omronFinsUdp;
 
@@ -300,10 +300,10 @@ namespace HslCommunicationDemo
 
         private void button26_Click( object sender, EventArgs e )
         {
-            OperateResult<byte[]> read = omronFinsUdp.ReadFromCoreServer( HslCommunication.BasicFramework.SoftBasic.HexStringToBytes( textBox13.Text ) );
+            OperateResult<byte[]> read = omronFinsUdp.ReadFromCoreServer( OilCommunication.BasicFramework.SoftBasic.HexStringToBytes( textBox13.Text ) );
             if (read.IsSuccess)
             {
-                textBox11.Text = "Result：" + HslCommunication.BasicFramework.SoftBasic.ByteToHexString( read.Content );
+                textBox11.Text = "Result：" + OilCommunication.BasicFramework.SoftBasic.ByteToHexString( read.Content );
             }
             else
             {

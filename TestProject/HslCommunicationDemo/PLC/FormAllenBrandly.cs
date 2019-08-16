@@ -6,12 +6,12 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-using HslCommunication.Profinet;
+using OilCommunication.Profinet;
 using System.Threading;
-using HslCommunication.Profinet.AllenBradley;
-using HslCommunication;
+using OilCommunication.Profinet.AllenBradley;
+using OilCommunication;
 
-namespace HslCommunicationDemo
+namespace OilCommunicationDemo
 {
     public partial class FormAllenBrandly : Form
     {
@@ -153,7 +153,7 @@ namespace HslCommunicationDemo
                 OperateResult connect = allenBradleyNet.ConnectServer( );
                 if (connect.IsSuccess)
                 {
-                    MessageBox.Show( HslCommunication.StringResources.Language.ConnectedSuccess );
+                    MessageBox.Show( OilCommunication.StringResources.Language.ConnectedSuccess );
                     button2.Enabled = true;
                     button1.Enabled = false;
                     panel2.Enabled = true;
@@ -161,7 +161,7 @@ namespace HslCommunicationDemo
                 }
                 else
                 {
-                    MessageBox.Show( HslCommunication.StringResources.Language.ConnectedFailed + connect.ToMessageShowString( ) );
+                    MessageBox.Show( OilCommunication.StringResources.Language.ConnectedFailed + connect.ToMessageShowString( ) );
                 }
             }
             catch (Exception ex)
@@ -197,7 +197,7 @@ namespace HslCommunicationDemo
         }
         private void button_read_byte_Click( object sender, EventArgs e )
         {
-            // MessageBox.Show( HslCommunication.BasicFramework.SoftBasic.ByteToHexString( allenBradleyNet.BuildReadCommand( textBox3.Text ).Content, ' ' ) );
+            // MessageBox.Show( OilCommunication.BasicFramework.SoftBasic.ByteToHexString( allenBradleyNet.BuildReadCommand( textBox3.Text ).Content, ' ' ) );
             // 读取byte变量
             DemoUtils.ReadResultRender( allenBradleyNet.ReadByte( textBox3.Text ), textBox3.Text, textBox4 );
         }
@@ -262,7 +262,7 @@ namespace HslCommunicationDemo
         private void button24_Click( object sender, EventArgs e )
         {
             // bool写入
-            //MessageBox.Show( HslCommunication.BasicFramework.SoftBasic.ByteToHexString( allenBradleyNet.BuildWriteCommand( textBox8.Text, AllenBradleyHelper.CIP_Type_Bool, (bool.Parse( textBox7.Text ) ?
+            //MessageBox.Show( OilCommunication.BasicFramework.SoftBasic.ByteToHexString( allenBradleyNet.BuildWriteCommand( textBox8.Text, AllenBradleyHelper.CIP_Type_Bool, (bool.Parse( textBox7.Text ) ?
             //   new byte[] { 0xFF } : new byte[] { 0x00 }) ).Content , ' ') );
             DemoUtils.WriteResultRender( () => allenBradleyNet.Write( textBox8.Text, bool.Parse( textBox7.Text ) ), textBox8.Text );
         }
@@ -347,18 +347,18 @@ namespace HslCommunicationDemo
                 OperateResult<byte[]> read = null;
                 if (!textBox6.Text.Contains( ";" ))
                 {
-                    //MessageBox.Show( HslCommunication.BasicFramework.SoftBasic.ByteToHexString( allenBradleyNet.BuildReadCommand( new string[] { textBox6.Text }, new int[] { int.Parse(textBox9.Text) } ).Content , ' ') );
+                    //MessageBox.Show( OilCommunication.BasicFramework.SoftBasic.ByteToHexString( allenBradleyNet.BuildReadCommand( new string[] { textBox6.Text }, new int[] { int.Parse(textBox9.Text) } ).Content , ' ') );
                     read = allenBradleyNet.Read( textBox6.Text, ushort.Parse( textBox9.Text ) );
                 }
                 else
                 {
-                    //MessageBox.Show( HslCommunication.BasicFramework.SoftBasic.ByteToHexString( allenBradleyNet.BuildReadCommand( textBox6.Text.Split( ';' ) ).Content, ' ' ) );
+                    //MessageBox.Show( OilCommunication.BasicFramework.SoftBasic.ByteToHexString( allenBradleyNet.BuildReadCommand( textBox6.Text.Split( ';' ) ).Content, ' ' ) );
                     read = allenBradleyNet.Read( textBox6.Text.Split(';' ));
                 }
 
                 if (read.IsSuccess)
                 {
-                    textBox10.Text = "Result：" + HslCommunication.BasicFramework.SoftBasic.ByteToHexString( read.Content );
+                    textBox10.Text = "Result：" + OilCommunication.BasicFramework.SoftBasic.ByteToHexString( read.Content );
                 }
                 else
                 {
@@ -378,10 +378,10 @@ namespace HslCommunicationDemo
 
         private void button26_Click( object sender, EventArgs e )
         {
-            OperateResult<byte[]> read = allenBradleyNet.ReadFromCoreServer( HslCommunication.BasicFramework.SoftBasic.HexStringToBytes( textBox13.Text ) );
+            OperateResult<byte[]> read = allenBradleyNet.ReadFromCoreServer( OilCommunication.BasicFramework.SoftBasic.HexStringToBytes( textBox13.Text ) );
             if (read.IsSuccess)
             {
-                textBox11.Text = "Result：" + HslCommunication.BasicFramework.SoftBasic.ByteToHexString( read.Content );
+                textBox11.Text = "Result：" + OilCommunication.BasicFramework.SoftBasic.ByteToHexString( read.Content );
             }
             else
             {

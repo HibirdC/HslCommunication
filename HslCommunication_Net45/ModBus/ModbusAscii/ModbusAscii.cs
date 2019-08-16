@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace HslCommunication.ModBus
+namespace OilCommunication.ModBus
 {
     /// <summary>
     /// Modbus-Ascii通讯协议的类库，基于rtu类库完善过来
@@ -45,11 +45,11 @@ namespace HslCommunication.ModBus
     /// </remarks>
     /// <example>
     /// 基本的用法请参照下面的代码示例，初始化部分的代码省略
-    /// <code lang="cs" source="HslCommunication_Net45.Test\Documentation\Samples\Modbus\ModbusAsciiExample.cs" region="Example" title="Modbus示例" />
+    /// <code lang="cs" source="OilCommunication_Net45.Test\Documentation\Samples\Modbus\ModbusAsciiExample.cs" region="Example" title="Modbus示例" />
     /// 复杂的读取数据的代码示例如下：
-    /// <code lang="cs" source="HslCommunication_Net45.Test\Documentation\Samples\Modbus\ModbusAsciiExample.cs" region="ReadExample" title="read示例" />
+    /// <code lang="cs" source="OilCommunication_Net45.Test\Documentation\Samples\Modbus\ModbusAsciiExample.cs" region="ReadExample" title="read示例" />
     /// 写入数据的代码如下：
-    /// <code lang="cs" source="HslCommunication_Net45.Test\Documentation\Samples\Modbus\ModbusAsciiExample.cs" region="WriteExample" title="write示例" />
+    /// <code lang="cs" source="OilCommunication_Net45.Test\Documentation\Samples\Modbus\ModbusAsciiExample.cs" region="WriteExample" title="write示例" />
     /// </example>
     public class ModbusAscii : ModbusRtu
     {

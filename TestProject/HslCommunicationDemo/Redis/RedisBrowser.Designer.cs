@@ -1,4 +1,4 @@
-﻿namespace HslCommunicationDemo.Redis
+﻿namespace OilCommunicationDemo.Redis
 {
     partial class RedisBrowser
     {

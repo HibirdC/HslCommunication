@@ -1,5 +1,5 @@
-﻿using HslCommunication;
-using HslCommunication.Enthernet;
+﻿using OilCommunication;
+using OilCommunication.Enthernet;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,7 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace HslCommunicationDemo
+namespace OilCommunicationDemo
 {
     public partial class FormFileClient : Form
     {
@@ -61,7 +61,7 @@ namespace HslCommunicationDemo
                 ConnectTimeOut = 5000,                                                      // 连接的超时时间
                 ServerIpEndPoint = new System.Net.IPEndPoint( ipAddress, port ),            // 服务器的地址
                 Token = new Guid( textBox15.Text ),                                         // 指定一个令牌（不是必须的）
-                LogNet = new HslCommunication.LogNet.LogNetSingle( Application.StartupPath + "\\Logs\\log.txt" ),   // 指定日志（不是必须的）
+                LogNet = new OilCommunication.LogNet.LogNetSingle( Application.StartupPath + "\\Logs\\log.txt" ),   // 指定日志（不是必须的）
             };
 
             // 创建本地文件存储的路径
@@ -438,7 +438,7 @@ namespace HslCommunicationDemo
             }
             catch (Exception ex)
             {
-                HslCommunication.BasicFramework.SoftBasic.ShowExceptionMessage( ex );
+                OilCommunication.BasicFramework.SoftBasic.ShowExceptionMessage( ex );
             }
         }
     }

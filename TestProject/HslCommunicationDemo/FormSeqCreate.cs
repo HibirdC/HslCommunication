@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace HslCommunicationDemo
+namespace OilCommunicationDemo
 {
     #region FormSeqCreate
 
@@ -20,11 +20,11 @@ namespace HslCommunicationDemo
         }
 
 
-        private HslCommunication.BasicFramework.SoftNumericalOrder softNumericalOrder;    // 序列号生成器对象
+        private OilCommunication.BasicFramework.SoftNumericalOrder softNumericalOrder;    // 序列号生成器对象
 
         private void FormSeqCreate_Load( object sender, EventArgs e )
         {
-            softNumericalOrder = new HslCommunication.BasicFramework.SoftNumericalOrder(
+            softNumericalOrder = new OilCommunication.BasicFramework.SoftNumericalOrder(
                    "ABC",              // "ABC201711090000001" 中的ABC前缀，代码中仍然可以更改ABC
                    "yyyyMMdd",         // "ABC201711090000001" 中的20171109，可以格式化时间，也可以为""，也可以设置为"yyyyMMddHHmmss";
                    7,                  // "ABC201711090000001" 中的0000001，总位数为7，然后不停的累加，即使日期时间变了，也不停的累加，最好长度设置大一些
@@ -75,7 +75,7 @@ namespace HslCommunicationDemo
             }
             catch (Exception ex)
             {
-                HslCommunication.BasicFramework.SoftBasic.ShowExceptionMessage( ex );
+                OilCommunication.BasicFramework.SoftBasic.ShowExceptionMessage( ex );
             }
         }
     }

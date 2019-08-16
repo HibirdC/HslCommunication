@@ -23,7 +23,7 @@ using System.Drawing.Drawing2D;
 
 
 
-namespace HslCommunication.Controls
+namespace OilCommunication.Controls
 {
     /// <summary>
     /// 一个时钟控件

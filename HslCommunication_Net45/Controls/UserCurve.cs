@@ -19,7 +19,7 @@ using System.Windows.Forms;
  *******************************************************************************/
 
 
-namespace HslCommunication.Controls
+namespace OilCommunication.Controls
 {
     /// <summary>
     /// 曲线控件对象

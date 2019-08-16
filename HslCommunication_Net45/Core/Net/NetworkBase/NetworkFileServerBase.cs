@@ -4,12 +4,12 @@ using System.IO;
 using System.Linq;
 using System.Net.Sockets;
 using System.Text;
-using HslCommunication.BasicFramework;
-using HslCommunication.Enthernet;
-using HslCommunication.LogNet;
+using OilCommunication.BasicFramework;
+using OilCommunication.Enthernet;
+using OilCommunication.LogNet;
 using System.Threading;
 
-namespace HslCommunication.Core.Net
+namespace OilCommunication.Core.Net
 {
     /// <summary>
     /// 文件服务器类的基类，为直接映射文件模式和间接映射文件模式提供基础的方法支持

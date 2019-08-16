@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace HslCommunicationDemo
+namespace OilCommunicationDemo
 {
     public partial class FormAuthor : Form
     {

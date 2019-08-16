@@ -1,15 +1,15 @@
-﻿using HslCommunication.Core;
+﻿using OilCommunication.Core;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Net;
 using System.Net.Sockets;
-using HslCommunication;
+using OilCommunication;
 using System.IO;
-using HslCommunication.Core.Net;
+using OilCommunication.Core.Net;
 
-namespace HslCommunication.Enthernet
+namespace OilCommunication.Enthernet
 {
 
     /// <summary>

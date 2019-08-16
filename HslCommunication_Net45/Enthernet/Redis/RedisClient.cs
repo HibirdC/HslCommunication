@@ -1,6 +1,6 @@
-﻿using HslCommunication.Core;
-using HslCommunication.Core.IMessage;
-using HslCommunication.Core.Net;
+﻿using OilCommunication.Core;
+using OilCommunication.Core.IMessage;
+using OilCommunication.Core.Net;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,7 +8,7 @@ using System.Net.Sockets;
 using System.Text;
 using System.IO;
 
-namespace HslCommunication.Enthernet.Redis
+namespace OilCommunication.Enthernet.Redis
 {
     /// <summary>
     /// 这是一个redis的客户端类，支持读取，写入，发布订阅，但是不支持订阅，如果需要订阅，请使用另一个类
@@ -77,7 +77,7 @@ namespace HslCommunication.Enthernet.Redis
         /// </remarks>
         /// <example>
         /// 假设你有一个自己的socket连接了设备，本组件可以直接基于该socket实现modbus读取，三菱读取，西门子读取等等操作，前提是该服务器支持多协议，虽然这个需求听上去比较变态，但本组件支持这样的操作。
-        /// <code lang="cs" source="HslCommunication_Net45.Test\Documentation\Samples\Core\NetworkDoubleBase.cs" region="ReadFromCoreServerExample1" title="ReadFromCoreServer示例" />
+        /// <code lang="cs" source="OilCommunication_Net45.Test\Documentation\Samples\Core\NetworkDoubleBase.cs" region="ReadFromCoreServerExample1" title="ReadFromCoreServer示例" />
         /// </example>
         /// <returns>接收的完整的报文信息</returns>
         public override OperateResult<byte[]> ReadFromCoreServer( Socket socket, byte[] send )

@@ -6,11 +6,11 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-using HslCommunication.Enthernet;
-using HslCommunication;
+using OilCommunication.Enthernet;
+using OilCommunication;
 using System.Net;
 
-namespace HslCommunicationDemo
+namespace OilCommunicationDemo
 {
     #region NetComplexClient
 
@@ -74,7 +74,7 @@ namespace HslCommunicationDemo
             }
             catch (Exception ex)
             {
-                HslCommunication.BasicFramework.SoftBasic.ShowExceptionMessage( ex );
+                OilCommunication.BasicFramework.SoftBasic.ShowExceptionMessage( ex );
             }
         }
 
@@ -89,13 +89,13 @@ namespace HslCommunicationDemo
             label11.Text =  text;
         }
 
-        private void ComplexClient_AcceptByte( HslCommunication.Core.Net.AppSession session, NetHandle handle, byte[] data )
+        private void ComplexClient_AcceptByte( OilCommunication.Core.Net.AppSession session, NetHandle handle, byte[] data )
         {
             // 接收字节数据，
-            ShowTextInfo( $"[{session.IpEndPoint}] [{handle}] {HslCommunication.BasicFramework.SoftBasic.ByteToHexString( data )}" );
+            ShowTextInfo( $"[{session.IpEndPoint}] [{handle}] {OilCommunication.BasicFramework.SoftBasic.ByteToHexString( data )}" );
         }
 
-        private void ComplexClient_AcceptString( HslCommunication.Core.Net.AppSession session, NetHandle handle, string data )
+        private void ComplexClient_AcceptString( OilCommunication.Core.Net.AppSession session, NetHandle handle, string data )
         {
             // 接收字符串
             ShowTextInfo( $"[{session.IpEndPoint}] [{handle}] {data}" );
@@ -213,7 +213,7 @@ namespace HslCommunicationDemo
             }
             catch (Exception ex)
             {
-                HslCommunication.BasicFramework.SoftBasic.ShowExceptionMessage( ex );
+                OilCommunication.BasicFramework.SoftBasic.ShowExceptionMessage( ex );
             }
         }
     }

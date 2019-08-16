@@ -4,7 +4,7 @@ using System.IO;
 using System.Diagnostics;
 using System.Threading;
 
-namespace HslCommunication.ModBus
+namespace OilCommunication.ModBus
 {
     class ModbusLog
     {

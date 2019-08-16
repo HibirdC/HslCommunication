@@ -1,11 +1,11 @@
-﻿using HslCommunication.BasicFramework;
+﻿using OilCommunication.BasicFramework;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Sockets;
 using System.Text;
 
-namespace HslCommunication.Core.Net
+namespace OilCommunication.Core.Net
 {
     /// <summary>
     /// 所有虚拟的数据服务器的基类
@@ -344,9 +344,9 @@ namespace HslCommunication.Core.Net
         /// </remarks>
         /// <example>
         /// 此处演示三菱的读取示例，先定义一个类，实现<see cref="IDataTransfer"/>接口
-        /// <code lang="cs" source="HslCommunication_Net45.Test\Documentation\Samples\Core\NetworkDeviceBase.cs" region="IDataTransfer Example" title="DataMy示例" />
+        /// <code lang="cs" source="OilCommunication_Net45.Test\Documentation\Samples\Core\NetworkDeviceBase.cs" region="IDataTransfer Example" title="DataMy示例" />
         /// 接下来就可以实现数据的读取了
-        /// <code lang="cs" source="HslCommunication_Net45.Test\Documentation\Samples\Core\NetworkDeviceBase.cs" region="ReadCustomerExample" title="ReadCustomer示例" />
+        /// <code lang="cs" source="OilCommunication_Net45.Test\Documentation\Samples\Core\NetworkDeviceBase.cs" region="ReadCustomerExample" title="ReadCustomer示例" />
         /// </example>
         public OperateResult<T> ReadCustomer<T>( string address ) where T : IDataTransfer, new()
         {
@@ -379,9 +379,9 @@ namespace HslCommunication.Core.Net
         /// </remarks>
         /// <example>
         /// 此处演示三菱的读取示例，先定义一个类，实现<see cref="IDataTransfer"/>接口
-        /// <code lang="cs" source="HslCommunication_Net45.Test\Documentation\Samples\Core\NetworkDeviceBase.cs" region="IDataTransfer Example" title="DataMy示例" />
+        /// <code lang="cs" source="OilCommunication_Net45.Test\Documentation\Samples\Core\NetworkDeviceBase.cs" region="IDataTransfer Example" title="DataMy示例" />
         /// 接下来就可以实现数据的读取了
-        /// <code lang="cs" source="HslCommunication_Net45.Test\Documentation\Samples\Core\NetworkDeviceBase.cs" region="WriteCustomerExample" title="WriteCustomer示例" />
+        /// <code lang="cs" source="OilCommunication_Net45.Test\Documentation\Samples\Core\NetworkDeviceBase.cs" region="WriteCustomerExample" title="WriteCustomer示例" />
         /// </example>
         public OperateResult WriteCustomer<T>( string address, T data ) where T : IDataTransfer, new()
         {
@@ -401,7 +401,7 @@ namespace HslCommunication.Core.Net
         /// <returns>带成功标志的结果数据对象</returns>
         /// <example>
         /// 以下为三菱的连接对象示例，其他的设备读写情况参照下面的代码：
-        /// <code lang="cs" source="HslCommunication_Net45.Test\Documentation\Samples\Core\NetworkDeviceBase.cs" region="ReadInt16" title="Int16类型示例" />
+        /// <code lang="cs" source="OilCommunication_Net45.Test\Documentation\Samples\Core\NetworkDeviceBase.cs" region="ReadInt16" title="Int16类型示例" />
         /// </example>
         public OperateResult<short> ReadInt16( string address )
         {
@@ -417,7 +417,7 @@ namespace HslCommunication.Core.Net
         /// <returns>带成功标志的结果数据对象</returns>
         /// <example>
         /// 以下为三菱的连接对象示例，其他的设备读写情况参照下面的代码：
-        /// <code lang="cs" source="HslCommunication_Net45.Test\Documentation\Samples\Core\NetworkDeviceBase.cs" region="ReadInt16Array" title="Int16类型示例" />
+        /// <code lang="cs" source="OilCommunication_Net45.Test\Documentation\Samples\Core\NetworkDeviceBase.cs" region="ReadInt16Array" title="Int16类型示例" />
         /// </example>
         public virtual OperateResult<short[]> ReadInt16( string address, ushort length )
         {
@@ -431,7 +431,7 @@ namespace HslCommunication.Core.Net
         /// <returns>带成功标志的结果数据对象</returns>
         /// <example>
         /// 以下为三菱的连接对象示例，其他的设备读写情况参照下面的代码：
-        /// <code lang="cs" source="HslCommunication_Net45.Test\Documentation\Samples\Core\NetworkDeviceBase.cs" region="ReadUInt16" title="UInt16类型示例" />
+        /// <code lang="cs" source="OilCommunication_Net45.Test\Documentation\Samples\Core\NetworkDeviceBase.cs" region="ReadUInt16" title="UInt16类型示例" />
         /// </example>
         public OperateResult<ushort> ReadUInt16( string address )
         {
@@ -447,7 +447,7 @@ namespace HslCommunication.Core.Net
         /// <returns>带成功标志的结果数据对象</returns>
         /// <example>
         /// 以下为三菱的连接对象示例，其他的设备读写情况参照下面的代码：
-        /// <code lang="cs" source="HslCommunication_Net45.Test\Documentation\Samples\Core\NetworkDeviceBase.cs" region="ReadUInt16Array" title="UInt16类型示例" />
+        /// <code lang="cs" source="OilCommunication_Net45.Test\Documentation\Samples\Core\NetworkDeviceBase.cs" region="ReadUInt16Array" title="UInt16类型示例" />
         /// </example>
         public virtual OperateResult<ushort[]> ReadUInt16( string address, ushort length )
         {
@@ -463,7 +463,7 @@ namespace HslCommunication.Core.Net
         /// <returns>带成功标志的结果数据对象</returns>
         /// <example>
         /// 以下为三菱的连接对象示例，其他的设备读写情况参照下面的代码：
-        /// <code lang="cs" source="HslCommunication_Net45.Test\Documentation\Samples\Core\NetworkDeviceBase.cs" region="ReadInt32" title="Int32类型示例" />
+        /// <code lang="cs" source="OilCommunication_Net45.Test\Documentation\Samples\Core\NetworkDeviceBase.cs" region="ReadInt32" title="Int32类型示例" />
         /// </example>
         public OperateResult<int> ReadInt32( string address )
         {
@@ -478,7 +478,7 @@ namespace HslCommunication.Core.Net
         /// <returns>带成功标志的结果数据对象</returns>
         /// <example>
         /// 以下为三菱的连接对象示例，其他的设备读写情况参照下面的代码：
-        /// <code lang="cs" source="HslCommunication_Net45.Test\Documentation\Samples\Core\NetworkDeviceBase.cs" region="ReadInt32Array" title="Int32类型示例" />
+        /// <code lang="cs" source="OilCommunication_Net45.Test\Documentation\Samples\Core\NetworkDeviceBase.cs" region="ReadInt32Array" title="Int32类型示例" />
         /// </example>
         public virtual OperateResult<int[]> ReadInt32( string address, ushort length )
         {
@@ -492,7 +492,7 @@ namespace HslCommunication.Core.Net
         /// <returns>带成功标志的结果数据对象</returns>
         /// <example>
         /// 以下为三菱的连接对象示例，其他的设备读写情况参照下面的代码：
-        /// <code lang="cs" source="HslCommunication_Net45.Test\Documentation\Samples\Core\NetworkDeviceBase.cs" region="ReadUInt32" title="UInt32类型示例" />
+        /// <code lang="cs" source="OilCommunication_Net45.Test\Documentation\Samples\Core\NetworkDeviceBase.cs" region="ReadUInt32" title="UInt32类型示例" />
         /// </example>
         public OperateResult<uint> ReadUInt32( string address )
         {
@@ -507,7 +507,7 @@ namespace HslCommunication.Core.Net
         /// <returns>带成功标志的结果数据对象</returns>
         /// <example>
         /// 以下为三菱的连接对象示例，其他的设备读写情况参照下面的代码：
-        /// <code lang="cs" source="HslCommunication_Net45.Test\Documentation\Samples\Core\NetworkDeviceBase.cs" region="ReadUInt32Array" title="UInt32类型示例" />
+        /// <code lang="cs" source="OilCommunication_Net45.Test\Documentation\Samples\Core\NetworkDeviceBase.cs" region="ReadUInt32Array" title="UInt32类型示例" />
         /// </example>
         public virtual OperateResult<uint[]> ReadUInt32( string address, ushort length )
         {
@@ -521,7 +521,7 @@ namespace HslCommunication.Core.Net
         /// <returns>带成功标志的结果数据对象</returns>
         /// <example>
         /// 以下为三菱的连接对象示例，其他的设备读写情况参照下面的代码：
-        /// <code lang="cs" source="HslCommunication_Net45.Test\Documentation\Samples\Core\NetworkDeviceBase.cs" region="ReadFloat" title="Float类型示例" />
+        /// <code lang="cs" source="OilCommunication_Net45.Test\Documentation\Samples\Core\NetworkDeviceBase.cs" region="ReadFloat" title="Float类型示例" />
         /// </example>
         public OperateResult<float> ReadFloat( string address )
         {
@@ -537,7 +537,7 @@ namespace HslCommunication.Core.Net
         /// <returns>带成功标志的结果数据对象</returns>
         /// <example>
         /// 以下为三菱的连接对象示例，其他的设备读写情况参照下面的代码：
-        /// <code lang="cs" source="HslCommunication_Net45.Test\Documentation\Samples\Core\NetworkDeviceBase.cs" region="ReadFloatArray" title="Float类型示例" />
+        /// <code lang="cs" source="OilCommunication_Net45.Test\Documentation\Samples\Core\NetworkDeviceBase.cs" region="ReadFloatArray" title="Float类型示例" />
         /// </example>
         public virtual OperateResult<float[]> ReadFloat( string address, ushort length )
         {
@@ -551,7 +551,7 @@ namespace HslCommunication.Core.Net
         /// <returns>带成功标志的结果数据对象</returns>
         /// <example>
         /// 以下为三菱的连接对象示例，其他的设备读写情况参照下面的代码：
-        /// <code lang="cs" source="HslCommunication_Net45.Test\Documentation\Samples\Core\NetworkDeviceBase.cs" region="ReadInt64" title="Int64类型示例" />
+        /// <code lang="cs" source="OilCommunication_Net45.Test\Documentation\Samples\Core\NetworkDeviceBase.cs" region="ReadInt64" title="Int64类型示例" />
         /// </example>
         public OperateResult<long> ReadInt64( string address )
         {
@@ -566,7 +566,7 @@ namespace HslCommunication.Core.Net
         /// <returns>带成功标志的结果数据对象</returns>
         /// <example>
         /// 以下为三菱的连接对象示例，其他的设备读写情况参照下面的代码：
-        /// <code lang="cs" source="HslCommunication_Net45.Test\Documentation\Samples\Core\NetworkDeviceBase.cs" region="ReadInt64Array" title="Int64类型示例" />
+        /// <code lang="cs" source="OilCommunication_Net45.Test\Documentation\Samples\Core\NetworkDeviceBase.cs" region="ReadInt64Array" title="Int64类型示例" />
         /// </example>
         public virtual OperateResult<long[]> ReadInt64( string address, ushort length )
         {
@@ -580,7 +580,7 @@ namespace HslCommunication.Core.Net
         /// <returns>带成功标志的结果数据对象</returns>
         /// <example>
         /// 以下为三菱的连接对象示例，其他的设备读写情况参照下面的代码：
-        /// <code lang="cs" source="HslCommunication_Net45.Test\Documentation\Samples\Core\NetworkDeviceBase.cs" region="ReadUInt64" title="UInt64类型示例" />
+        /// <code lang="cs" source="OilCommunication_Net45.Test\Documentation\Samples\Core\NetworkDeviceBase.cs" region="ReadUInt64" title="UInt64类型示例" />
         /// </example>
         public OperateResult<ulong> ReadUInt64( string address )
         {
@@ -595,7 +595,7 @@ namespace HslCommunication.Core.Net
         /// <returns>带成功标志的结果数据对象</returns>
         /// <example>
         /// 以下为三菱的连接对象示例，其他的设备读写情况参照下面的代码：
-        /// <code lang="cs" source="HslCommunication_Net45.Test\Documentation\Samples\Core\NetworkDeviceBase.cs" region="ReadUInt64Array" title="UInt64类型示例" />
+        /// <code lang="cs" source="OilCommunication_Net45.Test\Documentation\Samples\Core\NetworkDeviceBase.cs" region="ReadUInt64Array" title="UInt64类型示例" />
         /// </example>
         public virtual OperateResult<ulong[]> ReadUInt64( string address, ushort length )
         {
@@ -609,7 +609,7 @@ namespace HslCommunication.Core.Net
         /// <returns>带成功标志的结果数据对象</returns>
         /// <example>
         /// 以下为三菱的连接对象示例，其他的设备读写情况参照下面的代码：
-        /// <code lang="cs" source="HslCommunication_Net45.Test\Documentation\Samples\Core\NetworkDeviceBase.cs" region="ReadDouble" title="Double类型示例" />
+        /// <code lang="cs" source="OilCommunication_Net45.Test\Documentation\Samples\Core\NetworkDeviceBase.cs" region="ReadDouble" title="Double类型示例" />
         /// </example>
         public OperateResult<double> ReadDouble( string address )
         {
@@ -624,7 +624,7 @@ namespace HslCommunication.Core.Net
         /// <returns>带成功标志的结果数据对象</returns>
         /// <example>
         /// 以下为三菱的连接对象示例，其他的设备读写情况参照下面的代码：
-        /// <code lang="cs" source="HslCommunication_Net45.Test\Documentation\Samples\Core\NetworkDeviceBase.cs" region="ReadDoubleArray" title="Double类型示例" />
+        /// <code lang="cs" source="OilCommunication_Net45.Test\Documentation\Samples\Core\NetworkDeviceBase.cs" region="ReadDoubleArray" title="Double类型示例" />
         /// </example>
         public virtual OperateResult<double[]> ReadDouble( string address, ushort length )
         {
@@ -639,7 +639,7 @@ namespace HslCommunication.Core.Net
         /// <returns>带成功标志的结果数据对象</returns>
         /// <example>
         /// 以下为三菱的连接对象示例，其他的设备读写情况参照下面的代码：
-        /// <code lang="cs" source="HslCommunication_Net45.Test\Documentation\Samples\Core\NetworkDeviceBase.cs" region="ReadString" title="String类型示例" />
+        /// <code lang="cs" source="OilCommunication_Net45.Test\Documentation\Samples\Core\NetworkDeviceBase.cs" region="ReadString" title="String类型示例" />
         /// </example>
         public OperateResult<string> ReadString( string address, ushort length )
         {
@@ -658,7 +658,7 @@ namespace HslCommunication.Core.Net
         /// <returns>是否写入成功的结果对象</returns>
         /// <example>
         /// 以下为三菱的连接对象示例，其他的设备读写情况参照下面的代码：
-        /// <code lang="cs" source="HslCommunication_Net45.Test\Documentation\Samples\Core\NetworkDeviceBase.cs" region="WriteInt16Array" title="Int16类型示例" />
+        /// <code lang="cs" source="OilCommunication_Net45.Test\Documentation\Samples\Core\NetworkDeviceBase.cs" region="WriteInt16Array" title="Int16类型示例" />
         /// </example>
         public virtual OperateResult Write( string address, short[] values )
         {
@@ -673,7 +673,7 @@ namespace HslCommunication.Core.Net
         /// <returns>是否写入成功的结果对象</returns>
         /// <example>
         /// 以下为三菱的连接对象示例，其他的设备读写情况参照下面的代码：
-        /// <code lang="cs" source="HslCommunication_Net45.Test\Documentation\Samples\Core\NetworkDeviceBase.cs" region="WriteInt16" title="Int16类型示例" />
+        /// <code lang="cs" source="OilCommunication_Net45.Test\Documentation\Samples\Core\NetworkDeviceBase.cs" region="WriteInt16" title="Int16类型示例" />
         /// </example>
         public OperateResult Write( string address, short value )
         {
@@ -693,7 +693,7 @@ namespace HslCommunication.Core.Net
         /// <returns>是否写入成功的结果对象</returns>
         /// <example>
         /// 以下为三菱的连接对象示例，其他的设备读写情况参照下面的代码：
-        /// <code lang="cs" source="HslCommunication_Net45.Test\Documentation\Samples\Core\NetworkDeviceBase.cs" region="WriteUInt16Array" title="UInt16类型示例" />
+        /// <code lang="cs" source="OilCommunication_Net45.Test\Documentation\Samples\Core\NetworkDeviceBase.cs" region="WriteUInt16Array" title="UInt16类型示例" />
         /// </example>
         public virtual OperateResult Write( string address, ushort[] values )
         {
@@ -709,7 +709,7 @@ namespace HslCommunication.Core.Net
         /// <returns>是否写入成功的结果对象</returns>
         /// <example>
         /// 以下为三菱的连接对象示例，其他的设备读写情况参照下面的代码：
-        /// <code lang="cs" source="HslCommunication_Net45.Test\Documentation\Samples\Core\NetworkDeviceBase.cs" region="WriteUInt16" title="UInt16类型示例" />
+        /// <code lang="cs" source="OilCommunication_Net45.Test\Documentation\Samples\Core\NetworkDeviceBase.cs" region="WriteUInt16" title="UInt16类型示例" />
         /// </example>
         public OperateResult Write( string address, ushort value )
         {
@@ -729,7 +729,7 @@ namespace HslCommunication.Core.Net
         /// <returns>是否写入成功的结果对象</returns>
         /// <example>
         /// 以下为三菱的连接对象示例，其他的设备读写情况参照下面的代码：
-        /// <code lang="cs" source="HslCommunication_Net45.Test\Documentation\Samples\Core\NetworkDeviceBase.cs" region="WriteInt32Array" title="Int32类型示例" />
+        /// <code lang="cs" source="OilCommunication_Net45.Test\Documentation\Samples\Core\NetworkDeviceBase.cs" region="WriteInt32Array" title="Int32类型示例" />
         /// </example>
         public virtual OperateResult Write( string address, int[] values )
         {
@@ -744,7 +744,7 @@ namespace HslCommunication.Core.Net
         /// <returns>是否写入成功的结果对象</returns>
         /// <example>
         /// 以下为三菱的连接对象示例，其他的设备读写情况参照下面的代码：
-        /// <code lang="cs" source="HslCommunication_Net45.Test\Documentation\Samples\Core\NetworkDeviceBase.cs" region="WriteInt32" title="Int32类型示例" />
+        /// <code lang="cs" source="OilCommunication_Net45.Test\Documentation\Samples\Core\NetworkDeviceBase.cs" region="WriteInt32" title="Int32类型示例" />
         /// </example>
         public OperateResult Write( string address, int value )
         {
@@ -763,7 +763,7 @@ namespace HslCommunication.Core.Net
         /// <returns>是否写入成功的结果对象</returns>
         /// <example>
         /// 以下为三菱的连接对象示例，其他的设备读写情况参照下面的代码：
-        /// <code lang="cs" source="HslCommunication_Net45.Test\Documentation\Samples\Core\NetworkDeviceBase.cs" region="WriteUInt32Array" title="UInt32类型示例" />
+        /// <code lang="cs" source="OilCommunication_Net45.Test\Documentation\Samples\Core\NetworkDeviceBase.cs" region="WriteUInt32Array" title="UInt32类型示例" />
         /// </example>
         public virtual OperateResult Write( string address, uint[] values )
         {
@@ -778,7 +778,7 @@ namespace HslCommunication.Core.Net
         /// <returns>是否写入成功的结果对象</returns>
         /// <example>
         /// 以下为三菱的连接对象示例，其他的设备读写情况参照下面的代码：
-        /// <code lang="cs" source="HslCommunication_Net45.Test\Documentation\Samples\Core\NetworkDeviceBase.cs" region="WriteUInt32" title="UInt32类型示例" />
+        /// <code lang="cs" source="OilCommunication_Net45.Test\Documentation\Samples\Core\NetworkDeviceBase.cs" region="WriteUInt32" title="UInt32类型示例" />
         /// </example>
         public OperateResult Write( string address, uint value )
         {
@@ -797,7 +797,7 @@ namespace HslCommunication.Core.Net
         /// <returns>返回写入结果</returns>
         /// <example>
         /// 以下为三菱的连接对象示例，其他的设备读写情况参照下面的代码：
-        /// <code lang="cs" source="HslCommunication_Net45.Test\Documentation\Samples\Core\NetworkDeviceBase.cs" region="WriteFloatArray" title="Float类型示例" />
+        /// <code lang="cs" source="OilCommunication_Net45.Test\Documentation\Samples\Core\NetworkDeviceBase.cs" region="WriteFloatArray" title="Float类型示例" />
         /// </example>
         public virtual OperateResult Write( string address, float[] values )
         {
@@ -812,7 +812,7 @@ namespace HslCommunication.Core.Net
         /// <returns>返回写入结果</returns>
         /// <example>
         /// 以下为三菱的连接对象示例，其他的设备读写情况参照下面的代码：
-        /// <code lang="cs" source="HslCommunication_Net45.Test\Documentation\Samples\Core\NetworkDeviceBase.cs" region="WriteFloat" title="Float类型示例" />
+        /// <code lang="cs" source="OilCommunication_Net45.Test\Documentation\Samples\Core\NetworkDeviceBase.cs" region="WriteFloat" title="Float类型示例" />
         /// </example>
         public OperateResult Write( string address, float value )
         {
@@ -832,7 +832,7 @@ namespace HslCommunication.Core.Net
         /// <returns>是否写入成功的结果对象</returns>
         /// <example>
         /// 以下为三菱的连接对象示例，其他的设备读写情况参照下面的代码：
-        /// <code lang="cs" source="HslCommunication_Net45.Test\Documentation\Samples\Core\NetworkDeviceBase.cs" region="WriteInt64Array" title="Int64类型示例" />
+        /// <code lang="cs" source="OilCommunication_Net45.Test\Documentation\Samples\Core\NetworkDeviceBase.cs" region="WriteInt64Array" title="Int64类型示例" />
         /// </example>
         public virtual OperateResult Write( string address, long[] values )
         {
@@ -847,7 +847,7 @@ namespace HslCommunication.Core.Net
         /// <returns>是否写入成功的结果对象</returns>
         /// <example>
         /// 以下为三菱的连接对象示例，其他的设备读写情况参照下面的代码：
-        /// <code lang="cs" source="HslCommunication_Net45.Test\Documentation\Samples\Core\NetworkDeviceBase.cs" region="WriteInt64" title="Int64类型示例" />
+        /// <code lang="cs" source="OilCommunication_Net45.Test\Documentation\Samples\Core\NetworkDeviceBase.cs" region="WriteInt64" title="Int64类型示例" />
         /// </example>
         public OperateResult Write( string address, long value )
         {
@@ -866,7 +866,7 @@ namespace HslCommunication.Core.Net
         /// <returns>是否写入成功的结果对象</returns>
         /// <example>
         /// 以下为三菱的连接对象示例，其他的设备读写情况参照下面的代码：
-        /// <code lang="cs" source="HslCommunication_Net45.Test\Documentation\Samples\Core\NetworkDeviceBase.cs" region="WriteUInt64Array" title="UInt64类型示例" />
+        /// <code lang="cs" source="OilCommunication_Net45.Test\Documentation\Samples\Core\NetworkDeviceBase.cs" region="WriteUInt64Array" title="UInt64类型示例" />
         /// </example>
         public virtual OperateResult Write( string address, ulong[] values )
         {
@@ -881,7 +881,7 @@ namespace HslCommunication.Core.Net
         /// <returns>是否写入成功的结果对象</returns>
         /// <example>
         /// 以下为三菱的连接对象示例，其他的设备读写情况参照下面的代码：
-        /// <code lang="cs" source="HslCommunication_Net45.Test\Documentation\Samples\Core\NetworkDeviceBase.cs" region="WriteUInt64" title="UInt64类型示例" />
+        /// <code lang="cs" source="OilCommunication_Net45.Test\Documentation\Samples\Core\NetworkDeviceBase.cs" region="WriteUInt64" title="UInt64类型示例" />
         /// </example>
         public OperateResult Write( string address, ulong value )
         {
@@ -900,7 +900,7 @@ namespace HslCommunication.Core.Net
         /// <returns>是否写入成功的结果对象</returns>
         /// <example>
         /// 以下为三菱的连接对象示例，其他的设备读写情况参照下面的代码：
-        /// <code lang="cs" source="HslCommunication_Net45.Test\Documentation\Samples\Core\NetworkDeviceBase.cs" region="WriteDoubleArray" title="Double类型示例" />
+        /// <code lang="cs" source="OilCommunication_Net45.Test\Documentation\Samples\Core\NetworkDeviceBase.cs" region="WriteDoubleArray" title="Double类型示例" />
         /// </example>
         public virtual OperateResult Write( string address, double[] values )
         {
@@ -915,7 +915,7 @@ namespace HslCommunication.Core.Net
         /// <returns>是否写入成功的结果对象</returns>
         /// <example>
         /// 以下为三菱的连接对象示例，其他的设备读写情况参照下面的代码：
-        /// <code lang="cs" source="HslCommunication_Net45.Test\Documentation\Samples\Core\NetworkDeviceBase.cs" region="WriteDouble" title="Double类型示例" />
+        /// <code lang="cs" source="OilCommunication_Net45.Test\Documentation\Samples\Core\NetworkDeviceBase.cs" region="WriteDouble" title="Double类型示例" />
         /// </example>
         public OperateResult Write( string address, double value )
         {
@@ -934,7 +934,7 @@ namespace HslCommunication.Core.Net
         /// <returns>是否写入成功的结果对象</returns>
         /// <example>
         /// 以下为三菱的连接对象示例，其他的设备读写情况参照下面的代码：
-        /// <code lang="cs" source="HslCommunication_Net45.Test\Documentation\Samples\Core\NetworkDeviceBase.cs" region="WriteString" title="String类型示例" />
+        /// <code lang="cs" source="OilCommunication_Net45.Test\Documentation\Samples\Core\NetworkDeviceBase.cs" region="WriteString" title="String类型示例" />
         /// </example>
         public virtual OperateResult Write( string address, string value )
         {
@@ -952,7 +952,7 @@ namespace HslCommunication.Core.Net
         /// <returns>是否写入成功的结果对象 -> Whether to write a successful result object</returns>
         /// <example>
         /// 以下为三菱的连接对象示例，其他的设备读写情况参照下面的代码：
-        /// <code lang="cs" source="HslCommunication_Net45.Test\Documentation\Samples\Core\NetworkDeviceBase.cs" region="WriteString2" title="String类型示例" />
+        /// <code lang="cs" source="OilCommunication_Net45.Test\Documentation\Samples\Core\NetworkDeviceBase.cs" region="WriteString2" title="String类型示例" />
         /// </example>
         public virtual OperateResult Write( string address, string value, int length )
         {

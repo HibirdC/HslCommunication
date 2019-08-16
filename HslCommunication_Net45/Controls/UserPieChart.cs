@@ -6,9 +6,9 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-using HslCommunication.Core;
+using OilCommunication.Core;
 
-namespace HslCommunication.Controls
+namespace OilCommunication.Controls
 {
 
 

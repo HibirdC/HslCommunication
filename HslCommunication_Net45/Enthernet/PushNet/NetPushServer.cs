@@ -1,10 +1,10 @@
-﻿using HslCommunication.Core.Net;
+﻿using OilCommunication.Core.Net;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Sockets;
 using System.Text;
-using HslCommunication.Core;
+using OilCommunication.Core;
 
 
 
@@ -19,7 +19,7 @@ using HslCommunication.Core;
 
 
 
-namespace HslCommunication.Enthernet
+namespace OilCommunication.Enthernet
 {
     /// <summary>
     /// 发布订阅服务器的类，支持按照关键字进行数据信息的订阅

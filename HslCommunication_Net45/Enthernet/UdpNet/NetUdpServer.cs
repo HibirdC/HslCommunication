@@ -4,10 +4,10 @@ using System.Linq;
 using System.Net;
 using System.Net.Sockets;
 using System.Text;
-using HslCommunication.Core;
-using HslCommunication.Core.Net;
+using OilCommunication.Core;
+using OilCommunication.Core.Net;
 
-namespace HslCommunication.Enthernet
+namespace OilCommunication.Enthernet
 {
     /// <summary>
     /// Udp网络的服务器端类

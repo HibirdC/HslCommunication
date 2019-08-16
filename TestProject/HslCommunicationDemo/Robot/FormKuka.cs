@@ -6,12 +6,12 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-using HslCommunication.Profinet;
+using OilCommunication.Profinet;
 using System.Threading;
-using HslCommunication.Robot.KUKA;
-using HslCommunication;
+using OilCommunication.Robot.KUKA;
+using OilCommunication;
 
-namespace HslCommunicationDemo
+namespace OilCommunicationDemo
 {
     public partial class FormKuka : Form
     {

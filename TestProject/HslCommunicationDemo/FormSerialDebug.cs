@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace HslCommunicationDemo
+namespace OilCommunicationDemo
 {
     public partial class FormSerialDebug : Form
     {
@@ -143,7 +143,7 @@ namespace HslCommunicationDemo
             }
             catch(Exception ex)
             {
-                HslCommunication.BasicFramework.SoftBasic.ShowExceptionMessage( ex );
+                OilCommunication.BasicFramework.SoftBasic.ShowExceptionMessage( ex );
             }
         }
 
@@ -173,7 +173,7 @@ namespace HslCommunicationDemo
                  string msg = string.Empty;
                  if(checkBox1.Checked)
                  {
-                     msg = HslCommunication.BasicFramework.SoftBasic.ByteToHexString( buffer, ' ' );
+                     msg = OilCommunication.BasicFramework.SoftBasic.ByteToHexString( buffer, ' ' );
                  }
                  else
                  {
@@ -199,7 +199,7 @@ namespace HslCommunicationDemo
             byte[] send = null;
             if(checkBox1.Checked)
             {
-                send = HslCommunication.BasicFramework.SoftBasic.HexStringToBytes( textBox5.Text );
+                send = OilCommunication.BasicFramework.SoftBasic.HexStringToBytes( textBox5.Text );
             }
             else
             {
@@ -210,7 +210,7 @@ namespace HslCommunicationDemo
             {
                 try
                 {
-                    send = HslCommunication.Serial.SoftCRC16.CRC16( send, Convert.ToByte( textBox3.Text, 16 ), Convert.ToByte( textBox4.Text, 16 ) );
+                    send = OilCommunication.Serial.SoftCRC16.CRC16( send, Convert.ToByte( textBox3.Text, 16 ), Convert.ToByte( textBox4.Text, 16 ) );
                 }
                 catch
                 {
@@ -224,11 +224,11 @@ namespace HslCommunicationDemo
                 // 显示发送信息
                 if(checkBox4.Checked)
                 {
-                    textBox6.AppendText( "[" + DateTime.Now.ToString( "yyyy-MM-dd HH:mm:ss.fff" ) + (Program.Language == 1 ? "][发]   " : "][S]   ") + HslCommunication.BasicFramework.SoftBasic.ByteToHexString( send,' ' ) + Environment.NewLine );
+                    textBox6.AppendText( "[" + DateTime.Now.ToString( "yyyy-MM-dd HH:mm:ss.fff" ) + (Program.Language == 1 ? "][发]   " : "][S]   ") + OilCommunication.BasicFramework.SoftBasic.ByteToHexString( send,' ' ) + Environment.NewLine );
                 }
                 else
                 {
-                    textBox6.AppendText( HslCommunication.BasicFramework.SoftBasic.ByteToHexString( send, ' ' ) + Environment.NewLine );
+                    textBox6.AppendText( OilCommunication.BasicFramework.SoftBasic.ByteToHexString( send, ' ' ) + Environment.NewLine );
                 }
             }
             SP_ReadData?.Write( send, 0, send.Length );
@@ -256,7 +256,7 @@ namespace HslCommunicationDemo
             }
             catch(Exception ex)
             {
-                HslCommunication.BasicFramework.SoftBasic.ShowExceptionMessage( ex );
+                OilCommunication.BasicFramework.SoftBasic.ShowExceptionMessage( ex );
             }
         }
 
@@ -268,7 +268,7 @@ namespace HslCommunicationDemo
             }
             catch (Exception ex)
             {
-                HslCommunication.BasicFramework.SoftBasic.ShowExceptionMessage( ex );
+                OilCommunication.BasicFramework.SoftBasic.ShowExceptionMessage( ex );
             }
         }
     }

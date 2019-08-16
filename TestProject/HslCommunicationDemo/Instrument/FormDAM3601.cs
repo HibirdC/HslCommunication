@@ -6,13 +6,13 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-using HslCommunication.Profinet;
-using HslCommunication;
-using HslCommunication.Instrument.Temperature;
+using OilCommunication.Profinet;
+using OilCommunication;
+using OilCommunication.Instrument.Temperature;
 using System.Threading;
 using System.IO.Ports;
 
-namespace HslCommunicationDemo
+namespace OilCommunicationDemo
 {
     public partial class FormDAM3601 : Form
     {
@@ -138,10 +138,10 @@ namespace HslCommunicationDemo
             {
                 switch (comboBox2.SelectedIndex)
                 {
-                    case 0: dAM3601.DataFormat = HslCommunication.Core.DataFormat.ABCD; break;
-                    case 1: dAM3601.DataFormat = HslCommunication.Core.DataFormat.BADC; break;
-                    case 2: dAM3601.DataFormat = HslCommunication.Core.DataFormat.CDAB; break;
-                    case 3: dAM3601.DataFormat = HslCommunication.Core.DataFormat.DCBA; break;
+                    case 0: dAM3601.DataFormat = OilCommunication.Core.DataFormat.ABCD; break;
+                    case 1: dAM3601.DataFormat = OilCommunication.Core.DataFormat.BADC; break;
+                    case 2: dAM3601.DataFormat = OilCommunication.Core.DataFormat.CDAB; break;
+                    case 3: dAM3601.DataFormat = OilCommunication.Core.DataFormat.DCBA; break;
                     default: break;
                 }
             }

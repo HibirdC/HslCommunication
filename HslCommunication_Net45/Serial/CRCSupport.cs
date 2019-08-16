@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace HslCommunication.Serial
+namespace OilCommunication.Serial
 {
     /// <summary>
     /// 用于CRC16验证的类，提供了标准的验证方法
@@ -13,9 +13,9 @@ namespace HslCommunication.Serial
     /// </remarks>
     /// <example>
     /// 先演示如何校验一串数据的CRC码
-    /// <code lang="cs" source="HslCommunication_Net45.Test\Documentation\Samples\Serial\SoftCRC16.cs" region="Example1" title="SoftCRC16示例" />
+    /// <code lang="cs" source="OilCommunication_Net45.Test\Documentation\Samples\Serial\SoftCRC16.cs" region="Example1" title="SoftCRC16示例" />
     /// 然后下面是如何生成你自己的CRC校验码
-    /// <code lang="cs" source="HslCommunication_Net45.Test\Documentation\Samples\Serial\SoftCRC16.cs" region="Example2" title="SoftCRC16示例" />
+    /// <code lang="cs" source="OilCommunication_Net45.Test\Documentation\Samples\Serial\SoftCRC16.cs" region="Example2" title="SoftCRC16示例" />
     /// </example>
     public class SoftCRC16
     {

@@ -6,11 +6,11 @@ using System.Net;
 using System.Net.Sockets;
 using System.IO;
 using System.Threading;
-using HslCommunication.BasicFramework;
-using HslCommunication.Enthernet;
-using HslCommunication.LogNet;
+using OilCommunication.BasicFramework;
+using OilCommunication.Enthernet;
+using OilCommunication.LogNet;
 
-namespace HslCommunication.Core
+namespace OilCommunication.Core
 {
     /*******************************************************************************
      * 
@@ -30,7 +30,7 @@ namespace HslCommunication.Core
     /// </remarks>
     /// <example>
     /// 一个接收的示例
-    /// <code lang="cs" source="HslCommunication_Net45.Test\Documentation\Samples\Core\NetSupport.cs" region="ReadBytesFromSocketExample2" title="ReadBytesFromSocket示例" />
+    /// <code lang="cs" source="OilCommunication_Net45.Test\Documentation\Samples\Core\NetSupport.cs" region="ReadBytesFromSocketExample2" title="ReadBytesFromSocket示例" />
     /// </example>
     public static class NetSupport
     {
@@ -98,9 +98,9 @@ namespace HslCommunication.Core
         /// <exception cref="System.Security.SecurityException"></exception>
         /// <example>
         /// 接收数据的举例，简单的接收20个字节长度的数据。
-        /// <code lang="cs" source="HslCommunication_Net45.Test\Documentation\Samples\Core\NetSupport.cs" region="ReadBytesFromSocketExample1" title="ReadBytesFromSocket示例" />
+        /// <code lang="cs" source="OilCommunication_Net45.Test\Documentation\Samples\Core\NetSupport.cs" region="ReadBytesFromSocketExample1" title="ReadBytesFromSocket示例" />
         /// 如何接收不定长度的数据呢？我们可以将一条数据拆分成2次接收，第一次是接收8个固定的字节，解析成长度，再接收真实的数据。
-        ///  <code lang="cs" source="HslCommunication_Net45.Test\Documentation\Samples\Core\NetSupport.cs" region="ReadBytesFromSocketExample3" title="ReadBytesFromSocket示例" />
+        ///  <code lang="cs" source="OilCommunication_Net45.Test\Documentation\Samples\Core\NetSupport.cs" region="ReadBytesFromSocketExample3" title="ReadBytesFromSocket示例" />
         /// </example>
         public static byte[] ReadBytesFromSocket( Socket socket, int receive )
         {
@@ -123,7 +123,7 @@ namespace HslCommunication.Core
         /// <exception cref="System.Security.SecurityException"></exception>
         /// <example>
         /// 接收数据的举例，输出报告，不根据百分比来产生报告，不回复接收进度。
-        /// <code lang="cs" source="HslCommunication_Net45.Test\Documentation\Samples\Core\NetSupport.cs" region="ReadBytesFromSocketExample2" title="ReadBytesFromSocket示例" />
+        /// <code lang="cs" source="OilCommunication_Net45.Test\Documentation\Samples\Core\NetSupport.cs" region="ReadBytesFromSocketExample2" title="ReadBytesFromSocket示例" />
         /// </example>
         public static byte[] ReadBytesFromSocket( Socket socket, int receive, Action<long, long> report, bool reportByPercent, bool response )
         {
@@ -236,7 +236,7 @@ namespace HslCommunication.Core
         /// <exception cref="System.Security.SecurityException"></exception>
         /// <example>
         /// 举例从socket读取数据，然后写入到文件流中
-        /// <code lang="cs" source="HslCommunication_Net45.Test\Documentation\Samples\Core\NetSupport.cs" region="WriteStreamFromSocketExample" title="WriteStreamFromSocket示例" />
+        /// <code lang="cs" source="OilCommunication_Net45.Test\Documentation\Samples\Core\NetSupport.cs" region="WriteStreamFromSocketExample" title="WriteStreamFromSocket示例" />
         /// </example>
         public static void WriteStreamFromSocket( Socket socket, Stream stream, long receive, Action<long, long> report, bool reportByPercent )
         {
@@ -286,7 +286,7 @@ namespace HslCommunication.Core
         /// <exception cref="ObjectDisposedException"></exception>
         /// <example>
         /// 举例从文件读取数据，然后写入到套接字中，相当于发送文件到socket
-        /// <code lang="cs" source="HslCommunication_Net45.Test\Documentation\Samples\Core\NetSupport.cs" region="WriteSocketFromStreamExample" title="WriteSocketFromStream示例" />
+        /// <code lang="cs" source="OilCommunication_Net45.Test\Documentation\Samples\Core\NetSupport.cs" region="WriteSocketFromStreamExample" title="WriteSocketFromStream示例" />
         /// </example>
         public static void WriteSocketFromStream( Socket socket, Stream stream, long length, Action<long, long> report, bool reportByPercent )
         {

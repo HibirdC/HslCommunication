@@ -1,11 +1,11 @@
-﻿using HslCommunication.Serial;
-using HslCommunication.Core;
+﻿using OilCommunication.Serial;
+using OilCommunication.Core;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace HslCommunication.Profinet.Melsec
+namespace OilCommunication.Profinet.Melsec
 {
     /// <summary>
     /// 三菱PLC的计算机链接协议，适用的PLC型号参考备注

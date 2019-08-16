@@ -1,6 +1,6 @@
-﻿using HslCommunication.Core.Address;
-using HslCommunication.ModBus;
-using HslCommunication.Serial;
+﻿using OilCommunication.Core.Address;
+using OilCommunication.ModBus;
+using OilCommunication.Serial;
 using System;
 using System.Collections.Generic;
 using System.IO.Ports;
@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 
-namespace HslCommunication.Instrument.Temperature
+namespace OilCommunication.Instrument.Temperature
 {
     /// <summary>
     /// 阿尔泰科技发展有限公司的DAM3601温度采集模块，基于ModbusRtu开发完成。
@@ -85,7 +85,7 @@ namespace HslCommunication.Instrument.Temperature
         /// <returns>带有成功标志的字节信息</returns>
         /// <example>
         /// 此处演示批量读取的示例
-        /// <code lang="cs" source="HslCommunication_Net45.Test\Documentation\Samples\Modbus\Modbus.cs" region="ReadExample2" title="Read示例" />
+        /// <code lang="cs" source="OilCommunication_Net45.Test\Documentation\Samples\Modbus\Modbus.cs" region="ReadExample2" title="Read示例" />
         /// </example>
         public override OperateResult<byte[]> Read( string address, ushort length )
         {

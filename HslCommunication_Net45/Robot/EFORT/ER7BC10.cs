@@ -1,14 +1,14 @@
-﻿using HslCommunication.BasicFramework;
-using HslCommunication.Core;
-using HslCommunication.Core.IMessage;
-using HslCommunication.Core.Net;
+﻿using OilCommunication.BasicFramework;
+using OilCommunication.Core;
+using OilCommunication.Core.IMessage;
+using OilCommunication.Core.Net;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
 
-namespace HslCommunication.Robot.EFORT
+namespace OilCommunication.Robot.EFORT
 {
 
     /// <summary>

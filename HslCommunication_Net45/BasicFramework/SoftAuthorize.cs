@@ -10,7 +10,7 @@ using System.Security.Cryptography;
 using System.Security.Principal;
 using System.Text;
 
-namespace HslCommunication.BasicFramework
+namespace OilCommunication.BasicFramework
 {
     /// <summary>
     /// 软件授权类

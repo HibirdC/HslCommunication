@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using HslCommunication.BasicFramework;
-using HslCommunication.Core;
-using HslCommunication.Core.IMessage;
-using HslCommunication.Core.Net;
+using OilCommunication.BasicFramework;
+using OilCommunication.Core;
+using OilCommunication.Core.IMessage;
+using OilCommunication.Core.Net;
 
-namespace HslCommunication.Profinet.Melsec
+namespace OilCommunication.Profinet.Melsec
 {
 
     /// <summary>
@@ -233,8 +233,8 @@ namespace HslCommunication.Profinet.Melsec
     /// </list>
     /// </remarks>
     /// <example>
-    /// <code lang="cs" source="HslCommunication_Net45.Test\Documentation\Samples\Profinet\melsecTest.cs" region="Usage" title="简单的短连接使用" />
-    /// <code lang="cs" source="HslCommunication_Net45.Test\Documentation\Samples\Profinet\melsecTest.cs" region="Usage2" title="简单的长连接使用" />
+    /// <code lang="cs" source="OilCommunication_Net45.Test\Documentation\Samples\Profinet\melsecTest.cs" region="Usage" title="简单的短连接使用" />
+    /// <code lang="cs" source="OilCommunication_Net45.Test\Documentation\Samples\Profinet\melsecTest.cs" region="Usage2" title="简单的长连接使用" />
     /// </example>
     public class MelsecMcNet : NetworkDeviceBase<MelsecQnA3EBinaryMessage, RegularByteTransform>
     {
@@ -310,9 +310,9 @@ namespace HslCommunication.Profinet.Melsec
         /// </remarks>
         /// <example>
         /// 假设起始地址为D100，D100存储了温度，100.6℃值为1006，D101存储了压力，1.23Mpa值为123，D102，D103存储了产量计数，读取如下：
-        /// <code lang="cs" source="HslCommunication_Net45.Test\Documentation\Samples\Profinet\melsecTest.cs" region="ReadExample2" title="Read示例" />
+        /// <code lang="cs" source="OilCommunication_Net45.Test\Documentation\Samples\Profinet\melsecTest.cs" region="ReadExample2" title="Read示例" />
         /// 以下是读取不同类型数据的示例
-        /// <code lang="cs" source="HslCommunication_Net45.Test\Documentation\Samples\Profinet\melsecTest.cs" region="ReadExample1" title="Read示例" />
+        /// <code lang="cs" source="OilCommunication_Net45.Test\Documentation\Samples\Profinet\melsecTest.cs" region="ReadExample1" title="Read示例" />
         /// </example>
         public override OperateResult<byte[]> Read( string address, ushort length )
         {
@@ -339,9 +339,9 @@ namespace HslCommunication.Profinet.Melsec
         /// <param name="value">原始的字节数据</param>
         /// <example>
         /// 假设起始地址为D100，D100存储了温度，100.6℃值为1006，D101存储了压力，1.23Mpa值为123，D102，D103存储了产量计数，写入如下：
-        /// <code lang="cs" source="HslCommunication_Net45.Test\Documentation\Samples\Profinet\melsecTest.cs" region="WriteExample2" title="Write示例" />
+        /// <code lang="cs" source="OilCommunication_Net45.Test\Documentation\Samples\Profinet\melsecTest.cs" region="WriteExample2" title="Write示例" />
         /// 以下是写入不同类型数据的示例
-        /// <code lang="cs" source="HslCommunication_Net45.Test\Documentation\Samples\Profinet\melsecTest.cs" region="WriteExample1" title="Write示例" />
+        /// <code lang="cs" source="OilCommunication_Net45.Test\Documentation\Samples\Profinet\melsecTest.cs" region="WriteExample1" title="Write示例" />
         /// </example>
         /// <returns>结果</returns>
         public override OperateResult Write( string address, byte[] value )
@@ -376,7 +376,7 @@ namespace HslCommunication.Profinet.Melsec
         /// 地址支持的列表参考 <seealso cref="MelsecMcNet"/> 的备注说明
         /// </remarks>
         /// <example>
-        /// <code lang="cs" source="HslCommunication_Net45.Test\Documentation\Samples\Profinet\melsecTest.cs" region="ReadBool" title="Bool类型示例" />
+        /// <code lang="cs" source="OilCommunication_Net45.Test\Documentation\Samples\Profinet\melsecTest.cs" region="ReadBool" title="Bool类型示例" />
         /// </example>
         public OperateResult<bool[]> ReadBool( string address, ushort length )
         {
@@ -435,7 +435,7 @@ namespace HslCommunication.Profinet.Melsec
         /// <param name="address">要写入的数据地址</param>
         /// <param name="values">要写入的实际数据，可以指定任意的长度</param>
         /// <example>
-        /// <code lang="cs" source="HslCommunication_Net45.Test\Documentation\Samples\Profinet\melsecTest.cs" region="WriteBool" title="Write示例" />
+        /// <code lang="cs" source="OilCommunication_Net45.Test\Documentation\Samples\Profinet\melsecTest.cs" region="WriteBool" title="Write示例" />
         /// </example>
         /// <returns>返回写入结果</returns>
         public OperateResult Write( string address, bool[] values )

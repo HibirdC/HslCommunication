@@ -1,4 +1,4 @@
-﻿using HslCommunication.BasicFramework;
+﻿using OilCommunication.BasicFramework;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,7 +6,7 @@ using System.Net;
 using System.Net.Sockets;
 using System.Text;
 
-namespace HslCommunication.Core.Net
+namespace OilCommunication.Core.Net
 {
     /// <summary>
     /// 基础的Udp的通信对象

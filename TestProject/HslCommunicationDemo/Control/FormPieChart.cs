@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace HslCommunicationDemo
+namespace OilCommunicationDemo
 {
     public partial class FormPieChart : Form
     {
@@ -53,7 +53,7 @@ namespace HslCommunicationDemo
 
         }
 
-        private HslCommunication.Controls.UserPieChart[] charts = new HslCommunication.Controls.UserPieChart[5];
+        private OilCommunication.Controls.UserPieChart[] charts = new OilCommunication.Controls.UserPieChart[5];
         private Random random = new Random( );
         private Timer timerTick = null;
     }

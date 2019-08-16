@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace HslCommunication.Core
+namespace OilCommunication.Core
 {
     /// <summary>
     /// 所有的和设备或是交互类统一读写标准
@@ -13,7 +13,7 @@ namespace HslCommunication.Core
     /// </remarks>
     /// <example>
     /// 此处举例实现modbus，三菱，西门子三种设备的统一的数据交互
-    /// <code lang="cs" source="HslCommunication_Net45.Test\Documentation\Samples\Core\IReadWriteNet.cs" region="IReadWriteNetExample" title="IReadWriteNet示例" />
+    /// <code lang="cs" source="OilCommunication_Net45.Test\Documentation\Samples\Core\IReadWriteNet.cs" region="IReadWriteNetExample" title="IReadWriteNet示例" />
     /// </example>
     public interface IReadWriteNet
     {

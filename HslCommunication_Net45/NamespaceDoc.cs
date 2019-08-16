@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using HslCommunication.Core;
+using OilCommunication.Core;
 
-namespace HslCommunication
+namespace OilCommunication
 {
     /// <summary>
     /// 一个工业物联网的底层架构框架，专注于底层的技术通信及跨平台，跨语言通信功能，实现各种主流的PLC数据读写，实现modbus的各种协议读写等等，
@@ -13,7 +13,7 @@ namespace HslCommunication
     /// 本组件免费开源，使用之前请认真的阅读本API文档，对于本文档中警告部分的内容务必理解，部署生产之前请详细测试，如果在测试的过程中，
     /// 发现了BUG，或是有问题的地方，欢迎联系作者进行修改，或是直接在github上进行提问。统一声明：对于操作设备造成的任何损失，作者概不负责。
     /// <br /><br />
-    /// 官方网站：<a href="http://www.hslcommunication.cn/">http://www.hslcommunication.cn/</a>，包含组件的在线API地址以及一个MES DEMO的项目展示。
+    /// 官方网站：<a href="http://www.OilCommunication.cn/">http://www.OilCommunication.cn/</a>，包含组件的在线API地址以及一个MES DEMO的项目展示。
     /// <br /><br />
     /// <note type="important">
     /// 本组件的目标是集成一个框架，统一所有的设备读写方法，抽象成统一的接口<see cref="IReadWriteNet"/>，对于上层操作只需要关注地址，读取类型即可，另一个目标是使用本框架轻松实现C#后台+C#客户端+web浏览器+android手机的全方位功能实现。
@@ -22,12 +22,12 @@ namespace HslCommunication
     /// 本库提供了C#版本和java版本和python版本，java，python版本的使用和C#几乎是一模一样的，都是可以相互通讯的。
     /// </summary>
     /// <remarks>
-    /// 本软件著作权归Richard.Hu所有，开源项目地址：<a href="https://github.com/dathlin/HslCommunication">https://github.com/dathlin/HslCommunication</a>  开源协议：LGPL-3.0
+    /// 本软件著作权归Richard.Hu所有，开源项目地址：<a href="https://github.com/dathlin/OilCommunication">https://github.com/dathlin/OilCommunication</a>  开源协议：LGPL-3.0
     /// <br />
     /// 博客地址：<a href="https://www.cnblogs.com/dathlin/p/7703805.html">https://www.cnblogs.com/dathlin/p/7703805.html</a>
     /// <br />
     /// 打赏请扫码：<br />
-    /// <img src="https://raw.githubusercontent.com/dathlin/HslCommunication/master/imgs/support.png" />
+    /// <img src="https://raw.githubusercontent.com/dathlin/OilCommunication/master/imgs/support.png" />
     /// </remarks>
     /// <revisionHistory>
     ///     <revision date="2017-10-21" version="3.7.10" author="Richard.Hu">
@@ -69,9 +69,9 @@ namespace HslCommunication
     ///         <list type="bullet">
     ///             <item>与3.X版本不兼容，谨慎升级。如果要升级，主要涉及的代码包含PLC的数据访问和同步数据通信。</item>
     ///             <item>删除了2个类，OperateResultBytes和OperateResultString类，提供了更加强大方便的泛型继承类，多达10个泛型参数。地址见http://www.cnblogs.com/dathlin/p/7865682.html</item>
-    ///             <item>将部分类从HslCommunication命名空间下移动到HslCommunication.Core下面。</item>
+    ///             <item>将部分类从OilCommunication命名空间下移动到OilCommunication.Core下面。</item>
     ///             <item>提供了一个通用的ModBus TCP的客户端类，方便和服务器交互。</item>
-    ///             <item>完善了HslCommunication.BasicFramework.SoftBaisc下面的辅助用的静态方法，提供了一些方便的数据转化，在上面进行公开。</item>
+    ///             <item>完善了OilCommunication.BasicFramework.SoftBaisc下面的辅助用的静态方法，提供了一些方便的数据转化，在上面进行公开。</item>
     ///         </list>
     ///     </revision>
     ///     <revision date="2017-11-24" version="4.0.1" author="Richard.Hu">
@@ -686,7 +686,7 @@ namespace HslCommunication
     ///             <item>添加KeyenceNanoSerial以支持基恩士Nano系列串口通信。</item>
     ///             <item>其他的代码优化。</item>
     ///             <item>发布一个基于xamarin的安卓测试demo。</item>
-    ///             <item>发布官方论坛： http://bbs.hslcommunication.cn/ </item>
+    ///             <item>发布官方论坛： http://bbs.OilCommunication.cn/ </item>
     ///         </list>
     ///     </revision>
     ///     <revision date="2019-4-24" version="6.1.1" author="Richard.Hu">
@@ -700,14 +700,14 @@ namespace HslCommunication
     ///             <term>modbus服务器的方法ReadFromModbusCore( byte[] modbusCore )设置为虚方法，可以继承重写，实现自定义返回。</term>
     ///             <item>串口基类serialbase的初始化方法新增多个重载方法，方便VB和labview调用。</item>
     ///             <item>NetworkBase: 默认的机制任然使用异步实现，UseSynchronousNet=false。</item>
-    ///             <item>发布官方论坛： http://bbs.hslcommunication.cn/ </item>
+    ///             <item>发布官方论坛： http://bbs.OilCommunication.cn/ </item>
     ///         </list>
     ///     </revision>
     ///     <revision date="2019-4-25" version="6.1.2" author="Richard.Hu">
     ///         <list type="bullet">
     ///             <item>紧急修复在NET451和Core里的异步读取的bug。</item>
     ///             <item>紧急修复PushNetServer的发送回调bug。</item>
-    ///             <item>发布官方论坛： http://bbs.hslcommunication.cn/ </item>
+    ///             <item>发布官方论坛： http://bbs.OilCommunication.cn/ </item>
     ///         </list>
     ///     </revision>
     ///     <revision date="2019-5-6" version="6.2.0" author="Richard.Hu">
@@ -719,7 +719,7 @@ namespace HslCommunication
     ///             <item>新增三菱mc协议的虚拟服务器，仅支持二进制格式的机制。</item>
     ///             <item>LogNet支持写入任意的字符串格式。</item>
     ///             <item>其他的注释添加及代码优化。</item>
-    ///             <item>发布官方论坛： http://bbs.hslcommunication.cn/ </item>
+    ///             <item>发布官方论坛： http://bbs.OilCommunication.cn/ </item>
     ///         </list>
     ///     </revision>
     ///     <revision date="2019-5-9" version="6.2.1" author="Richard.Hu">
@@ -727,7 +727,7 @@ namespace HslCommunication
     ///             <item>修复三菱读写PLC位时的bug。</item>
     ///             <item>修复Modbus读写线圈及离散的变量bug。</item>
     ///             <item>强烈建议更新，不能使用6.2.0版本！或是回退更低的版本。</item>
-    ///             <item>有问题先上论坛： http://bbs.hslcommunication.cn/ </item>
+    ///             <item>有问题先上论坛： http://bbs.OilCommunication.cn/ </item>
     ///         </list>
     ///     </revision>
     ///     <revision date="2019-5-10" version="6.2.2" author="Richard.Hu">
@@ -778,7 +778,7 @@ namespace HslCommunication
     // 1. 研究MQTT协议的通讯                                                           ===================== 研究完成在C#的服务器构建和客户端的数据推送操作
     // 2. 研究 ML.NET 的机器学习的平台
     // 3. 工业网关的深入集成
-    // 4. HslCommunication官网集成项目发布接收及案例展示平台
+    // 4. OilCommunication官网集成项目发布接收及案例展示平台
     // 5. 研究PyQt的界面开发和实现
 
 

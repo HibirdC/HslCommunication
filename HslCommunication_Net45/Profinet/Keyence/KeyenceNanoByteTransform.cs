@@ -1,12 +1,12 @@
-﻿using HslCommunication.BasicFramework;
-using HslCommunication.Core;
+﻿using OilCommunication.BasicFramework;
+using OilCommunication.Core;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
 
-namespace HslCommunication.Profinet.Keyence
+namespace OilCommunication.Profinet.Keyence
 {
     /// <summary>
     /// 基恩士Nano串口Bytes数据转换规则

@@ -6,13 +6,13 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-using HslCommunication.Profinet;
-using HslCommunication;
-using HslCommunication.Profinet.LSIS;
+using OilCommunication.Profinet;
+using OilCommunication;
+using OilCommunication.Profinet.LSIS;
 using System.Threading;
 using System.IO.Ports;
 
-namespace HslCommunicationDemo
+namespace OilCommunicationDemo
 {
     public partial class FormLsisCnet : Form
     {
@@ -400,10 +400,10 @@ namespace HslCommunicationDemo
 
         private void button26_Click( object sender, EventArgs e )
         {
-            OperateResult<byte[]> read = xGBCnet.ReadBase( HslCommunication.Serial.SoftCRC16.CRC16( HslCommunication.BasicFramework.SoftBasic.HexStringToBytes( textBox13.Text ) ) );
+            OperateResult<byte[]> read = xGBCnet.ReadBase( OilCommunication.Serial.SoftCRC16.CRC16( OilCommunication.BasicFramework.SoftBasic.HexStringToBytes( textBox13.Text ) ) );
             if (read.IsSuccess)
             {
-                textBox11.Text = "Result：" + HslCommunication.BasicFramework.SoftBasic.ByteToHexString( read.Content );
+                textBox11.Text = "Result：" + OilCommunication.BasicFramework.SoftBasic.ByteToHexString( read.Content );
             }
             else
             {

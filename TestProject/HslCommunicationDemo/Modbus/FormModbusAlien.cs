@@ -6,11 +6,11 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-using HslCommunication.Profinet;
-using HslCommunication;
-using HslCommunication.ModBus;
+using OilCommunication.Profinet;
+using OilCommunication;
+using OilCommunication.ModBus;
 using System.Threading;
-using HslCommunication.Core.Net;
+using OilCommunication.Core.Net;
 
 
 /***************************************************************************************************
@@ -25,19 +25,19 @@ using HslCommunication.Core.Net;
  * 
  * ***************************************************************************************************/
 
-namespace HslCommunicationDemo
+namespace OilCommunicationDemo
 {
     public partial class FormModbusAlien : Form
     {
         public FormModbusAlien( )
         {
             InitializeComponent( );
-            logNet = new HslCommunication.LogNet.LogNetSingle( "modbus.txt" );
+            logNet = new OilCommunication.LogNet.LogNetSingle( "modbus.txt" );
         }
 
 
         private ModbusTcpNet busTcpClient = null;
-        private HslCommunication.LogNet.ILogNet logNet = null;
+        private OilCommunication.LogNet.ILogNet logNet = null;
 
         private void linkLabel1_LinkClicked( object sender, LinkLabelLinkClickedEventArgs e )
         {
@@ -485,7 +485,7 @@ namespace HslCommunicationDemo
                 OperateResult<byte[]> read = busTcpClient.Read( textBox6.Text , ushort.Parse( textBox9.Text ) );
                 if (read.IsSuccess)
                 {
-                    textBox10.Text = "结果：" + HslCommunication.BasicFramework.SoftBasic.ByteToHexString( read.Content );
+                    textBox10.Text = "结果：" + OilCommunication.BasicFramework.SoftBasic.ByteToHexString( read.Content );
                 }
                 else
                 {
@@ -509,10 +509,10 @@ namespace HslCommunicationDemo
         {
             try
             {
-                OperateResult<byte[]> read = busTcpClient.ReadFromCoreServer( HslCommunication.BasicFramework.SoftBasic.HexStringToBytes( textBox13.Text ) );
+                OperateResult<byte[]> read = busTcpClient.ReadFromCoreServer( OilCommunication.BasicFramework.SoftBasic.HexStringToBytes( textBox13.Text ) );
                 if (read.IsSuccess)
                 {
-                    textBox11.Text = "结果：" + HslCommunication.BasicFramework.SoftBasic.ByteToHexString( read.Content );
+                    textBox11.Text = "结果：" + OilCommunication.BasicFramework.SoftBasic.ByteToHexString( read.Content );
                 }
                 else
                 {
@@ -675,7 +675,7 @@ namespace HslCommunicationDemo
                 string err = write.Message;
             }
 
-            HslCommunication.Core.IByteTransform ByteTransform = new HslCommunication.Core.ReverseWordTransform( );
+            OilCommunication.Core.IByteTransform ByteTransform = new OilCommunication.Core.ReverseWordTransform( );
         }
 
         #endregion

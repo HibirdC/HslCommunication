@@ -1,4 +1,4 @@
-﻿namespace HslCommunicationDemo
+﻿namespace OilCommunicationDemo
 {
     partial class FormModbusRtu
     {
@@ -47,7 +47,7 @@
             this.label24 = new System.Windows.Forms.Label();
             this.checkBox3 = new System.Windows.Forms.CheckBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.userControlCurve1 = new HslCommunicationDemo.DemoControl.UserControlCurve();
+            this.userControlCurve1 = new OilCommunicationDemo.DemoControl.UserControlCurve();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.textBox11 = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();

@@ -1,4 +1,4 @@
-﻿namespace HslCommunicationDemo.Algorithms
+﻿namespace OilCommunicationDemo.Algorithms
 {
     partial class FourierTransform
     {
@@ -36,15 +36,15 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.userButton1 = new HslCommunication.Controls.UserButton();
-            this.userCurve5 = new HslCommunication.Controls.UserCurve();
-            this.userCurve6 = new HslCommunication.Controls.UserCurve();
-            this.userCurve3 = new HslCommunication.Controls.UserCurve();
-            this.userCurve4 = new HslCommunication.Controls.UserCurve();
-            this.userCurve2 = new HslCommunication.Controls.UserCurve();
-            this.userCurve1 = new HslCommunication.Controls.UserCurve();
-            this.userButton2 = new HslCommunication.Controls.UserButton();
-            this.userButton3 = new HslCommunication.Controls.UserButton();
+            this.userButton1 = new OilCommunication.Controls.UserButton();
+            this.userCurve5 = new OilCommunication.Controls.UserCurve();
+            this.userCurve6 = new OilCommunication.Controls.UserCurve();
+            this.userCurve3 = new OilCommunication.Controls.UserCurve();
+            this.userCurve4 = new OilCommunication.Controls.UserCurve();
+            this.userCurve2 = new OilCommunication.Controls.UserCurve();
+            this.userCurve1 = new OilCommunication.Controls.UserCurve();
+            this.userButton2 = new OilCommunication.Controls.UserButton();
+            this.userButton3 = new OilCommunication.Controls.UserButton();
             this.SuspendLayout();
             // 
             // label20
@@ -276,17 +276,17 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.Label label2;
-        private HslCommunication.Controls.UserCurve userCurve1;
-        private HslCommunication.Controls.UserCurve userCurve2;
+        private OilCommunication.Controls.UserCurve userCurve1;
+        private OilCommunication.Controls.UserCurve userCurve2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
-        private HslCommunication.Controls.UserCurve userCurve3;
-        private HslCommunication.Controls.UserCurve userCurve4;
+        private OilCommunication.Controls.UserCurve userCurve3;
+        private OilCommunication.Controls.UserCurve userCurve4;
         private System.Windows.Forms.Label label6;
-        private HslCommunication.Controls.UserCurve userCurve5;
-        private HslCommunication.Controls.UserCurve userCurve6;
-        private HslCommunication.Controls.UserButton userButton1;
-        private HslCommunication.Controls.UserButton userButton2;
-        private HslCommunication.Controls.UserButton userButton3;
+        private OilCommunication.Controls.UserCurve userCurve5;
+        private OilCommunication.Controls.UserCurve userCurve6;
+        private OilCommunication.Controls.UserButton userButton1;
+        private OilCommunication.Controls.UserButton userButton2;
+        private OilCommunication.Controls.UserButton userButton3;
     }
 }

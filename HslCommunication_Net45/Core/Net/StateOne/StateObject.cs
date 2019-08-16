@@ -5,7 +5,7 @@ using System.Net.Sockets;
 using System.Text;
 using System.Threading;
 
-namespace HslCommunication.Core.Net
+namespace OilCommunication.Core.Net
 {
     /// <summary>
     /// 网络中的异步对象

@@ -1,4 +1,4 @@
-﻿namespace HslCommunication.LogNet
+﻿namespace OilCommunication.LogNet
 {
     partial class LogNetAnalysisControl
     {
@@ -39,13 +39,13 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
-            this.userButton_source = new HslCommunication.Controls.UserButton();
-            this.userButton_All = new HslCommunication.Controls.UserButton();
-            this.userButton_Fatal = new HslCommunication.Controls.UserButton();
-            this.userButton_Error = new HslCommunication.Controls.UserButton();
-            this.userButton_Warn = new HslCommunication.Controls.UserButton();
-            this.userButton_Info = new HslCommunication.Controls.UserButton();
-            this.userButton_Debug = new HslCommunication.Controls.UserButton();
+            this.userButton_source = new OilCommunication.Controls.UserButton();
+            this.userButton_All = new OilCommunication.Controls.UserButton();
+            this.userButton_Fatal = new OilCommunication.Controls.UserButton();
+            this.userButton_Error = new OilCommunication.Controls.UserButton();
+            this.userButton_Warn = new OilCommunication.Controls.UserButton();
+            this.userButton_Info = new OilCommunication.Controls.UserButton();
+            this.userButton_Debug = new OilCommunication.Controls.UserButton();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();

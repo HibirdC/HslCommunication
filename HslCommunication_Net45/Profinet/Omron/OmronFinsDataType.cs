@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace HslCommunication.Profinet.Omron
+namespace OilCommunication.Profinet.Omron
 {
     /// <summary>
     /// 欧姆龙的Fins协议的数据类型

@@ -1,13 +1,13 @@
-﻿using HslCommunication.BasicFramework;
-using HslCommunication.Core;
-using HslCommunication.Core.IMessage;
-using HslCommunication.Core.Net;
+﻿using OilCommunication.BasicFramework;
+using OilCommunication.Core;
+using OilCommunication.Core.IMessage;
+using OilCommunication.Core.Net;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace HslCommunication.Robot.KUKA
+namespace OilCommunication.Robot.KUKA
 {
     /// <summary>
     /// Kuka机器人的数据交互对象，通讯支持的条件为KUKA 的 KRC4 控制器中运行KUKAVARPROXY 这个第三方软件，端口通常为7000

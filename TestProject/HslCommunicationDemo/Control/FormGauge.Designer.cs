@@ -1,4 +1,4 @@
-﻿namespace HslCommunicationDemo
+﻿namespace OilCommunicationDemo
 {
     partial class FormGauge
     {
@@ -30,11 +30,11 @@
         {
             this.propertyGrid1 = new System.Windows.Forms.PropertyGrid();
             this.label1 = new System.Windows.Forms.Label();
-            this.userGaugeChart5 = new HslCommunication.Controls.UserGaugeChart();
-            this.userGaugeChart4 = new HslCommunication.Controls.UserGaugeChart();
-            this.userGaugeChart3 = new HslCommunication.Controls.UserGaugeChart();
-            this.userGaugeChart2 = new HslCommunication.Controls.UserGaugeChart();
-            this.userGaugeChart1 = new HslCommunication.Controls.UserGaugeChart();
+            this.userGaugeChart5 = new OilCommunication.Controls.UserGaugeChart();
+            this.userGaugeChart4 = new OilCommunication.Controls.UserGaugeChart();
+            this.userGaugeChart3 = new OilCommunication.Controls.UserGaugeChart();
+            this.userGaugeChart2 = new OilCommunication.Controls.UserGaugeChart();
+            this.userGaugeChart1 = new OilCommunication.Controls.UserGaugeChart();
             this.SuspendLayout();
             // 
             // propertyGrid1
@@ -146,12 +146,12 @@
 
         #endregion
 
-        private HslCommunication.Controls.UserGaugeChart userGaugeChart4;
-        private HslCommunication.Controls.UserGaugeChart userGaugeChart3;
-        private HslCommunication.Controls.UserGaugeChart userGaugeChart2;
-        private HslCommunication.Controls.UserGaugeChart userGaugeChart1;
+        private OilCommunication.Controls.UserGaugeChart userGaugeChart4;
+        private OilCommunication.Controls.UserGaugeChart userGaugeChart3;
+        private OilCommunication.Controls.UserGaugeChart userGaugeChart2;
+        private OilCommunication.Controls.UserGaugeChart userGaugeChart1;
         private System.Windows.Forms.PropertyGrid propertyGrid1;
-        private HslCommunication.Controls.UserGaugeChart userGaugeChart5;
+        private OilCommunication.Controls.UserGaugeChart userGaugeChart5;
         private System.Windows.Forms.Label label1;
     }
 }

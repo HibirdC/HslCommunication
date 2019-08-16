@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace HslCommunication.Core.IMessage
+namespace OilCommunication.Core.IMessage
 {
     /// <summary>
     /// 用于欧姆龙通信的Fins协议的消息解析规则

@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using HslCommunication.Core.Address;
+using OilCommunication.Core.Address;
 
-namespace HslCommunication.ModBus
+namespace OilCommunication.ModBus
 {
 
     /// <summary>

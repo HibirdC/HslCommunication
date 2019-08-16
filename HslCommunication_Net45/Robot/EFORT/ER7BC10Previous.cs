@@ -1,13 +1,13 @@
-﻿using HslCommunication.BasicFramework;
-using HslCommunication.Core;
-using HslCommunication.Core.IMessage;
-using HslCommunication.Core.Net;
+﻿using OilCommunication.BasicFramework;
+using OilCommunication.Core;
+using OilCommunication.Core.IMessage;
+using OilCommunication.Core.Net;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace HslCommunication.Robot.EFORT
+namespace OilCommunication.Robot.EFORT
 {
     /// <summary>
     /// 埃夫特机器人对应型号为ER7B-C10，此协议为旧版的定制版，使用前请测试

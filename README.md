@@ -1,4 +1,4 @@
-[中文](https://github.com/dathlin/HslCommunication/blob/master/docs/Chinese.md)
+[中文](https://github.com/dathlin/OilCommunication/blob/master/docs/Chinese.md)
 <pre>
              ///\      ///\             /////////\              ///\
             //\\/      //\/           //\\\\\\\\//\            //\\/
@@ -12,16 +12,16 @@
      \\\/      \\\/              \\\\\\\\\/             \\\\\\\\\\\\\/             Present by Richard.Hu
 </pre>
 
-# HslCommunication
+# OilCommunication
 HslCommnication.dll
 
-![Build status](https://img.shields.io/badge/Build-Success-green.svg) [![NuGet Status](https://img.shields.io/nuget/v/HslCommunication.svg)](https://www.nuget.org/packages/HslCommunication/) ![NuGet Download](https://img.shields.io/nuget/dt/HslCommunication.svg) [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/HslCommunication/community) [![NetFramework](https://img.shields.io/badge/Language-C%23%207.0-orange.svg)](https://blogs.msdn.microsoft.com/dotnet/2016/08/24/whats-new-in-csharp-7-0/) [![Visual Studio](https://img.shields.io/badge/Visual%20Studio-2019-red.svg)](https://www.visualstudio.com/zh-hans/) ![License status](https://img.shields.io/badge/License-LGPL3.0-yellow.svg) ![copyright status](https://img.shields.io/badge/CopyRight-Richard.Hu-brightgreen.svg) 
+![Build status](https://img.shields.io/badge/Build-Success-green.svg) [![NuGet Status](https://img.shields.io/nuget/v/OilCommunication.svg)](https://www.nuget.org/packages/OilCommunication/) ![NuGet Download](https://img.shields.io/nuget/dt/OilCommunication.svg) [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/OilCommunication/community) [![NetFramework](https://img.shields.io/badge/Language-C%23%207.0-orange.svg)](https://blogs.msdn.microsoft.com/dotnet/2016/08/24/whats-new-in-csharp-7-0/) [![Visual Studio](https://img.shields.io/badge/Visual%20Studio-2019-red.svg)](https://www.visualstudio.com/zh-hans/) ![License status](https://img.shields.io/badge/License-LGPL3.0-yellow.svg) ![copyright status](https://img.shields.io/badge/CopyRight-Richard.Hu-brightgreen.svg) 
 
-HslCommunication.jar
+OilCommunication.jar
 
 ![Build status](https://img.shields.io/badge/Build-Success-green.svg) ![License status](https://img.shields.io/badge/License-LGPL3.0-yellow.svg) ![NetFramework](https://img.shields.io/badge/Language-java-orange.svg) ![JDK status](https://img.shields.io/badge/JDK-1.8.0-green.svg) ![IDE status](https://img.shields.io/badge/Intellij%20Idea-2018.4-red.svg) ![copyright status](https://img.shields.io/badge/CopyRight-Richard.Hu-brightgreen.svg) 
 
-HslCommunication.py
+OilCommunication.py
 
 ![Build status](https://img.shields.io/badge/Build-Success-green.svg) ![License status](https://img.shields.io/badge/License-LGPL3.0-yellow.svg) ![NetFramework](https://img.shields.io/badge/python-3.6-orange.svg) ![IDE status](https://img.shields.io/badge/Visual%20Studio-Code-red.svg) ![copyright status](https://img.shields.io/badge/CopyRight-Richard.Hu-brightgreen.svg) 
 
@@ -29,13 +29,13 @@ HslCommunication.py
 (C) 2017 - 2019 Richard.Hu, All Rights Reserved
 
 ## Official Website
-Webside: [http://www.hslcommunication.cn/](http://www.hslcommunication.cn/)
+Webside: [http://www.OilCommunication.cn/](http://www.OilCommunication.cn/)
 
-BBS: [http://bbs.hslcommunication.cn/](http://bbs.hslcommunication.cn/)
+BBS: [http://bbs.OilCommunication.cn/](http://bbs.OilCommunication.cn/)
 
-API: [http://api.hslcommunication.cn/](http://api.hslcommunication.cn/)
+API: [http://api.OilCommunication.cn/](http://api.OilCommunication.cn/)
 
-Gitter[talk with me]: [https://gitter.im/HslCommunication/community](https://gitter.im/HslCommunication/community)
+Gitter[talk with me]: [https://gitter.im/OilCommunication/community](https://gitter.im/OilCommunication/community)
 
 ## What is HSL
 This is an industrial IoT based, computer communications architecture implementation, integrated with most of the basic functional implementation of industrial software development, 
@@ -69,7 +69,7 @@ for equipment suppliers, based on HSL to develop the host computer software syst
 Description: NuGet for stable version, Support Online upgrade, the use of components is best downloaded from NuGet, 
 the project published here is likely to have not yet compiled the beta version, NuGet installation is as follows:
 ```
-Install-Package HslCommunication
+Install-Package OilCommunication
 ```
 
 ## Environment
@@ -86,15 +86,15 @@ Install-Package HslCommunication
 #### Siemens
 No. | Class | Model | Price | Remarks | Contributor
 -|-|-|-|-|-
-1 | ![pic](https://img.shields.io/badge/-SiemensS7Net-informational.svg) | ![pic](https://img.shields.io/badge/1215C-Good-success.svg) | ￥ | &nbsp; | [Richard Hu](https://github.com/dathlin/HslCommunication)
+1 | ![pic](https://img.shields.io/badge/-SiemensS7Net-informational.svg) | ![pic](https://img.shields.io/badge/1215C-Good-success.svg) | ￥ | &nbsp; | [Richard Hu](https://github.com/dathlin/OilCommunication)
 
 #### Melsec
 No. | Class | Model | Price | Remarks | Contributor
 -|-|-|-|-|-
-1 | ![pic](https://img.shields.io/badge/-MelsecMcNet-informational.svg) | ![pic](https://img.shields.io/badge/QJ71E71%20100-Good-success.svg) | ￥ | &nbsp; | [Richard Hu](https://github.com/dathlin/HslCommunication)
-2 | ![pic](https://img.shields.io/badge/-MelsecMcNet-informational.svg) | ![pic](https://img.shields.io/badge/Q02H-Good-success.svg) | ￥ | &nbsp; | [Richard Hu](https://github.com/dathlin/HslCommunication)
-3 | ![pic](https://img.shields.io/badge/-MelsecMcNet-informational.svg) | ![pic](https://img.shields.io/badge/L02H-Good-success.svg) | ￥ | &nbsp; | [Richard Hu](https://github.com/dathlin/HslCommunication)
-4 | ![pic](https://img.shields.io/badge/-MelsecMcNet-informational.svg) | ![pic](https://img.shields.io/badge/Fx5u-Good-success.svg) | ￥ | &nbsp; | [Richard Hu](https://github.com/dathlin/HslCommunication)
+1 | ![pic](https://img.shields.io/badge/-MelsecMcNet-informational.svg) | ![pic](https://img.shields.io/badge/QJ71E71%20100-Good-success.svg) | ￥ | &nbsp; | [Richard Hu](https://github.com/dathlin/OilCommunication)
+2 | ![pic](https://img.shields.io/badge/-MelsecMcNet-informational.svg) | ![pic](https://img.shields.io/badge/Q02H-Good-success.svg) | ￥ | &nbsp; | [Richard Hu](https://github.com/dathlin/OilCommunication)
+3 | ![pic](https://img.shields.io/badge/-MelsecMcNet-informational.svg) | ![pic](https://img.shields.io/badge/L02H-Good-success.svg) | ￥ | &nbsp; | [Richard Hu](https://github.com/dathlin/OilCommunication)
+4 | ![pic](https://img.shields.io/badge/-MelsecMcNet-informational.svg) | ![pic](https://img.shields.io/badge/Fx5u-Good-success.svg) | ￥ | &nbsp; | [Richard Hu](https://github.com/dathlin/OilCommunication)
 
 #### AB plc
 No. | Class | Model | Price | Remarks | Contributor
@@ -115,8 +115,8 @@ No. | Class | Model | Price | Remarks | Contributor
 #### ModbusTcp
 No. | Class | Model | Price | Remarks | Contributor
 -|-|-|-|-|-
-1 | ![pic](https://img.shields.io/badge/-Modbus%20Tcp-informational.svg) | ![pic](https://img.shields.io/badge/1215C-Good-success.svg) | ￥ | &nbsp; | [Richard Hu](https://github.com/dathlin/HslCommunication)
-4 | ![pic](https://img.shields.io/badge/-Modbus%20Tcp-informational.svg) | ![pic](https://img.shields.io/badge/Fx5u-Good-success.svg) | ￥ | &nbsp; | [Richard Hu](https://github.com/dathlin/HslCommunication)
+1 | ![pic](https://img.shields.io/badge/-Modbus%20Tcp-informational.svg) | ![pic](https://img.shields.io/badge/1215C-Good-success.svg) | ￥ | &nbsp; | [Richard Hu](https://github.com/dathlin/OilCommunication)
+4 | ![pic](https://img.shields.io/badge/-Modbus%20Tcp-informational.svg) | ![pic](https://img.shields.io/badge/Fx5u-Good-success.svg) | ￥ | &nbsp; | [Richard Hu](https://github.com/dathlin/OilCommunication)
 
 #### Panasonic
 No. | Class | Model | Price | Remarks | Contributor
@@ -124,7 +124,7 @@ No. | Class | Model | Price | Remarks | Contributor
 1 | ![pic](https://img.shields.io/badge/-PanasonicMcNet-informational.svg) | ![pic](https://img.shields.io/badge/FP7%20CPS31E-Good-success.svg) | ￥ | &nbsp;| 镇江-Relax;
 
 
-## HslCommunication.dll Summary 
+## OilCommunication.dll Summary 
 When I started working on this project, I had an idea of how to easily and quickly read and write PLC data. Our code logic should be very simple, 
 and it only takes one or two lines of code to implement this feature. Like this
 ```
@@ -193,11 +193,11 @@ Called from Visual C++ project
 
 cppProject -> Properties -> Configuration Properties -> General -> CLR Support
 
-Add HslCommunication.dll(net35) reference
+Add OilCommunication.dll(net35) reference
 ```
 #include "pch.h"
 #include <iostream>
-using namespace HslCommunication;
+using namespace OilCommunication;
 using namespace ModBus;
 
 int main()
@@ -223,7 +223,7 @@ int main()
 ```
 
 If you want to communication in your mobile phone application, you also can use C# code by xamarin, you can download HslAppDemo to test
-[HslAppDemo.apk](https://github.com/dathlin/HslCommunication/raw/master/Download/com.companyname.HslAppDemo-Signed.apk)
+[HslAppDemo.apk](https://github.com/dathlin/OilCommunication/raw/master/Download/com.companyname.HslAppDemo-Signed.apk)
 
 
 Another feature of this project is support for cross-language communication support. You can build a C # background server that supports Windows desktop application 
@@ -285,22 +285,22 @@ value = netSimplifyClient.ReadFromServer(1,'123').Content
 **Note**: In the source code, still contains a lot of Chinese annotation, in the future for a short period of time, 
 will be used in English and Chinese double annotation, thank you for your understanding.
 
-**HslCommunicationDemo** The features supported by this project can be roughly clear through the demo interface below:
-![Picture](https://raw.githubusercontent.com/dathlin/HslCommunication/master/imgs/demo.png)
+**OilCommunicationDemo** The features supported by this project can be roughly clear through the demo interface below:
+![Picture](https://raw.githubusercontent.com/dathlin/OilCommunication/master/imgs/demo.png)
 
 
-## HslCommunication.jar Summary 
+## OilCommunication.jar Summary 
 This component provides the Java version, for the. NET version of the castration version, removed all the server function code, 
 retained part of the client function code, convenient and plc, device data interaction, and C # program data interaction, 
 this jar component is suitable for the development of Android, easy to build a. NET Server + Windows Client + asp.net client + J2EE client + Java Client + Android client.
-![Picture](https://raw.githubusercontent.com/dathlin/HslCommunication/master/imgs/java_demo.png)
+![Picture](https://raw.githubusercontent.com/dathlin/OilCommunication/master/imgs/java_demo.png)
 
-## HslCommunication.py Summary 
+## OilCommunication.py Summary 
 This component provides a Python version, a castration version of the. NET version, removes all server function codes, retains some of the client function code, 
 facilitates data interaction with PLC, devices, and data interaction with C # programs for cross-platform operation
 
 ## Xamarin.Android Demo
-![Picture](https://raw.githubusercontent.com/dathlin/HslCommunication/master/imgs/appDemo.png)
+![Picture](https://raw.githubusercontent.com/dathlin/OilCommunication/master/imgs/appDemo.png)
 
 ## Contribution
 Warmly welcome suggestions for improvement of the Code of this project, you can launch pull Request.
@@ -309,59 +309,59 @@ Warmly welcome suggestions for improvement of the Code of this project, you can 
 * Hybrid locks and serializable exception classes, read and write locks, concurrent model parts code and ideas refer to "CLR Via C #", thanks to the author Jeffrey Richter
 
 ## Cooperation Company
-![Picture](https://raw.githubusercontent.com/dathlin/HslCommunication/master/imgs/partner/woody.png) [![Picture](https://raw.githubusercontent.com/dathlin/HslCommunication/master/imgs/partner/均达电气.png)](http://junda-jy.com.cn/)
-[![Picture](https://raw.githubusercontent.com/dathlin/HslCommunication/master/imgs/partner/Pia.jpg)](http://www.piagroup.com) [![Picture](https://raw.githubusercontent.com/dathlin/HslCommunication/master/imgs/partner/堤摩讯.png)](https://www.timotion.com)
-[![Picture](https://raw.githubusercontent.com/dathlin/HslCommunication/master/imgs/partner/盛意达.jpg)](http://bjsyd.cn) [![Picture](https://raw.githubusercontent.com/dathlin/HslCommunication/master/imgs/partner/PENC.jpg)](http://www.penc.com)
-![Picture](https://raw.githubusercontent.com/dathlin/HslCommunication/master/imgs/partner/rocket_Blue.png) ![Picture](https://raw.githubusercontent.com/dathlin/HslCommunication/master/imgs/partner/翔宇自控.jpg) 
-[![Picture](https://raw.githubusercontent.com/dathlin/HslCommunication/master/imgs/partner/杭州优海.png)](http://www.eohi700.com/)
+![Picture](https://raw.githubusercontent.com/dathlin/OilCommunication/master/imgs/partner/woody.png) [![Picture](https://raw.githubusercontent.com/dathlin/OilCommunication/master/imgs/partner/均达电气.png)](http://junda-jy.com.cn/)
+[![Picture](https://raw.githubusercontent.com/dathlin/OilCommunication/master/imgs/partner/Pia.jpg)](http://www.piagroup.com) [![Picture](https://raw.githubusercontent.com/dathlin/OilCommunication/master/imgs/partner/堤摩讯.png)](https://www.timotion.com)
+[![Picture](https://raw.githubusercontent.com/dathlin/OilCommunication/master/imgs/partner/盛意达.jpg)](http://bjsyd.cn) [![Picture](https://raw.githubusercontent.com/dathlin/OilCommunication/master/imgs/partner/PENC.jpg)](http://www.penc.com)
+![Picture](https://raw.githubusercontent.com/dathlin/OilCommunication/master/imgs/partner/rocket_Blue.png) ![Picture](https://raw.githubusercontent.com/dathlin/OilCommunication/master/imgs/partner/翔宇自控.jpg) 
+[![Picture](https://raw.githubusercontent.com/dathlin/OilCommunication/master/imgs/partner/杭州优海.png)](http://www.eohi700.com/)
 
 ## Creative is not easy, thanks for the reward
 If this library really helps you, you can support me by AliPay. Please choose the amount according to your actual ability.
-![reward](https://raw.githubusercontent.com/dathlin/HslCommunication/master/imgs/support.png)
+![reward](https://raw.githubusercontent.com/dathlin/OilCommunication/master/imgs/support.png)
 
 ## Controls
 This library include some controls render upside picture. u can easily use them
-![Picture](https://raw.githubusercontent.com/dathlin/HslCommunication/master/imgs/controls.png)
+![Picture](https://raw.githubusercontent.com/dathlin/OilCommunication/master/imgs/controls.png)
 
 ## Mitsubishi PLC Communication
 Using MC protocol, Qna 3E, Include binary and ascii
-![Picture](https://raw.githubusercontent.com/dathlin/HslCommunication/master/imgs/Melsec1.png)
+![Picture](https://raw.githubusercontent.com/dathlin/OilCommunication/master/imgs/Melsec1.png)
 
 ## Siemens PLC Communication
 Using S7 protocol And Fetch/Write protocol
-![Picture](https://raw.githubusercontent.com/dathlin/HslCommunication/master/imgs/siemens1.png)
+![Picture](https://raw.githubusercontent.com/dathlin/OilCommunication/master/imgs/siemens1.png)
 
 ## Omron PLC Communication
 Using Fins-tcp protocol
-![Picture](https://raw.githubusercontent.com/dathlin/HslCommunication/master/imgs/Omron.png)
+![Picture](https://raw.githubusercontent.com/dathlin/OilCommunication/master/imgs/Omron.png)
 
 ## AllenBradley PLC Communication
-![Picture](https://raw.githubusercontent.com/dathlin/HslCommunication/master/imgs/ab1.png)
+![Picture](https://raw.githubusercontent.com/dathlin/OilCommunication/master/imgs/ab1.png)
 
 ## Modbus-tcp Communication
 Client, using read/write coils and register, read discrete input , read register input
-![Picture](https://raw.githubusercontent.com/dathlin/HslCommunication/master/imgs/Modbus1.png)
+![Picture](https://raw.githubusercontent.com/dathlin/OilCommunication/master/imgs/Modbus1.png)
 
 Server, you can build your own modbus-tcp server easily
-![Picture](https://raw.githubusercontent.com/dathlin/HslCommunication/master/imgs/Modbus2.png)
+![Picture](https://raw.githubusercontent.com/dathlin/OilCommunication/master/imgs/Modbus2.png)
 
 ## Redis Client Communication
-![Picture](https://raw.githubusercontent.com/dathlin/HslCommunication/master/imgs/redis.png)
+![Picture](https://raw.githubusercontent.com/dathlin/OilCommunication/master/imgs/redis.png)
 
 ## Simplify Net [ Based on Tcp/Ip ]
 Communicaion with multi-computers , client can exchange data with server easily, include server side ,client side
 
-![Picture](https://raw.githubusercontent.com/dathlin/HslCommunication/master/imgs/Simlify1.png)
-![Picture](https://raw.githubusercontent.com/dathlin/HslCommunication/master/imgs/Simlify2.png)
+![Picture](https://raw.githubusercontent.com/dathlin/OilCommunication/master/imgs/Simlify1.png)
+![Picture](https://raw.githubusercontent.com/dathlin/OilCommunication/master/imgs/Simlify2.png)
 
 ## Udp Net [ Base on Udp/Ip ]
 Communicaion with multi-computers , client can send a large of data to server, include server side ,client side
 
-![Picture](https://raw.githubusercontent.com/dathlin/HslCommunication/master/imgs/Udp1.png)
-![Picture](https://raw.githubusercontent.com/dathlin/HslCommunication/master/imgs/Udp2.png)
+![Picture](https://raw.githubusercontent.com/dathlin/OilCommunication/master/imgs/Udp1.png)
+![Picture](https://raw.githubusercontent.com/dathlin/OilCommunication/master/imgs/Udp2.png)
 
 ## File Net [ Base on Tcp/Ip ]
 Communicaion with multi-computers , client can exchange File with server easily, include server side ,client side
 
-![Picture](https://raw.githubusercontent.com/dathlin/HslCommunication/master/imgs/File1.png)
-![Picture](https://raw.githubusercontent.com/dathlin/HslCommunication/master/imgs/File2.png)
+![Picture](https://raw.githubusercontent.com/dathlin/OilCommunication/master/imgs/File1.png)
+![Picture](https://raw.githubusercontent.com/dathlin/OilCommunication/master/imgs/File2.png)

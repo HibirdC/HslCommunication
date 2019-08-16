@@ -1,7 +1,7 @@
-﻿using HslCommunication.BasicFramework;
-using HslCommunication.Core;
-using HslCommunication.Core.IMessage;
-using HslCommunication.Core.Net;
+﻿using OilCommunication.BasicFramework;
+using OilCommunication.Core;
+using OilCommunication.Core.IMessage;
+using OilCommunication.Core.Net;
 using System;
 using System.Collections.Generic;
 #if !NETSTANDARD2_0
@@ -10,7 +10,7 @@ using System.IO.Ports;
 using System.Net.Sockets;
 using System.Text;
 
-namespace HslCommunication.Profinet.LSIS
+namespace OilCommunication.Profinet.LSIS
 {
     /// <summary>
     /// LSisServer

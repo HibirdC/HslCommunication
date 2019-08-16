@@ -1,14 +1,14 @@
-﻿using HslCommunication.BasicFramework;
-using HslCommunication.Core;
-using HslCommunication.Core.Net;
+﻿using OilCommunication.BasicFramework;
+using OilCommunication.Core;
+using OilCommunication.Core.Net;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Sockets;
 using System.Text;
-using HslCommunication.Core.IMessage;
+using OilCommunication.Core.IMessage;
 
-namespace HslCommunication.Profinet.Siemens
+namespace OilCommunication.Profinet.Siemens
 {
     /// <summary>
     /// 西门子S7协议的虚拟服务器，支持TCP协议，无视PLC的型号，所以在客户端进行操作操作的时候，选择1200或是1500或是300或是400都是一样的。
@@ -93,13 +93,13 @@ namespace HslCommunication.Profinet.Siemens
     /// </remarks>
     /// <example>
     /// 你可以很快速并且简单的创建一个虚拟的s7服务器
-    /// <code lang="cs" source="HslCommunication_Net45.Test\Documentation\Samples\Profinet\SiemensS7ServerExample.cs" region="UseExample1" title="简单的创建服务器" />
+    /// <code lang="cs" source="OilCommunication_Net45.Test\Documentation\Samples\Profinet\SiemensS7ServerExample.cs" region="UseExample1" title="简单的创建服务器" />
     /// 当然如果需要高级的服务器，指定日志，限制客户端的IP地址，获取客户端发送的信息，在服务器初始化的时候就要参照下面的代码：
-    /// <code lang="cs" source="HslCommunication_Net45.Test\Documentation\Samples\Profinet\SiemensS7ServerExample.cs" region="UseExample4" title="定制服务器" />
+    /// <code lang="cs" source="OilCommunication_Net45.Test\Documentation\Samples\Profinet\SiemensS7ServerExample.cs" region="UseExample4" title="定制服务器" />
     /// 服务器创建好之后，我们就可以对服务器进行一些读写的操作了，下面的代码是基础的BCL类型的读写操作。
-    /// <code lang="cs" source="HslCommunication_Net45.Test\Documentation\Samples\Profinet\SiemensS7ServerExample.cs" region="ReadWriteExample" title="基础的读写示例" />
+    /// <code lang="cs" source="OilCommunication_Net45.Test\Documentation\Samples\Profinet\SiemensS7ServerExample.cs" region="ReadWriteExample" title="基础的读写示例" />
     /// 高级的对于byte数组类型的数据进行批量化的读写操作如下：   
-    /// <code lang="cs" source="HslCommunication_Net45.Test\Documentation\Samples\Profinet\SiemensS7ServerExample.cs" region="BytesReadWrite" title="字节的读写示例" />
+    /// <code lang="cs" source="OilCommunication_Net45.Test\Documentation\Samples\Profinet\SiemensS7ServerExample.cs" region="BytesReadWrite" title="字节的读写示例" />
     /// 更高级操作请参见源代码。
     /// </example>
     public class SiemensS7Server : NetworkDataServerBase

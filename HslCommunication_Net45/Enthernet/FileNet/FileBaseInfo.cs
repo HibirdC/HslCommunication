@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace HslCommunication.Enthernet
+namespace OilCommunication.Enthernet
 {
     /// <summary>
     /// 文件的基础信息

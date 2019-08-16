@@ -1,12 +1,12 @@
-﻿using HslCommunication.Core;
-using HslCommunication.LogNet;
+﻿using OilCommunication.Core;
+using OilCommunication.LogNet;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
 
-namespace HslCommunication.Enthernet
+namespace OilCommunication.Enthernet
 {
     /// <summary>
     /// 文件集容器，绑定一个文件夹的文件信息组

@@ -6,12 +6,12 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-using HslCommunication.Profinet;
+using OilCommunication.Profinet;
 using System.Threading;
-using HslCommunication;
-using HslCommunication.Profinet.Omron;
+using OilCommunication;
+using OilCommunication.Profinet.Omron;
 
-namespace HslCommunicationDemo
+namespace OilCommunicationDemo
 {
     public partial class FormOmronHostLink : Form
     {
@@ -19,7 +19,7 @@ namespace HslCommunicationDemo
         {
             InitializeComponent( );
             omronHostLink = new OmronHostLink( );
-            // omronHostLink.LogNet = new HslCommunication.LogNet.LogNetSingle( "omron.log.txt" );
+            // omronHostLink.LogNet = new OilCommunication.LogNet.LogNetSingle( "omron.log.txt" );
         }
 
 
@@ -39,8 +39,8 @@ namespace HslCommunicationDemo
 
         private void FormSiemens_Load( object sender, EventArgs e )
         {
-            comboBox1.DataSource = HslCommunication.BasicFramework.SoftBasic.GetEnumValues<HslCommunication.Core.DataFormat>( );
-            comboBox1.SelectedItem = HslCommunication.Core.DataFormat.CDAB;
+            comboBox1.DataSource = OilCommunication.BasicFramework.SoftBasic.GetEnumValues<OilCommunication.Core.DataFormat>( );
+            comboBox1.SelectedItem = OilCommunication.Core.DataFormat.CDAB;
             panel2.Enabled = false;
 
             Language( Program.Language );
@@ -194,7 +194,7 @@ namespace HslCommunicationDemo
                 omronHostLink.SID = SID;
                 omronHostLink.DA2 = DA2;
                 omronHostLink.SA2 = SA2;
-                omronHostLink.ByteTransform.DataFormat = (HslCommunication.Core.DataFormat)comboBox1.SelectedItem;
+                omronHostLink.ByteTransform.DataFormat = (OilCommunication.Core.DataFormat)comboBox1.SelectedItem;
 
 
                 omronHostLink.Open( );
@@ -370,10 +370,10 @@ namespace HslCommunicationDemo
 
         private void button26_Click( object sender, EventArgs e )
         {
-            OperateResult<byte[]> read = omronHostLink.ReadBase( HslCommunication.BasicFramework.SoftBasic.HexStringToBytes( textBox13.Text ) );
+            OperateResult<byte[]> read = omronHostLink.ReadBase( OilCommunication.BasicFramework.SoftBasic.HexStringToBytes( textBox13.Text ) );
             if (read.IsSuccess)
             {
-                textBox11.Text = "Result：" + HslCommunication.BasicFramework.SoftBasic.ByteToHexString( read.Content );
+                textBox11.Text = "Result：" + OilCommunication.BasicFramework.SoftBasic.ByteToHexString( read.Content );
             }
             else
             {

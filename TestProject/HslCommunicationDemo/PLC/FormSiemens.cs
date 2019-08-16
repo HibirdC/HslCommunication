@@ -6,12 +6,12 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-using HslCommunication.Profinet;
+using OilCommunication.Profinet;
 using System.Threading;
-using HslCommunication.Profinet.Siemens;
-using HslCommunication;
+using OilCommunication.Profinet.Siemens;
+using OilCommunication;
 
-namespace HslCommunicationDemo
+namespace OilCommunicationDemo
 {
     public partial class FormSiemens : Form
     {
@@ -165,7 +165,7 @@ namespace HslCommunicationDemo
                 OperateResult connect = siemensTcpNet.ConnectServer( );
                 if (connect.IsSuccess)
                 {
-                    MessageBox.Show( HslCommunication.StringResources.Language.ConnectedSuccess );
+                    MessageBox.Show( OilCommunication.StringResources.Language.ConnectedSuccess );
                     button2.Enabled = true;
                     button1.Enabled = false;
                     panel2.Enabled = true;
@@ -173,7 +173,7 @@ namespace HslCommunicationDemo
                 }
                 else
                 {
-                    MessageBox.Show( HslCommunication.StringResources.Language.ConnectedFailed );
+                    MessageBox.Show( OilCommunication.StringResources.Language.ConnectedFailed );
                 }
             }
             catch (Exception ex)
@@ -373,10 +373,10 @@ namespace HslCommunicationDemo
 
         private void button26_Click( object sender, EventArgs e )
         {
-            OperateResult<byte[]> read = siemensTcpNet.ReadFromCoreServer( HslCommunication.BasicFramework.SoftBasic.HexStringToBytes( textBox13.Text ) );
+            OperateResult<byte[]> read = siemensTcpNet.ReadFromCoreServer( OilCommunication.BasicFramework.SoftBasic.HexStringToBytes( textBox13.Text ) );
             if (read.IsSuccess)
             {
-                textBox11.Text = "Result：" + HslCommunication.BasicFramework.SoftBasic.ByteToHexString( read.Content );
+                textBox11.Text = "Result：" + OilCommunication.BasicFramework.SoftBasic.ByteToHexString( read.Content );
             }
             else
             {
@@ -426,7 +426,7 @@ namespace HslCommunicationDemo
             double m100_double = siemensTcpNet.ReadDouble( "M100" ).Content;
             string m100_string = siemensTcpNet.ReadString( "M100", 10 ).Content;
 
-            HslCommunication.Core.IByteTransform ByteTransform = new HslCommunication.Core.ReverseBytesTransform( );
+            OilCommunication.Core.IByteTransform ByteTransform = new OilCommunication.Core.ReverseBytesTransform( );
 
         }
 

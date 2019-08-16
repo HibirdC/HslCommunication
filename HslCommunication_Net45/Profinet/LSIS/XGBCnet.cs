@@ -1,12 +1,12 @@
-using HslCommunication.Core;
-using HslCommunication.Serial;
+using OilCommunication.Core;
+using OilCommunication.Serial;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using HslCommunication.BasicFramework;
+using OilCommunication.BasicFramework;
 
-namespace HslCommunication.Profinet.LSIS
+namespace OilCommunication.Profinet.LSIS
 {
     /// <summary>
     /// XGB Cnet I/F module supports Serial Port.

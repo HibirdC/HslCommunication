@@ -1,4 +1,4 @@
-﻿namespace HslCommunication.Controls
+﻿namespace OilCommunication.Controls
 {
     partial class UserDrum
     {

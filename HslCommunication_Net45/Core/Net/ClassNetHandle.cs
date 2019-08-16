@@ -10,14 +10,14 @@ using System.Text;
  *    文件名：ClassNetHandle.cs
  *    功能：  网络通信头，标识消息的内容
  *    
- *    这个类公开在HslCommunication下面
+ *    这个类公开在OilCommunication下面
  * 
  *************************************************************************************/
 
 
 
 
-namespace HslCommunication
+namespace OilCommunication
 {
 
 
@@ -29,7 +29,7 @@ namespace HslCommunication
     /// </remarks>
     /// <example>
     /// 使用上等同于int，只是本结构体允许将4字节的int拆分成3部分单独访问
-    /// <code lang="cs" source="HslCommunication_Net45.Test\Documentation\Samples\Core\NetHandle.cs" region="NetHandleExample" title="NetHandle示例" />
+    /// <code lang="cs" source="OilCommunication_Net45.Test\Documentation\Samples\Core\NetHandle.cs" region="NetHandleExample" title="NetHandle示例" />
     /// </example>
     [System.Runtime.InteropServices.StructLayout(System.Runtime.InteropServices.LayoutKind.Explicit)]
     public struct NetHandle

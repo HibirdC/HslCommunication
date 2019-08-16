@@ -5,9 +5,9 @@ using System.Text;
 using System.Net.Sockets;
 using System.Net;
 using System.Threading;
-using HslCommunication.Core;
+using OilCommunication.Core;
 
-namespace HslCommunication
+namespace OilCommunication
 {
     /****************************************************************************
      * 

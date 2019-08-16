@@ -8,7 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 
-namespace HslCommunication.BasicFramework
+namespace OilCommunication.BasicFramework
 { 
     /// <summary>
     /// 一个用于消息弹出显示的类

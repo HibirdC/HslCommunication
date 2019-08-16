@@ -6,19 +6,19 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-using HslCommunication.ModBus;
+using OilCommunication.ModBus;
 
-namespace HslCommunicationDemo
+namespace OilCommunicationDemo
 {
     public partial class FormTrustedClient : Form
     {
-        public FormTrustedClient( HslCommunication.ModBus.ModbusTcpServer modbusTcpServer )
+        public FormTrustedClient( OilCommunication.ModBus.ModbusTcpServer modbusTcpServer )
         {
             InitializeComponent( );
             this.modbusTcpServer = modbusTcpServer;
         }
 
-        private HslCommunication.ModBus.ModbusTcpServer modbusTcpServer;
+        private OilCommunication.ModBus.ModbusTcpServer modbusTcpServer;
 
         private void FormTrustedClient_Load( object sender, EventArgs e )
         {

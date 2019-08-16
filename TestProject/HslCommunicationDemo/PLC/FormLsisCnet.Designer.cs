@@ -1,4 +1,4 @@
-﻿namespace HslCommunicationDemo
+﻿namespace OilCommunicationDemo
 {
     partial class FormLsisCnet
     {
@@ -45,7 +45,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.userControlCurve1 = new HslCommunicationDemo.DemoControl.UserControlCurve();
+            this.userControlCurve1 = new OilCommunicationDemo.DemoControl.UserControlCurve();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.textBox11 = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
@@ -803,7 +803,7 @@
             this.linkLabel1.Size = new System.Drawing.Size(199, 17);
             this.linkLabel1.TabIndex = 3;
             this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "http://www.hslcommunication.cn/";
+            this.linkLabel1.Text = "http://www.OilCommunication.cn/";
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // label4

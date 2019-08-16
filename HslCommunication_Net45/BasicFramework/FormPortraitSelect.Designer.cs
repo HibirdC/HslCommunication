@@ -1,4 +1,4 @@
-﻿namespace HslCommunication.BasicFramework
+﻿namespace OilCommunication.BasicFramework
 {
     partial class FormPortraitSelect
     {
@@ -31,8 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPortraitSelect));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.userButton1 = new HslCommunication.Controls.UserButton();
-            this.userButton2 = new HslCommunication.Controls.UserButton();
+            this.userButton1 = new OilCommunication.Controls.UserButton();
+            this.userButton2 = new OilCommunication.Controls.UserButton();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();

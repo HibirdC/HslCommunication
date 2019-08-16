@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using HslCommunication.Core.IMessage;
-using HslCommunication.Core.Net;
-using HslCommunication.Core;
+using OilCommunication.Core.IMessage;
+using OilCommunication.Core.Net;
+using OilCommunication.Core;
 using System.Net.Sockets;
-using HslCommunication.BasicFramework;
+using OilCommunication.BasicFramework;
 
-namespace HslCommunication.Profinet.Omron
+namespace OilCommunication.Profinet.Omron
 {
     /// <summary>
     /// 欧姆龙PLC通讯类，采用Fins-Tcp通信协议实现
@@ -76,8 +76,8 @@ namespace HslCommunication.Profinet.Omron
     /// </list>
     /// </remarks>
     /// <example>
-    /// <code lang="cs" source="HslCommunication_Net45.Test\Documentation\Samples\Profinet\OmronFinsNet.cs" region="Usage" title="简单的短连接使用" />
-    /// <code lang="cs" source="HslCommunication_Net45.Test\Documentation\Samples\Profinet\OmronFinsNet.cs" region="Usage2" title="简单的长连接使用" />
+    /// <code lang="cs" source="OilCommunication_Net45.Test\Documentation\Samples\Profinet\OmronFinsNet.cs" region="Usage" title="简单的短连接使用" />
+    /// <code lang="cs" source="OilCommunication_Net45.Test\Documentation\Samples\Profinet\OmronFinsNet.cs" region="Usage2" title="简单的长连接使用" />
     /// </example>
     public class OmronFinsNet : NetworkDeviceBase<FinsMessage,ReverseWordTransform>
     {
@@ -300,9 +300,9 @@ namespace HslCommunication.Profinet.Omron
         /// <returns>带成功标志的结果数据对象</returns>
         /// <example>
         /// 假设起始地址为D100，D100存储了温度，100.6℃值为1006，D101存储了压力，1.23Mpa值为123，D102,D103存储了产量计数，读取如下：
-        /// <code lang="cs" source="HslCommunication_Net45.Test\Documentation\Samples\Profinet\OmronFinsNet.cs" region="ReadExample2" title="Read示例" />
+        /// <code lang="cs" source="OilCommunication_Net45.Test\Documentation\Samples\Profinet\OmronFinsNet.cs" region="ReadExample2" title="Read示例" />
         /// 以下是读取不同类型数据的示例
-        /// <code lang="cs" source="HslCommunication_Net45.Test\Documentation\Samples\Profinet\OmronFinsNet.cs" region="ReadExample1" title="Read示例" />
+        /// <code lang="cs" source="OilCommunication_Net45.Test\Documentation\Samples\Profinet\OmronFinsNet.cs" region="ReadExample1" title="Read示例" />
         /// </example>
         public override OperateResult<byte[]> Read( string address, ushort length )
         {
@@ -331,7 +331,7 @@ namespace HslCommunication.Profinet.Omron
         /// <param name="length">读取的长度</param>
         /// <returns>带成功标志的结果数据对象</returns>
         /// <example>
-        /// <code lang="cs" source="HslCommunication_Net45.Test\Documentation\Samples\Profinet\OmronFinsNet.cs" region="ReadBool" title="ReadBool示例" />
+        /// <code lang="cs" source="OilCommunication_Net45.Test\Documentation\Samples\Profinet\OmronFinsNet.cs" region="ReadBool" title="ReadBool示例" />
         /// </example>
         public OperateResult<bool[]> ReadBool( string address, ushort length )
         {
@@ -361,7 +361,7 @@ namespace HslCommunication.Profinet.Omron
         /// 地址的格式请参照<see cref="ReadBool(string, ushort)"/>方法
         /// </remarks>
         /// <example>
-        /// <code lang="cs" source="HslCommunication_Net45.Test\Documentation\Samples\Profinet\OmronFinsNet.cs" region="ReadBool" title="ReadBool示例" />
+        /// <code lang="cs" source="OilCommunication_Net45.Test\Documentation\Samples\Profinet\OmronFinsNet.cs" region="ReadBool" title="ReadBool示例" />
         /// </example>
         public OperateResult<bool> ReadBool( string address )
         {
@@ -385,9 +385,9 @@ namespace HslCommunication.Profinet.Omron
         /// <returns>结果</returns>
         /// <example>
         /// 假设起始地址为D100，D100存储了温度，100.6℃值为1006，D101存储了压力，1.23Mpa值为123，D102,D103存储了产量计数，读取如下：
-        /// <code lang="cs" source="HslCommunication_Net45.Test\Documentation\Samples\Profinet\OmronFinsNet.cs" region="WriteExample2" title="Write示例" />
+        /// <code lang="cs" source="OilCommunication_Net45.Test\Documentation\Samples\Profinet\OmronFinsNet.cs" region="WriteExample2" title="Write示例" />
         /// 以下是写入不同类型数据的示例
-        /// <code lang="cs" source="HslCommunication_Net45.Test\Documentation\Samples\Profinet\OmronFinsNet.cs" region="WriteExample1" title="Write示例" />
+        /// <code lang="cs" source="OilCommunication_Net45.Test\Documentation\Samples\Profinet\OmronFinsNet.cs" region="WriteExample1" title="Write示例" />
         /// </example>
         public override OperateResult Write( string address, byte[] value )
         {
@@ -419,7 +419,7 @@ namespace HslCommunication.Profinet.Omron
         /// <param name="value">要写入的实际数据，长度为8的倍数</param>
         /// <returns>返回写入结果</returns>
         /// <example>
-        /// <code lang="cs" source="HslCommunication_Net45.Test\Documentation\Samples\Profinet\OmronFinsNet.cs" region="WriteBool" title="WriteBool示例" />
+        /// <code lang="cs" source="OilCommunication_Net45.Test\Documentation\Samples\Profinet\OmronFinsNet.cs" region="WriteBool" title="WriteBool示例" />
         /// </example>
         public OperateResult Write( string address, bool value )
         {
@@ -434,7 +434,7 @@ namespace HslCommunication.Profinet.Omron
         /// <param name="values">要写入的实际数据，可以指定任意的长度</param>
         /// <returns>返回写入结果</returns>
         /// <example>
-        /// <code lang="cs" source="HslCommunication_Net45.Test\Documentation\Samples\Profinet\OmronFinsNet.cs" region="WriteBool" title="WriteBool示例" />
+        /// <code lang="cs" source="OilCommunication_Net45.Test\Documentation\Samples\Profinet\OmronFinsNet.cs" region="WriteBool" title="WriteBool示例" />
         /// </example>
         public OperateResult Write( string address, bool[] values )
         {

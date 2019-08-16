@@ -8,7 +8,7 @@ using System.Net.Sockets;
 using System.Text;
 using System.Windows.Forms;
 
-namespace HslCommunicationDemo
+namespace OilCommunicationDemo
 {
     public partial class FormTcpDebug : Form
     {
@@ -88,7 +88,7 @@ namespace HslCommunicationDemo
                     if (checkBox1.Checked)
                     {
                         // 二进制
-                        byte[] bytes = HslCommunication.BasicFramework.SoftBasic.HexStringToBytes( select );
+                        byte[] bytes = OilCommunication.BasicFramework.SoftBasic.HexStringToBytes( select );
                         label8.Text = Program.Language == 1? "已选择数据字节数：" : "Number of data bytes selected:" + bytes.Length;
                     }
                     else
@@ -125,11 +125,11 @@ namespace HslCommunicationDemo
                 button2.Enabled = true;
                 panel2.Enabled = true;
 
-                MessageBox.Show( HslCommunication.StringResources.Language.ConnectServerSuccess );
+                MessageBox.Show( OilCommunication.StringResources.Language.ConnectServerSuccess );
             }
             catch(Exception ex)
             {
-                MessageBox.Show( HslCommunication.StringResources.Language.ConnectedFailed + Environment.NewLine + ex.Message );
+                MessageBox.Show( OilCommunication.StringResources.Language.ConnectedFailed + Environment.NewLine + ex.Message );
             }
         }
 
@@ -158,7 +158,7 @@ namespace HslCommunicationDemo
                     string msg = string.Empty;
                     if (checkBox1.Checked)
                     {
-                        msg = HslCommunication.BasicFramework.SoftBasic.ByteToHexString( data, ' ' );
+                        msg = OilCommunication.BasicFramework.SoftBasic.ByteToHexString( data, ' ' );
                     }
                     else
                     {
@@ -199,7 +199,7 @@ namespace HslCommunicationDemo
             byte[] send = null;
             if (checkBox1.Checked)
             {
-                send = HslCommunication.BasicFramework.SoftBasic.HexStringToBytes( textBox5.Text );
+                send = OilCommunication.BasicFramework.SoftBasic.HexStringToBytes( textBox5.Text );
             }
             else
             {
@@ -208,7 +208,7 @@ namespace HslCommunicationDemo
 
             if (checkBox2.Checked)
             {
-                send = HslCommunication.BasicFramework.SoftBasic.SpliceTwoByteArray( send, new byte[] { 0x0A } );
+                send = OilCommunication.BasicFramework.SoftBasic.SpliceTwoByteArray( send, new byte[] { 0x0A } );
             }
 
             if (checkBox3.Checked)
@@ -216,11 +216,11 @@ namespace HslCommunicationDemo
                 // 显示发送信息
                 if (checkBox4.Checked)
                 {
-                    textBox6.AppendText( "[" + DateTime.Now.ToString( "yyyy-MM-dd HH:mm:ss.fff" ) + (Program.Language == 1 ? "][发]   " : "][S]   ") + HslCommunication.BasicFramework.SoftBasic.ByteToHexString( send, ' ' ) + Environment.NewLine );
+                    textBox6.AppendText( "[" + DateTime.Now.ToString( "yyyy-MM-dd HH:mm:ss.fff" ) + (Program.Language == 1 ? "][发]   " : "][S]   ") + OilCommunication.BasicFramework.SoftBasic.ByteToHexString( send, ' ' ) + Environment.NewLine );
                 }
                 else
                 {
-                    textBox6.AppendText( (Program.Language == 1 ? "][发]   " : "][S]   ") + HslCommunication.BasicFramework.SoftBasic.ByteToHexString( send, ' ' ) + Environment.NewLine );
+                    textBox6.AppendText( (Program.Language == 1 ? "][发]   " : "][S]   ") + OilCommunication.BasicFramework.SoftBasic.ByteToHexString( send, ' ' ) + Environment.NewLine );
                 }
             }
             try
@@ -229,14 +229,14 @@ namespace HslCommunicationDemo
             }
             catch(Exception ex)
             {
-                HslCommunication.BasicFramework.SoftBasic.ShowExceptionMessage( ex );
+                OilCommunication.BasicFramework.SoftBasic.ShowExceptionMessage( ex );
             }
         }
 
         private void button4_Click( object sender, EventArgs e )
         {
-            HslCommunication.Robot.EFORT.ER7BC10 eR7BC10 = new HslCommunication.Robot.EFORT.ER7BC10( "192.168.0.100",8008 );
-            textBox5.Text = HslCommunication.BasicFramework.SoftBasic.ByteToHexString( eR7BC10.GetReadCommand( ), ' ' );
+            OilCommunication.Robot.EFORT.ER7BC10 eR7BC10 = new OilCommunication.Robot.EFORT.ER7BC10( "192.168.0.100",8008 );
+            textBox5.Text = OilCommunication.BasicFramework.SoftBasic.ByteToHexString( eR7BC10.GetReadCommand( ), ' ' );
         }
     }
 }

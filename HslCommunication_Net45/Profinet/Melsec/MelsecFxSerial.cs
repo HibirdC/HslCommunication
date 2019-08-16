@@ -1,12 +1,12 @@
-﻿using HslCommunication.Core;
-using HslCommunication.Serial;
+﻿using OilCommunication.Core;
+using OilCommunication.Serial;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using HslCommunication.BasicFramework;
+using OilCommunication.BasicFramework;
 
-namespace HslCommunication.Profinet.Melsec
+namespace OilCommunication.Profinet.Melsec
 {
     /// <summary>
     /// 三菱的串口通信的对象，适用于读取FX系列的串口数据，支持的类型参考文档说明
@@ -124,7 +124,7 @@ namespace HslCommunication.Profinet.Melsec
     /// </list>
     /// </remarks>
     /// <example>
-    /// <code lang="cs" source="HslCommunication_Net45.Test\Documentation\Samples\Profinet\MelsecFxSerial.cs" region="Usage" title="简单的使用" />
+    /// <code lang="cs" source="OilCommunication_Net45.Test\Documentation\Samples\Profinet\MelsecFxSerial.cs" region="Usage" title="简单的使用" />
     /// </example>
     public class MelsecFxSerial : SerialDeviceBase<RegularByteTransform>
     {
@@ -175,9 +175,9 @@ namespace HslCommunication.Profinet.Melsec
         /// <returns>带成功标志的结果数据对象</returns>
         /// <example>
         /// 假设起始地址为D100，D100存储了温度，100.6℃值为1006，D101存储了压力，1.23Mpa值为123，D102，D103存储了产量计数，读取如下：
-        /// <code lang="cs" source="HslCommunication_Net45.Test\Documentation\Samples\Profinet\MelsecFxSerial.cs" region="ReadExample2" title="Read示例" />
+        /// <code lang="cs" source="OilCommunication_Net45.Test\Documentation\Samples\Profinet\MelsecFxSerial.cs" region="ReadExample2" title="Read示例" />
         /// 以下是读取不同类型数据的示例
-        /// <code lang="cs" source="HslCommunication_Net45.Test\Documentation\Samples\Profinet\MelsecFxSerial.cs" region="ReadExample1" title="Read示例" />
+        /// <code lang="cs" source="OilCommunication_Net45.Test\Documentation\Samples\Profinet\MelsecFxSerial.cs" region="ReadExample1" title="Read示例" />
         /// </example>
         public override OperateResult<byte[]> Read( string address, ushort length )
         {
@@ -206,7 +206,7 @@ namespace HslCommunication.Profinet.Melsec
         /// <param name="length">读取的长度</param>
         /// <returns>带成功标志的结果数据对象</returns>
         /// <example>
-        ///  <code lang="cs" source="HslCommunication_Net45.Test\Documentation\Samples\Profinet\MelsecFxSerial.cs" region="ReadBool" title="Bool类型示例" />
+        ///  <code lang="cs" source="OilCommunication_Net45.Test\Documentation\Samples\Profinet\MelsecFxSerial.cs" region="ReadBool" title="Bool类型示例" />
         /// </example>
         public OperateResult<bool[]> ReadBool( string address, ushort length )
         {
@@ -251,9 +251,9 @@ namespace HslCommunication.Profinet.Melsec
         /// <param name="value">原始的字节数据</param>
         /// <example>
         /// 假设起始地址为D100，D100存储了温度，100.6℃值为1006，D101存储了压力，1.23Mpa值为123，D102，D103存储了产量计数，写入如下：
-        /// <code lang="cs" source="HslCommunication_Net45.Test\Documentation\Samples\Profinet\MelsecFxSerial.cs" region="WriteExample2" title="Write示例" />
+        /// <code lang="cs" source="OilCommunication_Net45.Test\Documentation\Samples\Profinet\MelsecFxSerial.cs" region="WriteExample2" title="Write示例" />
         /// 以下是读取不同类型数据的示例
-        /// <code lang="cs" source="HslCommunication_Net45.Test\Documentation\Samples\Profinet\MelsecFxSerial.cs" region="WriteExample1" title="Write示例" />
+        /// <code lang="cs" source="OilCommunication_Net45.Test\Documentation\Samples\Profinet\MelsecFxSerial.cs" region="WriteExample1" title="Write示例" />
         /// </example>
         /// <returns>是否写入成功的结果对象</returns>
         public override OperateResult Write( string address, byte[] value )

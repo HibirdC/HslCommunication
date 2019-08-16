@@ -1,12 +1,12 @@
-﻿using HslCommunication.BasicFramework;
-using HslCommunication.Core;
-using HslCommunication.Serial;
+﻿using OilCommunication.BasicFramework;
+using OilCommunication.Core;
+using OilCommunication.Serial;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace HslCommunication.Profinet.Keyence
+namespace OilCommunication.Profinet.Keyence
 {
     /// <summary>
     /// 基恩士KV上位链路串口通信的对象,适用于Nano系列串口数据,以及L20V通信模块

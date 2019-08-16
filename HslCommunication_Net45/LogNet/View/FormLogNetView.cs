@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace HslCommunication.LogNet
+namespace OilCommunication.LogNet
 {
     /// <summary>
     /// 日志查看器的窗口类，用于分析统计日志数据

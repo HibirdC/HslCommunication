@@ -1,11 +1,11 @@
-﻿using HslCommunication.Core;
+﻿using OilCommunication.Core;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading;
 
-namespace HslCommunication.BasicFramework
+namespace OilCommunication.BasicFramework
 {
     /********************************************************************************************
      * 
@@ -29,7 +29,7 @@ namespace HslCommunication.BasicFramework
     /// <example>
     /// 此处举个例子，也是Demo程序的源代码，包含了2个按钮的示例和瞬间调用100万次的性能示例。
     /// <note type="tip">百万次调用的实际耗时取决于计算机的性能，不同的计算机的表现存在差异，比如作者的：i5-4590cpu,内存ddr3-8G表示差不多在800毫秒左右</note>
-    /// <code lang="cs" source="TestProject\HslCommunicationDemo\FormSeqCreate.cs" region="FormSeqCreate" title="示例代码" />
+    /// <code lang="cs" source="TestProject\OilCommunicationDemo\FormSeqCreate.cs" region="FormSeqCreate" title="示例代码" />
     /// </example>
     public sealed class SoftNumericalOrder : SoftFileSaveBase
     {

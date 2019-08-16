@@ -6,10 +6,10 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-using HslCommunication.Robot.EFORT;
-using HslCommunication;
+using OilCommunication.Robot.EFORT;
+using OilCommunication;
 
-namespace HslCommunicationDemo.Robot
+namespace OilCommunicationDemo.Robot
 {
     public partial class FormEfortPrevious : Form
     {
@@ -330,7 +330,7 @@ namespace HslCommunicationDemo.Robot
             }
             catch(Exception ex)
             {
-                HslCommunication.BasicFramework.SoftBasic.ShowExceptionMessage( ex );
+                OilCommunication.BasicFramework.SoftBasic.ShowExceptionMessage( ex );
             }
         }
 
@@ -397,7 +397,7 @@ namespace HslCommunicationDemo.Robot
             catch(Exception ex)
             {
                 // 因为有可能时间文本的格式输入错误
-                HslCommunication.BasicFramework.SoftBasic.ShowExceptionMessage( ex );
+                OilCommunication.BasicFramework.SoftBasic.ShowExceptionMessage( ex );
             }
         }
 

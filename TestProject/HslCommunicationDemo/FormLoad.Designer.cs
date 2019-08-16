@@ -1,4 +1,4 @@
-﻿namespace HslCommunicationDemo
+﻿namespace OilCommunicationDemo
 {
     partial class FormLoad
     {
@@ -1170,7 +1170,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FormLoad";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "HslCommunication Test Tools";
+            this.Text = "OilCommunication Test Tools";
             this.Load += new System.EventHandler(this.FormLoad_Load);
             this.Shown += new System.EventHandler(this.FormLoad_Shown);
             this.groupBox1.ResumeLayout(false);

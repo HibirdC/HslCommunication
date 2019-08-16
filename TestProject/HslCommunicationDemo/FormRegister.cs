@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace HslCommunicationDemo
+namespace OilCommunicationDemo
 {
     public partial class FormRegister : Form
     {
@@ -16,12 +16,12 @@ namespace HslCommunicationDemo
             InitializeComponent( );
         }
 
-        private HslCommunication.BasicFramework.SoftAuthorize softAuthorize = null;
+        private OilCommunication.BasicFramework.SoftAuthorize softAuthorize = null;
 
         private void FormRegister_Load( object sender, EventArgs e )
         {
-            softAuthorize = new HslCommunication.BasicFramework.SoftAuthorize(Settings1.Default.UseAdmin);            // 实例化
-            softAuthorize.ILogNet = new HslCommunication.LogNet.LogNetSingle( "log.txt" );   // 日志
+            softAuthorize = new OilCommunication.BasicFramework.SoftAuthorize(Settings1.Default.UseAdmin);            // 实例化
+            softAuthorize.ILogNet = new OilCommunication.LogNet.LogNetSingle( "log.txt" );   // 日志
             softAuthorize.FileSavePath = Application.StartupPath + @"\Authorize.txt";        // 设置存储激活码的文件，该存储是加密的
             softAuthorize.LoadByFile( );
 
@@ -57,7 +57,7 @@ namespace HslCommunicationDemo
         private string AuthorizeEncrypted( string origin )
         {
             // 此处使用了组件支持的DES对称加密技术
-            return HslCommunication.BasicFramework.SoftSecurity.MD5Encrypt( origin, textBox1.Text );
+            return OilCommunication.BasicFramework.SoftSecurity.MD5Encrypt( origin, textBox1.Text );
         }
 
         private void button3_Click( object sender, EventArgs e )
@@ -66,8 +66,8 @@ namespace HslCommunicationDemo
             if (!softAuthorize.IsAuthorizeSuccess( AuthorizeEncrypted ))
             {
                 // 显示注册窗口
-                using (HslCommunication.BasicFramework.FormAuthorize form =
-                    new HslCommunication.BasicFramework.FormAuthorize(
+                using (OilCommunication.BasicFramework.FormAuthorize form =
+                    new OilCommunication.BasicFramework.FormAuthorize(
                         softAuthorize,
                         "请联系XXX获取激活码",
                         AuthorizeEncrypted ))
@@ -97,7 +97,7 @@ namespace HslCommunicationDemo
             }
             catch(Exception ex)
             {
-                HslCommunication.BasicFramework.SoftBasic.ShowExceptionMessage( ex );
+                OilCommunication.BasicFramework.SoftBasic.ShowExceptionMessage( ex );
             }
         }
 
@@ -122,7 +122,7 @@ namespace HslCommunicationDemo
             }
             catch(Exception ex)
             {
-                HslCommunication.BasicFramework.SoftBasic.ShowExceptionMessage( ex );
+                OilCommunication.BasicFramework.SoftBasic.ShowExceptionMessage( ex );
             }
         }
 

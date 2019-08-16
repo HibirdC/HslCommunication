@@ -6,9 +6,9 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-using HslCommunication.Enthernet;
+using OilCommunication.Enthernet;
 
-namespace HslCommunicationDemo
+namespace OilCommunicationDemo
 {
     public partial class FormDisclaimer : Form
     {
@@ -30,7 +30,7 @@ namespace HslCommunicationDemo
 
         private long countOld = 1;
         private Dictionary<string, long> loginData = new Dictionary<string, long>( );
-        private HslCommunication.Core.SimpleHybirdLock hybirdLock = new HslCommunication.Core.SimpleHybirdLock( );
+        private OilCommunication.Core.SimpleHybirdLock hybirdLock = new OilCommunication.Core.SimpleHybirdLock( );
 
         private void AddDict( string address )
         {
@@ -57,8 +57,8 @@ namespace HslCommunicationDemo
 
         private void GetDataFromServer( object obj )
         {
-            NetSimplifyClient simplifyClient = new HslCommunication.Enthernet.NetSimplifyClient( "118.24.36.220", 18467 );
-            HslCommunication.OperateResult<HslCommunication.NetHandle, string> read = simplifyClient.ReadCustomerFromServer( 1000, HslCommunication.BasicFramework.SoftBasic.FrameworkVersion.ToString( ) );
+            NetSimplifyClient simplifyClient = new OilCommunication.Enthernet.NetSimplifyClient( "118.24.36.220", 18467 );
+            OilCommunication.OperateResult<OilCommunication.NetHandle, string> read = simplifyClient.ReadCustomerFromServer( 1000, OilCommunication.BasicFramework.SoftBasic.FrameworkVersion.ToString( ) );
             if (!read.IsSuccess) return;
             System.IO.MemoryStream ms = new System.IO.MemoryStream( Encoding.Unicode.GetBytes( read.Content2 ) );
             System.IO.StreamReader sr = new System.IO.StreamReader( ms, Encoding.Unicode );

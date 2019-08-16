@@ -6,13 +6,13 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-using HslCommunication.Profinet;
+using OilCommunication.Profinet;
 using System.Threading;
-using HslCommunication.Profinet.Siemens;
-using HslCommunication;
+using OilCommunication.Profinet.Siemens;
+using OilCommunication;
 using System.IO.Ports;
 
-namespace HslCommunicationDemo
+namespace OilCommunicationDemo
 {
     public partial class FormSiemensPPI : Form
     {
@@ -197,7 +197,7 @@ namespace HslCommunicationDemo
 
         private void button_read_bool_Click( object sender, EventArgs e )
         {
-            // Clipboard.SetText( HslCommunication.BasicFramework.SoftBasic.ByteToHexString( SiemensPPI.BuildReadCommand( 2, textBox3.Text, 1, true ).Content, ' ' ) );
+            // Clipboard.SetText( OilCommunication.BasicFramework.SoftBasic.ByteToHexString( SiemensPPI.BuildReadCommand( 2, textBox3.Text, 1, true ).Content, ' ' ) );
             // 读取bool变量
             DemoUtils.ReadResultRender( siemensPPI.ReadBool( textBox3.Text ), textBox3.Text, textBox4 );
         }
@@ -268,7 +268,7 @@ namespace HslCommunicationDemo
         private void button24_Click( object sender, EventArgs e )
         {
             // bool写入
-            //MessageBox.Show( HslCommunication.BasicFramework.SoftBasic.ByteToHexString( SiemensPPI.BuildWriteCommand( siemensPPI.Station, textBox8.Text, new byte[] { 1 } ).Content, ' ' ) );
+            //MessageBox.Show( OilCommunication.BasicFramework.SoftBasic.ByteToHexString( SiemensPPI.BuildWriteCommand( siemensPPI.Station, textBox8.Text, new byte[] { 1 } ).Content, ' ' ) );
             //return;
             try
             {
@@ -301,7 +301,7 @@ namespace HslCommunicationDemo
 
         private void button22_Click( object sender, EventArgs e )
         {
-            // Clipboard.SetText( HslCommunication.BasicFramework.SoftBasic.ByteToHexString( SiemensPPI.BuildWriteCommand( 2, textBox8.Text, new byte[] { 0x12, 0x34 } ).Content, ' ' ) );
+            // Clipboard.SetText( OilCommunication.BasicFramework.SoftBasic.ByteToHexString( SiemensPPI.BuildWriteCommand( 2, textBox8.Text, new byte[] { 0x12, 0x34 } ).Content, ' ' ) );
 
             // short写入
             try
@@ -480,7 +480,7 @@ namespace HslCommunicationDemo
             double m100_double = siemensPPI.ReadDouble( "M100" ).Content;
             string m100_string = siemensPPI.ReadString( "M100", 10 ).Content;
 
-            HslCommunication.Core.IByteTransform ByteTransform = new HslCommunication.Core.ReverseBytesTransform( );
+            OilCommunication.Core.IByteTransform ByteTransform = new OilCommunication.Core.ReverseBytesTransform( );
 
         }
 

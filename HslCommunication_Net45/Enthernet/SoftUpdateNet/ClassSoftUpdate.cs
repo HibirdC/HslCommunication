@@ -7,10 +7,10 @@ using System.Net.Sockets;
 using System.Net;
 using System.IO;
 using System.Threading;
-using HslCommunication.Core;
-using HslCommunication.Core.Net;
+using OilCommunication.Core;
+using OilCommunication.Core.Net;
 
-namespace HslCommunication.Enthernet
+namespace OilCommunication.Enthernet
 {
 
     /// <summary>
@@ -34,13 +34,13 @@ namespace HslCommunication.Enthernet
 
         #region Private Member
 
-        private string m_FilePath = @"C:\HslCommunication";
+        private string m_FilePath = @"C:\OilCommunication";
         private string updateExeFileName;                     // 软件更新的声明
 
         #endregion
 
         /// <summary>
-        /// 系统升级时客户端所在的目录，默认为C:\HslCommunication
+        /// 系统升级时客户端所在的目录，默认为C:\OilCommunication
         /// </summary>
         public string FileUpdatePath
         {

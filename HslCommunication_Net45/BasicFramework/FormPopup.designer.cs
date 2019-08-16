@@ -1,4 +1,4 @@
-﻿namespace HslCommunication.BasicFramework
+﻿namespace OilCommunication.BasicFramework
 {
     partial class FormPopup
     {

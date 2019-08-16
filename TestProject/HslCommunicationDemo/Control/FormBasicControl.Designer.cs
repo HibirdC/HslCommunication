@@ -1,4 +1,4 @@
-﻿namespace HslCommunicationDemo
+﻿namespace OilCommunicationDemo
 {
     partial class FormBasicControl
     {
@@ -45,25 +45,25 @@
             this.label6 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
-            this.userVerticalProgress8 = new HslCommunication.Controls.UserVerticalProgress();
-            this.userVerticalProgress7 = new HslCommunication.Controls.UserVerticalProgress();
-            this.userVerticalProgress1 = new HslCommunication.Controls.UserVerticalProgress();
-            this.userVerticalProgress2 = new HslCommunication.Controls.UserVerticalProgress();
-            this.userVerticalProgress6 = new HslCommunication.Controls.UserVerticalProgress();
-            this.userVerticalProgress3 = new HslCommunication.Controls.UserVerticalProgress();
-            this.userVerticalProgress5 = new HslCommunication.Controls.UserVerticalProgress();
-            this.userVerticalProgress4 = new HslCommunication.Controls.UserVerticalProgress();
-            this.userBottle1 = new HslCommunication.Controls.UserBottle();
-            this.userSwitch1 = new HslCommunication.Controls.UserSwitch();
-            this.userSwitch2 = new HslCommunication.Controls.UserSwitch();
-            this.userDrum1 = new HslCommunication.Controls.UserDrum();
-            this.userClock1 = new HslCommunication.Controls.UserClock();
-            this.userLantern3 = new HslCommunication.Controls.UserLantern();
-            this.userLantern1 = new HslCommunication.Controls.UserLantern();
-            this.userLantern2 = new HslCommunication.Controls.UserLantern();
-            this.userButton1 = new HslCommunication.Controls.UserButton();
-            this.userButton2 = new HslCommunication.Controls.UserButton();
-            this.userButton3 = new HslCommunication.Controls.UserButton();
+            this.userVerticalProgress8 = new OilCommunication.Controls.UserVerticalProgress();
+            this.userVerticalProgress7 = new OilCommunication.Controls.UserVerticalProgress();
+            this.userVerticalProgress1 = new OilCommunication.Controls.UserVerticalProgress();
+            this.userVerticalProgress2 = new OilCommunication.Controls.UserVerticalProgress();
+            this.userVerticalProgress6 = new OilCommunication.Controls.UserVerticalProgress();
+            this.userVerticalProgress3 = new OilCommunication.Controls.UserVerticalProgress();
+            this.userVerticalProgress5 = new OilCommunication.Controls.UserVerticalProgress();
+            this.userVerticalProgress4 = new OilCommunication.Controls.UserVerticalProgress();
+            this.userBottle1 = new OilCommunication.Controls.UserBottle();
+            this.userSwitch1 = new OilCommunication.Controls.UserSwitch();
+            this.userSwitch2 = new OilCommunication.Controls.UserSwitch();
+            this.userDrum1 = new OilCommunication.Controls.UserDrum();
+            this.userClock1 = new OilCommunication.Controls.UserClock();
+            this.userLantern3 = new OilCommunication.Controls.UserLantern();
+            this.userLantern1 = new OilCommunication.Controls.UserLantern();
+            this.userLantern2 = new OilCommunication.Controls.UserLantern();
+            this.userButton1 = new OilCommunication.Controls.UserButton();
+            this.userButton2 = new OilCommunication.Controls.UserButton();
+            this.userButton3 = new OilCommunication.Controls.UserButton();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -297,7 +297,7 @@
             this.userVerticalProgress6.Location = new System.Drawing.Point(216, 45);
             this.userVerticalProgress6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.userVerticalProgress6.Name = "userVerticalProgress6";
-            this.userVerticalProgress6.ProgressStyle = HslCommunication.Controls.ProgressStyle.Horizontal;
+            this.userVerticalProgress6.ProgressStyle = OilCommunication.Controls.ProgressStyle.Horizontal;
             this.userVerticalProgress6.Size = new System.Drawing.Size(191, 29);
             this.userVerticalProgress6.TabIndex = 42;
             this.userVerticalProgress6.Value = 80;
@@ -321,7 +321,7 @@
             this.userVerticalProgress5.Location = new System.Drawing.Point(216, 16);
             this.userVerticalProgress5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.userVerticalProgress5.Name = "userVerticalProgress5";
-            this.userVerticalProgress5.ProgressStyle = HslCommunication.Controls.ProgressStyle.Horizontal;
+            this.userVerticalProgress5.ProgressStyle = OilCommunication.Controls.ProgressStyle.Horizontal;
             this.userVerticalProgress5.Size = new System.Drawing.Size(191, 28);
             this.userVerticalProgress5.TabIndex = 41;
             this.userVerticalProgress5.Value = 50;
@@ -507,37 +507,37 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private HslCommunication.Controls.UserButton userButton3;
-        private HslCommunication.Controls.UserButton userButton2;
-        private HslCommunication.Controls.UserButton userButton1;
+        private OilCommunication.Controls.UserButton userButton3;
+        private OilCommunication.Controls.UserButton userButton2;
+        private OilCommunication.Controls.UserButton userButton1;
         private System.Windows.Forms.Label label8;
-        private HslCommunication.Controls.UserLantern userLantern2;
-        private HslCommunication.Controls.UserLantern userLantern1;
+        private OilCommunication.Controls.UserLantern userLantern2;
+        private OilCommunication.Controls.UserLantern userLantern1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private HslCommunication.Controls.UserClock userClock1;
+        private OilCommunication.Controls.UserClock userClock1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label9;
-        private HslCommunication.Controls.UserSwitch userSwitch2;
-        private HslCommunication.Controls.UserSwitch userSwitch1;
+        private OilCommunication.Controls.UserSwitch userSwitch2;
+        private OilCommunication.Controls.UserSwitch userSwitch1;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label6;
-        private HslCommunication.Controls.UserVerticalProgress userVerticalProgress6;
-        private HslCommunication.Controls.UserVerticalProgress userVerticalProgress5;
-        private HslCommunication.Controls.UserVerticalProgress userVerticalProgress4;
-        private HslCommunication.Controls.UserVerticalProgress userVerticalProgress3;
-        private HslCommunication.Controls.UserVerticalProgress userVerticalProgress2;
-        private HslCommunication.Controls.UserVerticalProgress userVerticalProgress1;
+        private OilCommunication.Controls.UserVerticalProgress userVerticalProgress6;
+        private OilCommunication.Controls.UserVerticalProgress userVerticalProgress5;
+        private OilCommunication.Controls.UserVerticalProgress userVerticalProgress4;
+        private OilCommunication.Controls.UserVerticalProgress userVerticalProgress3;
+        private OilCommunication.Controls.UserVerticalProgress userVerticalProgress2;
+        private OilCommunication.Controls.UserVerticalProgress userVerticalProgress1;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label7;
-        private HslCommunication.Controls.UserVerticalProgress userVerticalProgress7;
-        private HslCommunication.Controls.UserLantern userLantern3;
-        private HslCommunication.Controls.UserVerticalProgress userVerticalProgress8;
+        private OilCommunication.Controls.UserVerticalProgress userVerticalProgress7;
+        private OilCommunication.Controls.UserLantern userLantern3;
+        private OilCommunication.Controls.UserVerticalProgress userVerticalProgress8;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label10;
-        private HslCommunication.Controls.UserDrum userDrum1;
-        private HslCommunication.Controls.UserBottle userBottle1;
+        private OilCommunication.Controls.UserDrum userDrum1;
+        private OilCommunication.Controls.UserBottle userBottle1;
     }
 }

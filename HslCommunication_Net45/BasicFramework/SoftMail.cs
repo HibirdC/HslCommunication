@@ -4,7 +4,7 @@ using System.Linq;
 using System.Net.Mail;
 using System.Text;
 
-namespace HslCommunication.BasicFramework
+namespace OilCommunication.BasicFramework
 {
 
     /****************************************************************************
@@ -30,7 +30,7 @@ namespace HslCommunication.BasicFramework
     /// </remarks>
     /// <example>
     /// 以下的代码演示了通过静态的发送对象来发送邮件，包含了发送普通的邮件，和发送html邮件。
-    /// <code lang="cs" source="TestProject\HslCommunicationDemo\FormMail.cs" region="SoftMail" title="SoftMail示例" />
+    /// <code lang="cs" source="TestProject\OilCommunicationDemo\FormMail.cs" region="SoftMail" title="SoftMail示例" />
     /// </example>
     public class SoftMail
     {
@@ -95,7 +95,7 @@ namespace HslCommunication.BasicFramework
         /// 初始化的方法比较复杂，需要参照示例代码。
         /// </remarks>
         /// <example>
-        /// <code lang="cs" source="HslCommunication_Net45\BasicFramework\SoftMail.cs" region="Static Mail" title="SoftMail示例" />
+        /// <code lang="cs" source="OilCommunication_Net45\BasicFramework\SoftMail.cs" region="Static Mail" title="SoftMail示例" />
         /// </example>
         public SoftMail(Action<SmtpClient> mailIni, string addr_From = "", string addr_to = "")
         {

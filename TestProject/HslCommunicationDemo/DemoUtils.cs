@@ -1,11 +1,11 @@
-﻿using HslCommunication;
+﻿using OilCommunication;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace HslCommunicationDemo
+namespace OilCommunicationDemo
 {
     /// <summary>
     /// DEMO程序的一些静态变量信息
@@ -74,14 +74,14 @@ namespace HslCommunicationDemo
             }
         }
 
-        public static void BulkReadRenderResult( HslCommunication.Core.IReadWriteNet readWrite, TextBox addTextBox, TextBox lengthTextBox, TextBox resultTextBox )
+        public static void BulkReadRenderResult( OilCommunication.Core.IReadWriteNet readWrite, TextBox addTextBox, TextBox lengthTextBox, TextBox resultTextBox )
         {
             try
             {
                 OperateResult<byte[]> read = readWrite.Read( addTextBox.Text, ushort.Parse( lengthTextBox.Text ) );
                 if (read.IsSuccess)
                 {
-                    resultTextBox.Text = "Result：" + HslCommunication.BasicFramework.SoftBasic.ByteToHexString( read.Content );
+                    resultTextBox.Text = "Result：" + OilCommunication.BasicFramework.SoftBasic.ByteToHexString( read.Content );
                 }
                 else
                 {

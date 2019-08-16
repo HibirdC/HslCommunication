@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace HslCommunication.Core.IMessage
+namespace OilCommunication.Core.IMessage
 {
     /// <summary>
     /// 旧版的机器人的消息类对象，保留此类为了实现兼容

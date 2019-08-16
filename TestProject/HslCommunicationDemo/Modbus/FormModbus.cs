@@ -6,12 +6,12 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-using HslCommunication.Profinet;
-using HslCommunication;
-using HslCommunication.ModBus;
+using OilCommunication.Profinet;
+using OilCommunication;
+using OilCommunication.ModBus;
 using System.Threading;
 
-namespace HslCommunicationDemo
+namespace OilCommunicationDemo
 {
     public partial class FormModbus : Form
     {
@@ -125,10 +125,10 @@ namespace HslCommunicationDemo
             {
                 switch (comboBox1.SelectedIndex)
                 {
-                    case 0: busTcpClient.DataFormat = HslCommunication.Core.DataFormat.ABCD;break;
-                    case 1: busTcpClient.DataFormat = HslCommunication.Core.DataFormat.BADC; break;
-                    case 2: busTcpClient.DataFormat = HslCommunication.Core.DataFormat.CDAB; break;
-                    case 3: busTcpClient.DataFormat = HslCommunication.Core.DataFormat.DCBA; break;
+                    case 0: busTcpClient.DataFormat = OilCommunication.Core.DataFormat.ABCD;break;
+                    case 1: busTcpClient.DataFormat = OilCommunication.Core.DataFormat.BADC; break;
+                    case 2: busTcpClient.DataFormat = OilCommunication.Core.DataFormat.CDAB; break;
+                    case 3: busTcpClient.DataFormat = OilCommunication.Core.DataFormat.DCBA; break;
                     default:break;
                 }
             }
@@ -188,7 +188,7 @@ namespace HslCommunicationDemo
                 OperateResult connect = busTcpClient.ConnectServer( );
                 if (connect.IsSuccess)
                 {
-                    MessageBox.Show( HslCommunication.StringResources.Language.ConnectedSuccess );
+                    MessageBox.Show( OilCommunication.StringResources.Language.ConnectedSuccess );
                     button2.Enabled = true;
                     button1.Enabled = false;
                     panel2.Enabled = true;
@@ -197,7 +197,7 @@ namespace HslCommunicationDemo
                 }
                 else
                 {
-                    MessageBox.Show( HslCommunication.StringResources.Language.ConnectedFailed );
+                    MessageBox.Show( OilCommunication.StringResources.Language.ConnectedFailed );
                 }
             }
             catch (Exception ex)
@@ -446,10 +446,10 @@ namespace HslCommunicationDemo
 
         private void button26_Click( object sender, EventArgs e )
         {
-            OperateResult<byte[]> read = busTcpClient.ReadFromCoreServer( HslCommunication.BasicFramework.SoftBasic.HexStringToBytes( textBox13.Text ) );
+            OperateResult<byte[]> read = busTcpClient.ReadFromCoreServer( OilCommunication.BasicFramework.SoftBasic.HexStringToBytes( textBox13.Text ) );
             if (read.IsSuccess)
             {
-                textBox11.Text = "Result：" + HslCommunication.BasicFramework.SoftBasic.ByteToHexString( read.Content );
+                textBox11.Text = "Result：" + OilCommunication.BasicFramework.SoftBasic.ByteToHexString( read.Content );
             }
             else
             {
@@ -543,7 +543,7 @@ namespace HslCommunicationDemo
                 string err = write.Message;
             }
 
-            HslCommunication.Core.IByteTransform ByteTransform = new HslCommunication.Core.ReverseWordTransform( );
+            OilCommunication.Core.IByteTransform ByteTransform = new OilCommunication.Core.ReverseWordTransform( );
         }
 
 

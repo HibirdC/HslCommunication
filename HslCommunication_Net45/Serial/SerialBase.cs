@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.IO.Ports;
 using System.Threading;
-using HslCommunication.Core;
-using HslCommunication.LogNet;
+using OilCommunication.Core;
+using OilCommunication.LogNet;
 
-namespace HslCommunication.Serial
+namespace OilCommunication.Serial
 {
     /// <summary>
     /// 所有串行通信类的基类，提供了一些基础的服务

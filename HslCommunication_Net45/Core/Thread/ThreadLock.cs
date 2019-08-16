@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 
-namespace HslCommunication.Core
+namespace OilCommunication.Core
 {
 
     #region 多线程同步协调类
@@ -536,7 +536,7 @@ namespace HslCommunication.Core
     /// </summary>
     /// <example>
     /// 以下演示常用的锁的使用方式，还包含了如何优雅的处理异常锁
-    /// <code lang="cs" source="HslCommunication_Net45.Test\Documentation\Samples\Core\ThreadLock.cs" region="SimpleHybirdLockExample1" title="SimpleHybirdLock示例" />
+    /// <code lang="cs" source="OilCommunication_Net45.Test\Documentation\Samples\Core\ThreadLock.cs" region="SimpleHybirdLockExample1" title="SimpleHybirdLock示例" />
     /// </example>
     public sealed class SimpleHybirdLock : IDisposable
     {

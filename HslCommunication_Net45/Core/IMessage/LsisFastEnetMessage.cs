@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace HslCommunication.Core.IMessage
+namespace OilCommunication.Core.IMessage
 {
     /// <summary>
     /// LSIS的PLC的FastEnet的消息定义

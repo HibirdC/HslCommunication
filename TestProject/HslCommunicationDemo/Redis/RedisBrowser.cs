@@ -6,10 +6,10 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-using HslCommunication;
-using HslCommunication.Enthernet.Redis;
+using OilCommunication;
+using OilCommunication.Enthernet.Redis;
 
-namespace HslCommunicationDemo.Redis
+namespace OilCommunicationDemo.Redis
 {
     public partial class RedisBrowser : Form
     {
@@ -180,7 +180,7 @@ namespace HslCommunicationDemo.Redis
                 OperateResult<string> read = redisClient.ReadKey( e.Node.Tag.ToString( ) );
 
                 label5.Text = "Time: " + (DateTime.Now - start).TotalMilliseconds.ToString( "F0" ) + " ms";
-                label4.Text = "Size: " + HslCommunication.BasicFramework.SoftBasic.GetSizeDescription( Encoding.UTF8.GetBytes( read.Content ).Length );
+                label4.Text = "Size: " + OilCommunication.BasicFramework.SoftBasic.GetSizeDescription( Encoding.UTF8.GetBytes( read.Content ).Length );
                 if (read.IsSuccess)
                 {
                     textBox5.Text = read.Content;
@@ -216,7 +216,7 @@ namespace HslCommunicationDemo.Redis
                     size += Encoding.UTF8.GetBytes( read.Content[i] ).Length;
                 }
 
-                label13.Text = "Size: " + HslCommunication.BasicFramework.SoftBasic.GetSizeDescription( size );
+                label13.Text = "Size: " + OilCommunication.BasicFramework.SoftBasic.GetSizeDescription( size );
                 label11.Text = "Array: " + read.Content.Length;
                 if (read.IsSuccess)
                 {
@@ -255,7 +255,7 @@ namespace HslCommunicationDemo.Redis
                     size += Encoding.UTF8.GetBytes( read.Content[i] ).Length;
                 }
 
-                label13.Text = "Size: " + HslCommunication.BasicFramework.SoftBasic.GetSizeDescription( size );
+                label13.Text = "Size: " + OilCommunication.BasicFramework.SoftBasic.GetSizeDescription( size );
                 label11.Text = "Array: " + read.Content.Length;
                 if (read.IsSuccess)
                 {
@@ -298,7 +298,7 @@ namespace HslCommunicationDemo.Redis
                 if (dataGridView1.SelectedRows.Count > 0)
                 {
                     textBox7.Text = dataGridView1.SelectedRows[0].Cells[1].Value.ToString( );
-                    label9.Text = "Size: " + HslCommunication.BasicFramework.SoftBasic.GetSizeDescription( Encoding.UTF8.GetBytes( textBox7.Text ).Length );
+                    label9.Text = "Size: " + OilCommunication.BasicFramework.SoftBasic.GetSizeDescription( Encoding.UTF8.GetBytes( textBox7.Text ).Length );
                 }
             }
         }

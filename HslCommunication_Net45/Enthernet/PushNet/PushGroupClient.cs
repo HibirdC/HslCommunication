@@ -1,14 +1,14 @@
-﻿using HslCommunication.Core.Net;
+﻿using OilCommunication.Core.Net;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using HslCommunication.Core;
+using OilCommunication.Core;
 
 
 
 
-namespace HslCommunication.Enthernet
+namespace OilCommunication.Enthernet
 {
     /// <summary>
     /// 订阅分类的核心组织对象

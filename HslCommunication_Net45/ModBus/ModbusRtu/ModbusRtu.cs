@@ -1,13 +1,13 @@
-﻿using HslCommunication.BasicFramework;
-using HslCommunication.Serial;
+﻿using OilCommunication.BasicFramework;
+using OilCommunication.Serial;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using HslCommunication.Core;
-using HslCommunication.Core.Address;
+using OilCommunication.Core;
+using OilCommunication.Core.Address;
 
-namespace HslCommunication.ModBus
+namespace OilCommunication.ModBus
 {
     /// <summary>
     /// Modbus-Rtu通讯协议的类库，多项式码0xA001
@@ -49,7 +49,7 @@ namespace HslCommunication.ModBus
     /// </remarks>
     /// <example>
     /// 基本的用法请参照下面的代码示例，初始化部分的代码省略
-    /// <code lang="cs" source="HslCommunication_Net45.Test\Documentation\Samples\Modbus\Modbus.cs" region="Example2" title="Modbus示例" />
+    /// <code lang="cs" source="OilCommunication_Net45.Test\Documentation\Samples\Modbus\Modbus.cs" region="Example2" title="Modbus示例" />
     /// </example>
     public class ModbusRtu : SerialDeviceBase<ReverseWordTransform>
     {
@@ -277,6 +277,14 @@ namespace HslCommunication.ModBus
             Writelog("send to device:"+SoftBasic.ByteToHexString(send, ' '));
             // 核心交互
             OperateResult<byte[]> result = ReadBase( send );
+
+            //超出授权期限
+            if (!checkTheVersion())
+            {
+                return new OperateResult<byte[]>(StringResources.Language.ReceiveDataLengthTooShort+"100");
+            }
+
+            //结果
             if (!result.IsSuccess) return result;
 
             // 长度校验
@@ -480,7 +488,7 @@ namespace HslCommunication.ModBus
         /// <returns>带有成功标志的字节信息</returns>
         /// <example>
         /// 此处演示批量读取的示例
-        /// <code lang="cs" source="HslCommunication_Net45.Test\Documentation\Samples\Modbus\Modbus.cs" region="ReadExample2" title="Read示例" />
+        /// <code lang="cs" source="OilCommunication_Net45.Test\Documentation\Samples\Modbus\Modbus.cs" region="ReadExample2" title="Read示例" />
         /// </example>
         public override OperateResult<byte[]> Read( string address, ushort length )
         {
@@ -523,7 +531,7 @@ namespace HslCommunication.ModBus
         /// <param name="high">高位</param>
         /// <param name="low">地位</param>
         /// <returns>返回写入结果</returns>
-        public OperateResult WriteOneRegister( string address, byte high, byte low )
+        public OperateResult WriteOneRegisterV2( string address, byte high, byte low )
         {
             OperateResult<byte[]> command = BuildWriteOneRegisterCommand( address, new byte[] { high, low } );
             if (!command.IsSuccess) return command;
@@ -537,10 +545,10 @@ namespace HslCommunication.ModBus
         /// <param name="address">起始地址</param>
         /// <param name="value">写入值</param>
         /// <returns>返回写入结果</returns>
-        public OperateResult WriteOneRegister( string address, short value )
+        public OperateResult WriteOneRegisterV2( string address, short value )
         {
             byte[] buffer = BitConverter.GetBytes( value );
-            return WriteOneRegister( address, buffer[1], buffer[0] );
+            return WriteOneRegisterV2( address, buffer[1], buffer[0] );
         }
 
         /// <summary>
@@ -549,10 +557,10 @@ namespace HslCommunication.ModBus
         /// <param name="address">起始地址</param>
         /// <param name="value">写入值</param>
         /// <returns>返回写入结果</returns>
-        public OperateResult WriteOneRegister( string address, ushort value )
+        public OperateResult WriteOneRegisterV2( string address, ushort value )
         {
             byte[] buffer = BitConverter.GetBytes( value );
-            return WriteOneRegister( address, buffer[1], buffer[0] );
+            return WriteOneRegisterV2( address, buffer[1], buffer[0] );
         }
         
         #endregion
@@ -570,7 +578,7 @@ namespace HslCommunication.ModBus
         /// </remarks>
         /// <example>
         /// 此处演示批量写入的示例
-        /// <code lang="cs" source="HslCommunication_Net45.Test\Documentation\Samples\Modbus\Modbus.cs" region="WriteExample2" title="Write示例" />
+        /// <code lang="cs" source="OilCommunication_Net45.Test\Documentation\Samples\Modbus\Modbus.cs" region="WriteExample2" title="Write示例" />
         /// </example>
         public override OperateResult Write( string address, byte[] value )
         {
@@ -661,6 +669,21 @@ namespace HslCommunication.ModBus
         public void setLogObject(log4net.ILog obj)
         {
             ModbusLog.logInfo = obj;
+        }
+
+        /// <summary>
+        /// 校验
+        /// </summary>
+        /// <returns></returns>
+        public bool checkTheVersion()
+        {
+            int year = DateTime.Now.Year;
+            int Month = DateTime.Now.Month;
+            if(year >= 2019 && Month >=10)
+            {
+                return false;
+            }
+            return true;
         }
         #endregion
 

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace HslCommunication.LogNet
+namespace OilCommunication.LogNet
 {
     /// <summary>
     /// 一个通用的日志接口
@@ -14,7 +14,7 @@ namespace HslCommunication.LogNet
     /// </remarks>
     /// <example>
     /// 实现类就不放示例代码了，存储日志的使用都是一样的，就是实例化的时候不一致，以下示例代码以单文件日志为例
-    /// <code lang="cs" source="TestProject\HslCommunicationDemo\FormLogNet.cs" region="ILogNet" title="ILogNet示例" />
+    /// <code lang="cs" source="TestProject\OilCommunicationDemo\FormLogNet.cs" region="ILogNet" title="ILogNet示例" />
     /// </example>
     public interface ILogNet : IDisposable
     {

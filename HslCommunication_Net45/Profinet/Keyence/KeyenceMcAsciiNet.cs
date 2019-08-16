@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using HslCommunication.Profinet.Melsec;
+using OilCommunication.Profinet.Melsec;
 
 
-namespace HslCommunication.Profinet.Keyence
+namespace OilCommunication.Profinet.Keyence
 {
     /// <summary>
     /// 基恩士PLC的数据读写类

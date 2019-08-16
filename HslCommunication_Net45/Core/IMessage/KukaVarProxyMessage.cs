@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace HslCommunication.Core.IMessage
+namespace OilCommunication.Core.IMessage
 {
     /// <summary>
     /// Kuka机器人的 KRC4 控制器中的服务器KUKAVARPROXY

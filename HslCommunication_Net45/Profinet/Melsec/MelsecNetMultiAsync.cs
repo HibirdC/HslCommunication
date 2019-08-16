@@ -5,9 +5,9 @@ using System.Text;
 using System.Net;
 using System.Net.Sockets;
 using System.Threading;
-using HslCommunication.Core;
+using OilCommunication.Core;
 
-namespace HslCommunication.Profinet.Melsec
+namespace OilCommunication.Profinet.Melsec
 {
 //    internal sealed class MelsecNetMultiAsync : PlcNetBase
 //    {

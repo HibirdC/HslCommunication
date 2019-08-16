@@ -6,12 +6,12 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-using HslCommunication.Profinet;
-using HslCommunication.Profinet.Melsec;
+using OilCommunication.Profinet;
+using OilCommunication.Profinet.Melsec;
 using System.Threading;
-using HslCommunication;
+using OilCommunication;
 
-namespace HslCommunicationDemo
+namespace OilCommunicationDemo
 {
     public partial class FormMelsecAscii : Form
     {
@@ -150,7 +150,7 @@ namespace HslCommunicationDemo
                 OperateResult connect = melsec_net.ConnectServer( );
                 if (connect.IsSuccess)
                 {
-                    MessageBox.Show( HslCommunication.StringResources.Language.ConnectedSuccess );
+                    MessageBox.Show( OilCommunication.StringResources.Language.ConnectedSuccess );
                     button2.Enabled = true;
                     button1.Enabled = false;
                     panel2.Enabled = true;
@@ -158,7 +158,7 @@ namespace HslCommunicationDemo
                 }
                 else
                 {
-                    MessageBox.Show( HslCommunication.StringResources.Language.ConnectedFailed );
+                    MessageBox.Show( OilCommunication.StringResources.Language.ConnectedFailed );
                 }
             }
             catch (Exception ex)
@@ -328,10 +328,10 @@ namespace HslCommunicationDemo
 
         private void button26_Click( object sender, EventArgs e )
         {
-            OperateResult<byte[]> read = melsec_net.ReadFromCoreServer( HslCommunication.BasicFramework.SoftBasic.HexStringToBytes( textBox13.Text ) );
+            OperateResult<byte[]> read = melsec_net.ReadFromCoreServer( OilCommunication.BasicFramework.SoftBasic.HexStringToBytes( textBox13.Text ) );
             if (read.IsSuccess)
             {
-                textBox11.Text = "Result：" + HslCommunication.BasicFramework.SoftBasic.ByteToHexString( read.Content );
+                textBox11.Text = "Result：" + OilCommunication.BasicFramework.SoftBasic.ByteToHexString( read.Content );
             }
             else
             {

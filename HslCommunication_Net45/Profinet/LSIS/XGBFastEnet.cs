@@ -1,14 +1,14 @@
-using HslCommunication.Core;
-using HslCommunication.Core.IMessage;
-using HslCommunication.Core.Net;
+using OilCommunication.Core;
+using OilCommunication.Core.IMessage;
+using OilCommunication.Core.Net;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using HslCommunication.BasicFramework;
+using OilCommunication.BasicFramework;
 
-namespace HslCommunication.Profinet.LSIS
+namespace OilCommunication.Profinet.LSIS
 {
     /// <summary>
     /// XGB Fast Enet I/F module supports open Ethernet. It provides network configuration that is to connect LSIS and other company PLC, PC on network

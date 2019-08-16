@@ -1,4 +1,4 @@
-﻿namespace HslCommunicationDemo
+﻿namespace OilCommunicationDemo
 {
     partial class FormMelsec3C
     {
@@ -100,7 +100,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
-            this.userControlCurve1 = new HslCommunicationDemo.DemoControl.UserControlCurve();
+            this.userControlCurve1 = new OilCommunicationDemo.DemoControl.UserControlCurve();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -819,7 +819,7 @@
             this.linkLabel1.Size = new System.Drawing.Size(199, 17);
             this.linkLabel1.TabIndex = 3;
             this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "http://www.hslcommunication.cn/";
+            this.linkLabel1.Text = "http://www.OilCommunication.cn/";
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // label4

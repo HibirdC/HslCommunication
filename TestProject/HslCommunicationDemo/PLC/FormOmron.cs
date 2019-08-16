@@ -6,12 +6,12 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-using HslCommunication.Profinet;
+using OilCommunication.Profinet;
 using System.Threading;
-using HslCommunication;
-using HslCommunication.Profinet.Omron;
+using OilCommunication;
+using OilCommunication.Profinet.Omron;
 
-namespace HslCommunicationDemo
+namespace OilCommunicationDemo
 {
     public partial class FormOmron : Form
     {
@@ -20,7 +20,7 @@ namespace HslCommunicationDemo
             InitializeComponent( );
             omronFinsNet = new OmronFinsNet( );
             omronFinsNet.ConnectTimeOut = 2000;
-            // omronFinsNet.LogNet = new HslCommunication.LogNet.LogNetSingle( "omron.log.txt" );
+            // omronFinsNet.LogNet = new OilCommunication.LogNet.LogNetSingle( "omron.log.txt" );
         }
 
 
@@ -40,8 +40,8 @@ namespace HslCommunicationDemo
 
         private void FormSiemens_Load( object sender, EventArgs e )
         {
-            comboBox1.DataSource = HslCommunication.BasicFramework.SoftBasic.GetEnumValues<HslCommunication.Core.DataFormat>( );
-            comboBox1.SelectedItem = HslCommunication.Core.DataFormat.CDAB;
+            comboBox1.DataSource = OilCommunication.BasicFramework.SoftBasic.GetEnumValues<OilCommunication.Core.DataFormat>( );
+            comboBox1.SelectedItem = OilCommunication.Core.DataFormat.CDAB;
             panel2.Enabled = false;
 
             Language( Program.Language );
@@ -157,13 +157,13 @@ namespace HslCommunicationDemo
             omronFinsNet.Port = port;
             omronFinsNet.SA1 = SA1;
             omronFinsNet.DA2 = DA2;
-            omronFinsNet.ByteTransform.DataFormat = (HslCommunication.Core.DataFormat)comboBox1.SelectedItem;
+            omronFinsNet.ByteTransform.DataFormat = (OilCommunication.Core.DataFormat)comboBox1.SelectedItem;
 
             // OperateResult connect = OperateResult.CreateSuccessResult( ); 
             OperateResult connect = omronFinsNet.ConnectServer( );
             if (connect.IsSuccess)
             {
-                MessageBox.Show( HslCommunication.StringResources.Language.ConnectedSuccess );
+                MessageBox.Show( OilCommunication.StringResources.Language.ConnectedSuccess );
                 button2.Enabled = true;
                 button1.Enabled = false;
                 panel2.Enabled = true;
@@ -172,7 +172,7 @@ namespace HslCommunicationDemo
             }
             else
             {
-                MessageBox.Show( HslCommunication.StringResources.Language.ConnectedFailed );
+                MessageBox.Show( OilCommunication.StringResources.Language.ConnectedFailed );
             }
         }
 
@@ -334,10 +334,10 @@ namespace HslCommunicationDemo
 
         private void button26_Click( object sender, EventArgs e )
         {
-            OperateResult<byte[]> read = omronFinsNet.ReadFromCoreServer( HslCommunication.BasicFramework.SoftBasic.HexStringToBytes( textBox13.Text ) );
+            OperateResult<byte[]> read = omronFinsNet.ReadFromCoreServer( OilCommunication.BasicFramework.SoftBasic.HexStringToBytes( textBox13.Text ) );
             if (read.IsSuccess)
             {
-                textBox11.Text = "Result：" + HslCommunication.BasicFramework.SoftBasic.ByteToHexString( read.Content );
+                textBox11.Text = "Result：" + OilCommunication.BasicFramework.SoftBasic.ByteToHexString( read.Content );
             }
             else
             {

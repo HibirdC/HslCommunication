@@ -5,9 +5,9 @@ using System.Net.Sockets;
 using System.Text;
 using System.Net;
 using System.Threading;
-using HslCommunication.Core.IMessage;
+using OilCommunication.Core.IMessage;
 
-namespace HslCommunication.Core.Net
+namespace OilCommunication.Core.Net
 {
     /// <summary>
     /// 支持长连接，短连接两个模式的通用客户端基类 ->
@@ -55,7 +55,7 @@ namespace HslCommunication.Core.Net
         /// </summary>
         /// <example>
         /// 主要是用来转换数据类型的，下面仅仅演示了2个方法，其他的类型转换，类似处理。
-        /// <code lang="cs" source="HslCommunication_Net45.Test\Documentation\Samples\Core\NetworkDoubleBase.cs" region="ByteTransform" title="ByteTransform示例" />
+        /// <code lang="cs" source="OilCommunication_Net45.Test\Documentation\Samples\Core\NetworkDoubleBase.cs" region="ByteTransform" title="ByteTransform示例" />
         /// </example>
         public TTransform ByteTransform
         {
@@ -68,7 +68,7 @@ namespace HslCommunication.Core.Net
         /// </summary>
         /// <example>
         /// 设置1秒的超时的示例
-        /// <code lang="cs" source="HslCommunication_Net45.Test\Documentation\Samples\Core\NetworkDoubleBase.cs" region="ConnectTimeOutExample" title="ConnectTimeOut示例" />
+        /// <code lang="cs" source="OilCommunication_Net45.Test\Documentation\Samples\Core\NetworkDoubleBase.cs" region="ConnectTimeOutExample" title="ConnectTimeOut示例" />
         /// </example>
         /// <remarks>
         /// 不适用于异形模式的连接。
@@ -85,7 +85,7 @@ namespace HslCommunication.Core.Net
         /// </summary>
         /// <example>
         /// 设置1秒的接收超时的示例
-        /// <code lang="cs" source="HslCommunication_Net45.Test\Documentation\Samples\Core\NetworkDoubleBase.cs" region="ReceiveTimeOutExample" title="ReceiveTimeOut示例" />
+        /// <code lang="cs" source="OilCommunication_Net45.Test\Documentation\Samples\Core\NetworkDoubleBase.cs" region="ReceiveTimeOutExample" title="ReceiveTimeOut示例" />
         /// </example>
         /// <remarks>
         /// 超时的通常原因是服务器端没有配置好，导致访问失败，为了不卡死软件，所以有了这个超时的属性。
@@ -104,7 +104,7 @@ namespace HslCommunication.Core.Net
         /// </remarks>
         /// <example>
         /// 以下举例modbus-tcp的短连接及动态更改ip地址的示例
-        /// <code lang="cs" source="HslCommunication_Net45.Test\Documentation\Samples\Core\NetworkDoubleBase.cs" region="IpAddressExample" title="IpAddress示例" />
+        /// <code lang="cs" source="OilCommunication_Net45.Test\Documentation\Samples\Core\NetworkDoubleBase.cs" region="IpAddressExample" title="IpAddress示例" />
         /// </example>
         public virtual string IpAddress
         {
@@ -181,7 +181,7 @@ namespace HslCommunication.Core.Net
         /// </summary>
         /// <example>
         /// 以下的方式演示了另一种长连接的机制
-        /// <code lang="cs" source="HslCommunication_Net45.Test\Documentation\Samples\Core\NetworkDoubleBase.cs" region="SetPersistentConnectionExample" title="SetPersistentConnection示例" />
+        /// <code lang="cs" source="OilCommunication_Net45.Test\Documentation\Samples\Core\NetworkDoubleBase.cs" region="SetPersistentConnectionExample" title="SetPersistentConnection示例" />
         /// </example>
         public void SetPersistentConnection( )
         {
@@ -198,9 +198,9 @@ namespace HslCommunication.Core.Net
         /// <returns>返回连接结果，如果失败的话（也即IsSuccess为False），包含失败信息</returns>
         /// <example>
         ///   简单的连接示例，调用该方法后，连接设备，创建一个长连接的对象，后续的读写操作均公用一个连接对象。
-        ///   <code lang="cs" source="HslCommunication_Net45.Test\Documentation\Samples\Core\NetworkDoubleBase.cs" region="Connect1" title="连接设备" />
+        ///   <code lang="cs" source="OilCommunication_Net45.Test\Documentation\Samples\Core\NetworkDoubleBase.cs" region="Connect1" title="连接设备" />
         ///   如果想知道是否连接成功，请参照下面的代码。
-        ///   <code lang="cs" source="HslCommunication_Net45.Test\Documentation\Samples\Core\NetworkDoubleBase.cs" region="Connect2" title="判断连接结果" />
+        ///   <code lang="cs" source="OilCommunication_Net45.Test\Documentation\Samples\Core\NetworkDoubleBase.cs" region="Connect2" title="判断连接结果" />
         /// </example> 
         public OperateResult ConnectServer( )
         {
@@ -236,9 +236,9 @@ namespace HslCommunication.Core.Net
         /// <returns>通常都为成功</returns>
         /// <example>
         ///   简单的创建示例。
-        ///   <code lang="cs" source="HslCommunication_Net45.Test\Documentation\Samples\Core\NetworkDoubleBase.cs" region="AlienConnect1" title="连接设备" />
+        ///   <code lang="cs" source="OilCommunication_Net45.Test\Documentation\Samples\Core\NetworkDoubleBase.cs" region="AlienConnect1" title="连接设备" />
         ///   如果想知道是否创建成功。通常都是成功。
-        ///   <code lang="cs" source="HslCommunication_Net45.Test\Documentation\Samples\Core\NetworkDoubleBase.cs" region="AlienConnect2" title="判断连接结果" />
+        ///   <code lang="cs" source="OilCommunication_Net45.Test\Documentation\Samples\Core\NetworkDoubleBase.cs" region="AlienConnect2" title="判断连接结果" />
         /// </example> 
         /// <remarks>
         /// 不能和之前的长连接和短连接混用，详细参考 Demo程序 
@@ -285,7 +285,7 @@ namespace HslCommunication.Core.Net
         /// <returns>关闭连接，不需要查看IsSuccess属性查看</returns>
         /// <example>
         /// 直接关闭连接即可，基本上是不需要进行成功的判定
-        /// <code lang="cs" source="HslCommunication_Net45.Test\Documentation\Samples\Core\NetworkDoubleBase.cs" region="ConnectCloseExample" title="关闭连接结果" />
+        /// <code lang="cs" source="OilCommunication_Net45.Test\Documentation\Samples\Core\NetworkDoubleBase.cs" region="ConnectCloseExample" title="关闭连接结果" />
         /// </example>
         public OperateResult ConnectClose( )
         {
@@ -315,7 +315,7 @@ namespace HslCommunication.Core.Net
         /// <returns>是否初始化成功，依据具体的协议进行重写</returns>
         /// <example>
         /// 有些协议不需要握手信号，比如三菱的MC协议，Modbus协议，西门子和欧姆龙就存在握手信息，此处的例子是继承本类后重写的西门子的协议示例
-        /// <code lang="cs" source="HslCommunication_Net45\Profinet\Siemens\SiemensS7Net.cs" region="NetworkDoubleBase Override" title="西门子重连示例" />
+        /// <code lang="cs" source="OilCommunication_Net45\Profinet\Siemens\SiemensS7Net.cs" region="NetworkDoubleBase Override" title="西门子重连示例" />
         /// </example>
         protected virtual OperateResult InitializationOnConnect( Socket socket )
         {
@@ -439,7 +439,7 @@ namespace HslCommunication.Core.Net
         /// </remarks>
         /// <example>
         /// 假设你有一个自己的socket连接了设备，本组件可以直接基于该socket实现modbus读取，三菱读取，西门子读取等等操作，前提是该服务器支持多协议，虽然这个需求听上去比较变态，但本组件支持这样的操作。
-        /// <code lang="cs" source="HslCommunication_Net45.Test\Documentation\Samples\Core\NetworkDoubleBase.cs" region="ReadFromCoreServerExample1" title="ReadFromCoreServer示例" />
+        /// <code lang="cs" source="OilCommunication_Net45.Test\Documentation\Samples\Core\NetworkDoubleBase.cs" region="ReadFromCoreServerExample1" title="ReadFromCoreServer示例" />
         /// </example>
         /// <returns>接收的完整的报文信息</returns>
         public virtual OperateResult<byte[]> ReadFromCoreServer( Socket socket, byte[] send )
@@ -491,7 +491,7 @@ namespace HslCommunication.Core.Net
         /// </remarks>
         /// <example>
         /// 此处举例有个modbus服务器，有个特殊的功能码0x09，后面携带子数据0x01即可，发送字节为 0x00 0x00 0x00 0x00 0x00 0x03 0x01 0x09 0x01
-        /// <code lang="cs" source="HslCommunication_Net45.Test\Documentation\Samples\Core\NetworkDoubleBase.cs" region="ReadFromCoreServerExample2" title="ReadFromCoreServer示例" />
+        /// <code lang="cs" source="OilCommunication_Net45.Test\Documentation\Samples\Core\NetworkDoubleBase.cs" region="ReadFromCoreServerExample2" title="ReadFromCoreServer示例" />
         /// </example>
         public OperateResult<byte[]> ReadFromCoreServer( byte[] send )
         {

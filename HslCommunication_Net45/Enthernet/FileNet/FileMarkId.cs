@@ -1,11 +1,11 @@
-﻿using HslCommunication.Core;
-using HslCommunication.LogNet;
+﻿using OilCommunication.Core;
+using OilCommunication.LogNet;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace HslCommunication.Enthernet
+namespace OilCommunication.Enthernet
 {
     /// <summary>
     /// 文件标记对象类

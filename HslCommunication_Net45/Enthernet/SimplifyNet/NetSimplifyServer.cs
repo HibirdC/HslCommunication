@@ -1,11 +1,11 @@
-﻿using HslCommunication.Core.Net;
+﻿using OilCommunication.Core.Net;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Sockets;
 using System.Text;
 
-namespace HslCommunication.Enthernet
+namespace OilCommunication.Enthernet
 {
 
     /// <summary>

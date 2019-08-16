@@ -8,7 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
 
-namespace HslCommunication.LogNet
+namespace OilCommunication.LogNet
 {
     /// <summary>
     /// 一个用于日志分析的控件
@@ -170,7 +170,7 @@ namespace HslCommunication.LogNet
             }
         }
 
-        private HslCommunication.Controls.UserButton selectButton = null;
+        private OilCommunication.Controls.UserButton selectButton = null;
 
         private void UserButtonSetSelected(Controls.UserButton userButton)
         {

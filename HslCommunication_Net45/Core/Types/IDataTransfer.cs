@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace HslCommunication
+namespace OilCommunication
 {
     /// <summary>
     /// 用于PLC通讯及ModBus自定义数据类型的读写操作
@@ -13,9 +13,9 @@ namespace HslCommunication
     /// </remarks>
     /// <example>
     /// 此处举例读取三菱的自定义的数据，先实现接口，然后再读写操作
-    /// <code lang="cs" source="HslCommunication_Net45.Test\Documentation\Samples\Core\NetworkDeviceBase.cs" region="IDataTransfer Example" title="DataMy示例" />
+    /// <code lang="cs" source="OilCommunication_Net45.Test\Documentation\Samples\Core\NetworkDeviceBase.cs" region="IDataTransfer Example" title="DataMy示例" />
     /// 接下来就可以实现数据的读取了
-    /// <code lang="cs" source="HslCommunication_Net45.Test\Documentation\Samples\Core\NetworkDeviceBase.cs" region="ReadCustomerExample" title="ReadCustomer示例" />
+    /// <code lang="cs" source="OilCommunication_Net45.Test\Documentation\Samples\Core\NetworkDeviceBase.cs" region="ReadCustomerExample" title="ReadCustomer示例" />
     /// </example>
     public interface IDataTransfer
     {

@@ -1,4 +1,4 @@
-﻿namespace HslCommunication.LogNet
+﻿namespace OilCommunication.LogNet
 {
     partial class FormLogNetView
     {
@@ -33,8 +33,8 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.userButton1 = new HslCommunication.Controls.UserButton();
-            this.logNetAnalysisControl1 = new HslCommunication.LogNet.LogNetAnalysisControl();
+            this.userButton1 = new OilCommunication.Controls.UserButton();
+            this.logNetAnalysisControl1 = new OilCommunication.LogNet.LogNetAnalysisControl();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -73,7 +73,7 @@
             this.toolStripStatusLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
             this.toolStripStatusLabel1.Size = new System.Drawing.Size(248, 17);
-            this.toolStripStatusLabel1.Text = "本日志查看器由HslCommunication提供支持";
+            this.toolStripStatusLabel1.Text = "本日志查看器由OilCommunication提供支持";
             // 
             // userButton1
             // 

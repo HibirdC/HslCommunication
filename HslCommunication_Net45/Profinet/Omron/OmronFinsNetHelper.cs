@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using HslCommunication.BasicFramework;
+using OilCommunication.BasicFramework;
 
-namespace HslCommunication.Profinet.Omron
+namespace OilCommunication.Profinet.Omron
 {
     /// <summary>
     /// Omron PLC的FINS协议相关的辅助类

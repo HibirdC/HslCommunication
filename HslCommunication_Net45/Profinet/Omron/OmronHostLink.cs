@@ -1,11 +1,11 @@
-﻿using HslCommunication.Core;
-using HslCommunication.Serial;
+﻿using OilCommunication.Core;
+using OilCommunication.Serial;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace HslCommunication.Profinet.Omron
+namespace OilCommunication.Profinet.Omron
 {
     /// <summary>
     /// 欧姆龙的HostLink协议的实现
@@ -190,7 +190,7 @@ namespace HslCommunication.Profinet.Omron
         /// <param name="length">读取的长度</param>
         /// <returns>带成功标志的结果数据对象</returns>
         /// <example>
-        /// <code lang="cs" source="HslCommunication_Net45.Test\Documentation\Samples\Profinet\OmronFinsNet.cs" region="ReadBool" title="ReadBool示例" />
+        /// <code lang="cs" source="OilCommunication_Net45.Test\Documentation\Samples\Profinet\OmronFinsNet.cs" region="ReadBool" title="ReadBool示例" />
         /// </example>
         public OperateResult<bool[]> ReadBool( string address, ushort length )
         {
@@ -219,7 +219,7 @@ namespace HslCommunication.Profinet.Omron
         /// 地址的格式请参照<see cref="ReadBool(string, ushort)"/>方法
         /// </remarks>
         /// <example>
-        /// <code lang="cs" source="HslCommunication_Net45.Test\Documentation\Samples\Profinet\OmronFinsNet.cs" region="ReadBool" title="ReadBool示例" />
+        /// <code lang="cs" source="OilCommunication_Net45.Test\Documentation\Samples\Profinet\OmronFinsNet.cs" region="ReadBool" title="ReadBool示例" />
         /// </example>
         public OperateResult<bool> ReadBool( string address )
         {
@@ -236,7 +236,7 @@ namespace HslCommunication.Profinet.Omron
         /// <param name="value">要写入的实际数据，长度为8的倍数</param>
         /// <returns>返回写入结果</returns>
         /// <example>
-        /// <code lang="cs" source="HslCommunication_Net45.Test\Documentation\Samples\Profinet\OmronFinsNet.cs" region="WriteBool" title="WriteBool示例" />
+        /// <code lang="cs" source="OilCommunication_Net45.Test\Documentation\Samples\Profinet\OmronFinsNet.cs" region="WriteBool" title="WriteBool示例" />
         /// </example>
         public OperateResult Write( string address, bool value )
         {
@@ -250,7 +250,7 @@ namespace HslCommunication.Profinet.Omron
         /// <param name="values">要写入的实际数据，可以指定任意的长度</param>
         /// <returns>返回写入结果</returns>
         /// <example>
-        /// <code lang="cs" source="HslCommunication_Net45.Test\Documentation\Samples\Profinet\OmronFinsNet.cs" region="WriteBool" title="WriteBool示例" />
+        /// <code lang="cs" source="OilCommunication_Net45.Test\Documentation\Samples\Profinet\OmronFinsNet.cs" region="WriteBool" title="WriteBool示例" />
         /// </example>
         public OperateResult Write( string address, bool[] values )
         {

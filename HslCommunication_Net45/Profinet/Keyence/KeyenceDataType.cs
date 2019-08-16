@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace HslCommunication.Profinet.Keyence
+namespace OilCommunication.Profinet.Keyence
 {
     /// <summary>
     /// Keyence PLC的数据类型，此处包含了几个常用的类型

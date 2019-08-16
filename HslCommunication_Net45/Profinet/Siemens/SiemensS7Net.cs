@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net.Sockets;
 using System.Text;
-using HslCommunication.Core;
-using HslCommunication.Core.IMessage;
-using HslCommunication.Core.Net;
+using OilCommunication.Core;
+using OilCommunication.Core.IMessage;
+using OilCommunication.Core.Net;
 
 
 
@@ -21,7 +21,7 @@ using HslCommunication.Core.Net;
 
 
 
-namespace HslCommunication.Profinet.Siemens
+namespace OilCommunication.Profinet.Siemens
 {
     /// <summary>
     /// 一个西门子的客户端类，使用S7协议来进行数据交互 ->
@@ -106,8 +106,8 @@ namespace HslCommunication.Profinet.Siemens
     /// <note type="important">对于200smartPLC的V区，就是DB1.X，例如，V100=DB1.100</note>
     /// </remarks>
     /// <example>
-    /// <code lang="cs" source="HslCommunication_Net45.Test\Documentation\Samples\Profinet\SiemensS7Net.cs" region="Usage" title="简单的短连接使用" />
-    /// <code lang="cs" source="HslCommunication_Net45.Test\Documentation\Samples\Profinet\SiemensS7Net.cs" region="Usage2" title="简单的长连接使用" />
+    /// <code lang="cs" source="OilCommunication_Net45.Test\Documentation\Samples\Profinet\SiemensS7Net.cs" region="Usage" title="简单的短连接使用" />
+    /// <code lang="cs" source="OilCommunication_Net45.Test\Documentation\Samples\Profinet\SiemensS7Net.cs" region="Usage2" title="简单的长连接使用" />
     /// </example>
     public class SiemensS7Net : NetworkDeviceBase<S7Message, ReverseBytesTransform>
     {
@@ -306,9 +306,9 @@ namespace HslCommunication.Profinet.Siemens
         /// </remarks>
         /// <example>
         /// 假设起始地址为M100，M100存储了温度，100.6℃值为1006，M102存储了压力，1.23Mpa值为123，M104，M105，M106，M107存储了产量计数，读取如下：
-        /// <code lang="cs" source="HslCommunication_Net45.Test\Documentation\Samples\Profinet\SiemensS7Net.cs" region="ReadExample2" title="Read示例" />
+        /// <code lang="cs" source="OilCommunication_Net45.Test\Documentation\Samples\Profinet\SiemensS7Net.cs" region="ReadExample2" title="Read示例" />
         /// 以下是读取不同类型数据的示例
-        /// <code lang="cs" source="HslCommunication_Net45.Test\Documentation\Samples\Profinet\SiemensS7Net.cs" region="ReadExample1" title="Read示例" />
+        /// <code lang="cs" source="OilCommunication_Net45.Test\Documentation\Samples\Profinet\SiemensS7Net.cs" region="ReadExample1" title="Read示例" />
         /// </example>
         public override OperateResult<byte[]> Read( string address, ushort length )
         {
@@ -465,7 +465,7 @@ namespace HslCommunication.Profinet.Siemens
         /// </remarks>
         /// <example>
         /// 假设读取M100.0的位是否通断
-        /// <code lang="cs" source="HslCommunication_Net45.Test\Documentation\Samples\Profinet\SiemensS7Net.cs" region="ReadBool" title="ReadBool示例" />
+        /// <code lang="cs" source="OilCommunication_Net45.Test\Documentation\Samples\Profinet\SiemensS7Net.cs" region="ReadBool" title="ReadBool示例" />
         /// </example>
         public OperateResult<bool> ReadBool( string address )
         {
@@ -520,9 +520,9 @@ namespace HslCommunication.Profinet.Siemens
         /// <returns>是否写入成功的结果对象 -> Whether to write a successful result object</returns>
         /// <example>
         /// 假设起始地址为M100，M100,M101存储了温度，100.6℃值为1006，M102,M103存储了压力，1.23Mpa值为123，M104-M107存储了产量计数，写入如下：
-        /// <code lang="cs" source="HslCommunication_Net45.Test\Documentation\Samples\Profinet\SiemensS7Net.cs" region="WriteExample2" title="Write示例" />
+        /// <code lang="cs" source="OilCommunication_Net45.Test\Documentation\Samples\Profinet\SiemensS7Net.cs" region="WriteExample2" title="Write示例" />
         /// 以下是写入不同类型数据的示例
-        /// <code lang="cs" source="HslCommunication_Net45.Test\Documentation\Samples\Profinet\SiemensS7Net.cs" region="WriteExample1" title="Write示例" />
+        /// <code lang="cs" source="OilCommunication_Net45.Test\Documentation\Samples\Profinet\SiemensS7Net.cs" region="WriteExample1" title="Write示例" />
         /// </example>
         public override OperateResult Write( string address, byte[] value )
         {
@@ -559,7 +559,7 @@ namespace HslCommunication.Profinet.Siemens
         /// <returns>是否写入成功的结果对象 -> Whether to write a successful result object</returns>
         /// <example>
         /// 假设写入M100.0的位是否通断
-        /// <code lang="cs" source="HslCommunication_Net45.Test\Documentation\Samples\Profinet\SiemensS7Net.cs" region="WriteBool" title="WriteBool示例" />
+        /// <code lang="cs" source="OilCommunication_Net45.Test\Documentation\Samples\Profinet\SiemensS7Net.cs" region="WriteBool" title="WriteBool示例" />
         /// </example>
         public OperateResult Write( string address, bool value )
         {
@@ -619,7 +619,7 @@ namespace HslCommunication.Profinet.Siemens
         /// <returns>是否写入成功的结果对象</returns>
         /// <example>
         /// 以下为三菱的连接对象示例，其他的设备读写情况参照下面的代码：
-        /// <code lang="cs" source="HslCommunication_Net45.Test\Documentation\Samples\Core\NetworkDeviceBase.cs" region="WriteString" title="String类型示例" />
+        /// <code lang="cs" source="OilCommunication_Net45.Test\Documentation\Samples\Core\NetworkDeviceBase.cs" region="WriteString" title="String类型示例" />
         /// </example>
         public override OperateResult Write( string address, string value )
         {

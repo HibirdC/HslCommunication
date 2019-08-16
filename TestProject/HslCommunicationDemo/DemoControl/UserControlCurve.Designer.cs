@@ -1,4 +1,4 @@
-﻿namespace HslCommunicationDemo.DemoControl
+﻿namespace OilCommunicationDemo.DemoControl
 {
     partial class UserControlCurve
     {
@@ -37,7 +37,7 @@
             this.label17 = new System.Windows.Forms.Label();
             this.textBox12 = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
-            this.userCurve1 = new HslCommunication.Controls.UserCurve();
+            this.userCurve1 = new OilCommunication.Controls.UserCurve();
             this.groupBox5.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -144,6 +144,6 @@
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.TextBox textBox12;
         private System.Windows.Forms.Label label15;
-        private HslCommunication.Controls.UserCurve userCurve1;
+        private OilCommunication.Controls.UserCurve userCurve1;
     }
 }

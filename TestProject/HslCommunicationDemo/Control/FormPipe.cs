@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace HslCommunicationDemo.Control
+namespace OilCommunicationDemo.Control
 {
     public partial class FormPipe : Form
     {
