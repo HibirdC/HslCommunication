@@ -431,9 +431,9 @@ namespace OilCommunication.ModBus
         /// </summary>
         /// <param name="address">起始地址，格式为"1234"</param>
         /// <returns>带有成功标志的bool对象</returns>
-        public OperateResult<bool> ReadCoil( string address )
+        public OperateResult<bool> ReadCoilV3_1( string address )
         {
-            var read = ReadCoil( address, 1 );
+            var read = ReadCoilV3_1( address, 1 );
             if (!read.IsSuccess) return OperateResult.CreateFailedResult<bool>( read );
 
             return OperateResult.CreateSuccessResult( read.Content[0] );
@@ -445,7 +445,7 @@ namespace OilCommunication.ModBus
         /// <param name="address">起始地址，格式为"1234"</param>
         /// <param name="length">读取长度</param>
         /// <returns>带有成功标志的bool数组对象</returns>
-        public OperateResult<bool[]> ReadCoil( string address, ushort length )
+        public OperateResult<bool[]> ReadCoilV3_1( string address, ushort length )
         {
             var read = ReadModBusBase( ModbusInfo.ReadCoil, address, length );
             if (!read.IsSuccess) return OperateResult.CreateFailedResult<bool[]>( read );
@@ -458,7 +458,7 @@ namespace OilCommunication.ModBus
         /// </summary>
         /// <param name="address">起始地址，格式为"1234"</param>
         /// <returns>带有成功标志的bool对象</returns>
-        public OperateResult<bool> ReadDiscrete( string address )
+        public OperateResult<bool> ReadDiscreteV3_1( string address )
         {
             var read = ReadDiscrete( address, 1 );
             if (!read.IsSuccess) return OperateResult.CreateFailedResult<bool>( read );
@@ -490,7 +490,7 @@ namespace OilCommunication.ModBus
         /// 此处演示批量读取的示例
         /// <code lang="cs" source="OilCommunication_Net45.Test\Documentation\Samples\Modbus\Modbus.cs" region="ReadExample2" title="Read示例" />
         /// </example>
-        public override OperateResult<byte[]> Read( string address, ushort length )
+        public OperateResult<byte[]> ReadV3_1( string address, ushort length )
         {
             OperateResult<ModbusAddress> analysis = ModbusInfo.AnalysisAddress( address, isAddressStartWithZero, ModbusInfo.ReadRegister );
             if (!analysis.IsSuccess) return OperateResult.CreateFailedResult<byte[]>( analysis );
@@ -513,12 +513,32 @@ namespace OilCommunication.ModBus
         /// </summary>
         /// <param name="from">从机ID</param>
         /// <returns>带有成功标志的字节信息</returns>
-        public OperateResult<byte[]> ReadUping(ushort from)
+        public OperateResult<byte[]> ReadUpingV3_1(ushort from)
         {
             var read = ReadModBusSpecial(from);
             if (!read.IsSuccess) return OperateResult.CreateFailedResult<byte[]>(read);
 
             return OperateResult.CreateSuccessResult(read.Content);
+        }
+        /// <summary>
+        /// 读取设备的short类型的数据
+        /// </summary>
+        /// <param name="address">起始地址</param>
+        /// <returns>带成功标志的结果数据对象</returns>
+        public OperateResult<short> ReadInt16V3_1(string address)
+        {
+            return ByteTransformHelper.GetResultFromArray(ReadInt16(address, 1));
+        }
+
+        /// <summary>
+        /// 读取设备的short类型的数组
+        /// </summary>
+        /// <param name="address">起始地址</param>
+        /// <param name="length">数组长度</param>
+        /// <returns>带成功标志的结果数据对象</returns>
+        public OperateResult<short[]> ReadIntV3_1(string address, ushort length)
+        {
+            return ByteTransformHelper.GetResultFromBytes(Read(address, (ushort)(length * WordLength)), m => ByteTransform.TransInt16(m, 0, length));
         }
         #endregion
 
@@ -531,7 +551,7 @@ namespace OilCommunication.ModBus
         /// <param name="high">高位</param>
         /// <param name="low">地位</param>
         /// <returns>返回写入结果</returns>
-        public OperateResult WriteOneRegisterV2( string address, byte high, byte low )
+        public OperateResult WriteOneRegisterV3_1( string address, byte high, byte low )
         {
             OperateResult<byte[]> command = BuildWriteOneRegisterCommand( address, new byte[] { high, low } );
             if (!command.IsSuccess) return command;
@@ -545,10 +565,10 @@ namespace OilCommunication.ModBus
         /// <param name="address">起始地址</param>
         /// <param name="value">写入值</param>
         /// <returns>返回写入结果</returns>
-        public OperateResult WriteOneRegisterV2( string address, short value )
+        public OperateResult WriteOneRegisterV3_1( string address, short value )
         {
             byte[] buffer = BitConverter.GetBytes( value );
-            return WriteOneRegisterV2( address, buffer[1], buffer[0] );
+            return WriteOneRegisterV3_1( address, buffer[1], buffer[0] );
         }
 
         /// <summary>
@@ -557,10 +577,10 @@ namespace OilCommunication.ModBus
         /// <param name="address">起始地址</param>
         /// <param name="value">写入值</param>
         /// <returns>返回写入结果</returns>
-        public OperateResult WriteOneRegisterV2( string address, ushort value )
+        public OperateResult WriteOneRegisterV3_1( string address, ushort value )
         {
             byte[] buffer = BitConverter.GetBytes( value );
-            return WriteOneRegisterV2( address, buffer[1], buffer[0] );
+            return WriteOneRegisterV3_1( address, buffer[1], buffer[0] );
         }
         
         #endregion
@@ -600,7 +620,7 @@ namespace OilCommunication.ModBus
         /// <param name="address">起始地址</param>
         /// <param name="value">写入值</param>
         /// <returns>返回写入结果</returns>
-        public OperateResult WriteCoil( string address, bool value )
+        public OperateResult WriteCoilV3_1( string address, bool value )
         {
             // 解析指令
             OperateResult<byte[]> command = BuildWriteOneCoilCommand( address, value );
@@ -616,7 +636,7 @@ namespace OilCommunication.ModBus
         /// <param name="address">起始地址</param>
         /// <param name="values">写入值</param>
         /// <returns>返回写入结果</returns>
-        public OperateResult WriteCoil( string address, bool[] values )
+        public OperateResult WriteCoilV3_1( string address, bool[] values )
         {
             // 解析指令
             OperateResult<byte[]> command = BuildWriteCoilCommand( address, values );
@@ -636,7 +656,7 @@ namespace OilCommunication.ModBus
         /// <param name="address">要写入的数据地址</param>
         /// <param name="values">要写入的实际数据，长度为8的倍数</param>
         /// <returns>返回写入结果</returns>
-        public OperateResult Write( string address, bool[] values )
+        public OperateResult WriteV3_1( string address, bool[] values )
         {
             return Write( address, BasicFramework.SoftBasic.BoolArrayToByte( values ) );
         }
@@ -679,13 +699,12 @@ namespace OilCommunication.ModBus
         {
             int year = DateTime.Now.Year;
             int Month = DateTime.Now.Month;
-            if(year >= 2019 && Month >=10)
+            if(year >= 2020 && Month >=1)
             {
                 return false;
             }
             return true;
         }
         #endregion
-
     }
 }
