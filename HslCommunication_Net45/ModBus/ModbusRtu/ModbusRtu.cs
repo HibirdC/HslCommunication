@@ -479,7 +479,21 @@ namespace OilCommunication.ModBus
 
             return OperateResult.CreateSuccessResult( SoftBasic.ByteToBoolArray( read.Content, length ) );
         }
-        
+        /// <summary>
+        /// 从Modbus服务器批量读取寄存器的信息，需要指定起始地址，读取长度
+        /// </summary>
+        /// <param name="address">起始地址，格式为"1234"，或者是带功能码格式x=3;1234</param>
+        /// <param name="length">读取的数量</param>
+        /// <param name="flag">读取标志</param>
+        /// <returns>带有成功标志的字节信息</returns>
+        /// <example>
+        /// 此处演示批量读取的示例
+        /// <code lang="cs" source="OilCommunication_Net45.Test\Documentation\Samples\Modbus\Modbus.cs" region="ReadExample2" title="Read示例" />
+        /// </example>
+        public OperateResult<byte[]> ReadV3_1( string address, ushort length,bool flag)
+        {
+            return Read(address, length);
+        }
         /// <summary>
         /// 从Modbus服务器批量读取寄存器的信息，需要指定起始地址，读取长度
         /// </summary>
@@ -490,7 +504,7 @@ namespace OilCommunication.ModBus
         /// 此处演示批量读取的示例
         /// <code lang="cs" source="OilCommunication_Net45.Test\Documentation\Samples\Modbus\Modbus.cs" region="ReadExample2" title="Read示例" />
         /// </example>
-        public OperateResult<byte[]> ReadV3_1( string address, ushort length )
+        public override OperateResult<byte[]> Read( string address, ushort length )
         {
             OperateResult<ModbusAddress> analysis = ModbusInfo.AnalysisAddress( address, isAddressStartWithZero, ModbusInfo.ReadRegister );
             if (!analysis.IsSuccess) return OperateResult.CreateFailedResult<byte[]>( analysis );
@@ -524,21 +538,15 @@ namespace OilCommunication.ModBus
         /// 读取设备的short类型的数据
         /// </summary>
         /// <param name="address">起始地址</param>
+        /// <param name="flag">起始地址</param>
         /// <returns>带成功标志的结果数据对象</returns>
-        public OperateResult<short> ReadInt16V3_1(string address)
+        /// <example>
+        /// 以下为三菱的连接对象示例，其他的设备读写情况参照下面的代码：
+        /// <code lang="cs" source="OilCommunication_Net45.Test\Documentation\Samples\Core\NetworkDeviceBase.cs" region="ReadInt16" title="Int16类型示例" />
+        /// </example>
+        public OperateResult<short> ReadInt16V3_1(string address,bool flag)
         {
             return ByteTransformHelper.GetResultFromArray(ReadInt16(address, 1));
-        }
-
-        /// <summary>
-        /// 读取设备的short类型的数组
-        /// </summary>
-        /// <param name="address">起始地址</param>
-        /// <param name="length">数组长度</param>
-        /// <returns>带成功标志的结果数据对象</returns>
-        public OperateResult<short[]> ReadIntV3_1(string address, ushort length)
-        {
-            return ByteTransformHelper.GetResultFromBytes(Read(address, (ushort)(length * WordLength)), m => ByteTransform.TransInt16(m, 0, length));
         }
         #endregion
 
