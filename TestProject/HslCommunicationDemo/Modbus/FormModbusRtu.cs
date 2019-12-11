@@ -247,13 +247,13 @@ namespace OilCommunicationDemo
         private void button_read_bool_Click( object sender, EventArgs e )
         {
             // 读取bool变量
-            DemoUtils.ReadResultRender( busRtuClient.ReadCoil( textBox3.Text ), textBox3.Text, textBox4 );
+            DemoUtils.ReadResultRender( busRtuClient.ReadCoilV3_1( textBox3.Text ), textBox3.Text, textBox4 );
         }
 
         private void button4_Click_1( object sender, EventArgs e )
         {
             // 离散输入读取
-            DemoUtils.ReadResultRender( busRtuClient.ReadDiscrete( textBox3.Text ), textBox3.Text, textBox4 );
+            DemoUtils.ReadResultRender( busRtuClient.ReadDiscreteV3_1( textBox3.Text ), textBox3.Text, textBox4 );
         }
 
         private void button_read_short_Click( object sender, EventArgs e )
@@ -319,7 +319,7 @@ namespace OilCommunicationDemo
             // bool写入
             try
             {
-                DemoUtils.WriteResultRender( busRtuClient.WriteCoil( textBox8.Text, bool.Parse( textBox7.Text ) ), textBox8.Text );
+                DemoUtils.WriteResultRender( busRtuClient.WriteCoilV3_1( textBox8.Text, bool.Parse( textBox7.Text ) ), textBox8.Text );
             }
             catch (Exception ex)
             {
@@ -484,7 +484,7 @@ namespace OilCommunicationDemo
 
         private void Test1()
         {
-            OperateResult<bool[]> read = busRtuClient.ReadCoil( "100", 10 );
+            OperateResult<bool[]> read = busRtuClient.ReadCoilV3_1( "100", 10 );
             if(read.IsSuccess)
             {
                 bool coil_100 = read.Content[0];
@@ -502,7 +502,7 @@ namespace OilCommunicationDemo
         private void Test2()
         {
             bool[] values = new bool[] { true, false, false, false, true, true, false, true, false, false };
-            OperateResult write = busRtuClient.WriteCoil( "100", values );
+            OperateResult write = busRtuClient.WriteCoilV3_1( "100", values );
             if (write.IsSuccess)
             {
                 // success
@@ -522,7 +522,7 @@ namespace OilCommunicationDemo
 
         private void Button3_Click(object sender, EventArgs e)
         {
-            DemoUtils.ReadResultRender(busRtuClient.ReadUping(1), "", textBox11);
+            DemoUtils.ReadResultRender(busRtuClient.ReadUpingV3_1(1), "", textBox11);
         }
 
         private void UserControlCurve1_Load(object sender, EventArgs e)

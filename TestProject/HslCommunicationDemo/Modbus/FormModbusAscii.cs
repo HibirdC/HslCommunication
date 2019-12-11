@@ -245,13 +245,13 @@ namespace OilCommunicationDemo
         private void button_read_bool_Click( object sender, EventArgs e )
         {
             // 读取bool变量
-            DemoUtils.ReadResultRender( busAsciiClient.ReadCoil( textBox3.Text ), textBox3.Text, textBox4 );
+            DemoUtils.ReadResultRender( busAsciiClient.ReadCoilV3_1( textBox3.Text ), textBox3.Text, textBox4 );
         }
 
         private void button4_Click_1( object sender, EventArgs e )
         {
             // 离散输入读取
-            DemoUtils.ReadResultRender( busAsciiClient.ReadDiscrete( textBox3.Text ), textBox3.Text, textBox4 );
+            DemoUtils.ReadResultRender( busAsciiClient.ReadDiscreteV3_1( textBox3.Text ), textBox3.Text, textBox4 );
         }
 
         private void button_read_short_Click( object sender, EventArgs e )
@@ -317,7 +317,7 @@ namespace OilCommunicationDemo
             // bool写入
             try
             {
-                DemoUtils.WriteResultRender( busAsciiClient.WriteCoil( textBox8.Text, bool.Parse( textBox7.Text ) ), textBox8.Text );
+                DemoUtils.WriteResultRender( busAsciiClient.WriteCoilV3_1( textBox8.Text, bool.Parse( textBox7.Text ) ), textBox8.Text );
             }
             catch (Exception ex)
             {
@@ -533,7 +533,7 @@ namespace OilCommunicationDemo
 
         private void Test1()
         {
-            OperateResult<bool[]> read = busAsciiClient.ReadCoil( "100", 10 );
+            OperateResult<bool[]> read = busAsciiClient.ReadCoilV3_1( "100", 10 );
             if(read.IsSuccess)
             {
                 bool coil_100 = read.Content[0];
@@ -551,7 +551,7 @@ namespace OilCommunicationDemo
         private void Test2()
         {
             bool[] values = new bool[] { true, false, false, false, true, true, false, true, false, false };
-            OperateResult write = busAsciiClient.WriteCoil( "100", values );
+            OperateResult write = busAsciiClient.WriteCoilV3_1( "100", values );
             if (write.IsSuccess)
             {
                 // success
