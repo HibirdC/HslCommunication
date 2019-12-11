@@ -278,12 +278,6 @@ namespace OilCommunication.ModBus
             // 核心交互
             OperateResult<byte[]> result = ReadBase( send );
 
-            //超出授权期限
-            if (!checkTheVersion())
-            {
-                return new OperateResult<byte[]>(StringResources.Language.ReceiveDataLengthTooShort+"100");
-            }
-
             //结果
             if (!result.IsSuccess) return result;
 
@@ -697,21 +691,6 @@ namespace OilCommunication.ModBus
         public void setLogObject(log4net.ILog obj)
         {
             ModbusLog.logInfo = obj;
-        }
-
-        /// <summary>
-        /// 校验
-        /// </summary>
-        /// <returns></returns>
-        public bool checkTheVersion()
-        {
-            int year = DateTime.Now.Year;
-            int Month = DateTime.Now.Month;
-            if(year >= 2020 && Month >=1)
-            {
-                return false;
-            }
-            return true;
         }
         #endregion
     }
