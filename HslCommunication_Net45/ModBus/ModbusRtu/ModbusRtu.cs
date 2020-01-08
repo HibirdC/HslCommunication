@@ -662,9 +662,24 @@ namespace OilCommunication.ModBus
         {
             return Write( address, BasicFramework.SoftBasic.BoolArrayToByte( values ) );
         }
-        
+
         #endregion
-        
+
+        #region Write byte[]
+
+        /// <summary>
+        /// 向寄存器中写入byte数组，返回值说明，比如你写入M100,那么data[0]对应M100.0
+        /// </summary>
+        /// <param name="address">要写入的数据地址</param>
+        /// <param name="values">要写入的实际数据，长度为8的倍数</param>
+        /// <returns>返回写入结果</returns>
+        public OperateResult WriteV3_1(string address, byte[] values)
+        {
+            return Write(address, values);
+        }
+
+        #endregion
+
         #region Object Override
 
         /// <summary>
