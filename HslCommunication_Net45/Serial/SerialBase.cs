@@ -365,7 +365,7 @@ namespace OilCommunication.Serial
         private SerialPort SP_ReadData = null;                    // 串口交互的核心
         private SimpleHybirdLock hybirdLock;                      // 数据交互的锁
         private ILogNet logNet;                                   // 日志存储
-        private int receiveTimeout = 5000;                        // 接收数据的超时时间
+        private int receiveTimeout = 500;                         // 接收数据的超时时间
         private int sleepTime = 20;                               // 睡眠的时间
         private bool isClearCacheBeforeRead = false;              // 是否在发送前清除缓冲
 
